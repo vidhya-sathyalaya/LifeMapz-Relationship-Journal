@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lifemapzrelationship-dev-212110-authRole",
+      "UnauthRoleArn": "arn:aws:iam::275877396812:role/amplify-lifemapzrelationship-dev-212110-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::275877396812:role/amplify-lifemapzrelationship-dev-212110-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lifemapzrelationship-dev-212110-deployment",
+      "UnauthRoleName": "amplify-lifemapzrelationship-dev-212110-unauthRole",
+      "StackName": "amplify-lifemapzrelationship-dev-212110",
+      "StackId": "arn:aws:cloudformation:us-east-1:275877396812:stack/amplify-lifemapzrelationship-dev-212110/8eb2fed0-8896-11ec-a7e6-0e753b2bd793",
+      "AmplifyAppId": "dhfc0e2nxfl9j"
+    }
+  }
+}
