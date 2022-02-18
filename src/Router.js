@@ -1,15 +1,16 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import JournalEntry from './pages/JournalEntry.js';  
 
 {/* Referred from https://stackoverflow.com/a/56588937 */}
 
-{/* import Singin from '../pages/Signin'; */} {/*Remove comments and update*/}
+
 const Router = () => {
 
     return (
-        <Switch>
-           {/* <Route exact path='/' component={Signin}></Route>*/} {/*Remove comments and update*/}
-        </Switch>
+        <Routes>
+           <Route path='/journalentry' element={<JournalEntry />} /> {/* React v6 supports only this format */}
+        </Routes>
     );
 }
 

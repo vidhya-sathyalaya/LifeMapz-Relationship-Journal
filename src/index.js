@@ -23,14 +23,5 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-      <p> Hello World! </p>
-    </div>
-  );
- }
- export default App;
+
  
