@@ -10,7 +10,7 @@ class JournalEntry extends React.Component {
         return (
             <div>
                 <h1> Journal Entry page </h1>
-                <textarea className='journaltext'> Here goes old entry!&#10;</textarea>
+                <textarea className='journaltext'>Here goes old entry!&#10;</textarea>
             </div>
         );
     }
