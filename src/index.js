@@ -3,18 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
+import '@aws-amplify/ui-react/styles.css';
 
 import Amplify from "aws-amplify";
 import awsExports from "./aws-exports";
+import { AmplifyProvider } from '@aws-amplify/ui-react'
+
 Amplify.configure(awsExports);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
+  <AmplifyProvider>
       <App />
-    </BrowserRouter>
-  </React.StrictMode>,
+  </AmplifyProvider>,
   document.getElementById('root')
 );
 
