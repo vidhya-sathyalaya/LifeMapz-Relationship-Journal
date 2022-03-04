@@ -14,6 +14,7 @@ const initialState = { Entry: '' }
 
 class JournalEntryPage extends React.Component {
 
+
     constructor()
     {
         super();
@@ -26,7 +27,37 @@ class JournalEntryPage extends React.Component {
     {
         this.setState({ Entry: value });
     }
+
+    componentDidMount()
+    {
+        this.listEntries();
+    }
     
+    async listEntries(){
+
+        const tentries = [];
+        var txtentry = {};
+
+        const journalentries = await DataStore.query(JournalEntry,
+            c => c.date_created('gt', AWSDateUtil.getStartOfDayAsTimeStamp())
+            .date_created('le', AWSDateUtil.getEndOfDayAsTimeStamp())
+            .entry_type('eq', "Text"));
+        
+        for(var i = 0; i< journalentries.length; i++)
+        {
+            txtentry = await DataStore.query(TextEntry,
+                c => c.journalentryID('eq', journalentries[i].id));
+            for(var j =0; j<txtentry.length; j++)
+            {
+                //console.log(txtentry[j].content);
+                tentries.push(txtentry[j].content);
+            }
+        }
+
+        console.log(tentries);
+        this.setState( { PreviousEntries: tentries});
+
+    }
 
     async saveEntry(){
         const jentry = await DataStore.save(
@@ -47,15 +78,28 @@ class JournalEntryPage extends React.Component {
                 "journalentryID": jentry.id
             })
         );
+
+        this.listEntries();
+        this.setState({
+            Entry: ''
+          });
     }
 
     render() {
+        const tentries = this.state.PreviousEntries?.map((te, i) => (
+            <li key={i} className="previous-entry">{te}</li>
+          ));
         return (
             <div>
-                <h1> Journal Entry page </h1>
+                <h1> Today </h1>
                 <textarea className='journaltext' onChange={event => this.changeEntry(event.target.value)}/>
-                <div>Here goes old entry!&#10;</div>
+                <br></br>
                 <button onClick={this.saveEntry}> Save </button>
+                <div className='previous-entry-section'>
+                    <ul className='previous-entry-list'>
+                        {tentries}
+                    </ul>
+                </div>
             </div>
         );
     }
