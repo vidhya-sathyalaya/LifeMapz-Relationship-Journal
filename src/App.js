@@ -4,6 +4,7 @@ import './App.css';
 // import Amplify, { Auth } from "aws-amplify";
 // import awsconfig from "./aws-exports";
 import { withAuthenticator } from "@aws-amplify/ui-react";
+import LinkShare from './components/LinkShare';
 // Amplify.configure(awsconfig);
 // Auth.configure(awsconfig);
 function App( { signOut, user } ) {
@@ -12,6 +13,7 @@ function App( { signOut, user } ) {
       {/* <Router/> */}
       {user.attributes.email}
       <button onClick={signOut}>Sign Out</button>
+      <LinkShare></LinkShare>
     </div>
   );
 }
