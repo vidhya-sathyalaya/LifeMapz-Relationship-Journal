@@ -9,8 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Text, TextField } from "@aws-amplify/ui-react";
 export default function HeroLayout4(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="10px"
@@ -22,7 +21,7 @@ export default function HeroLayout4(props) {
       padding="160px 160px 160px 160px"
       backgroundColor="rgba(0,0,0,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "HeroLayout4")}
     >
       <Flex
         gap="24px"
@@ -30,9 +29,10 @@ export default function HeroLayout4(props) {
         justifyContent="center"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[0]")}
+        {...getOverrideProps(overrides, "Type Lock Up")}
       >
         <Text
           fontFamily="Inter"
@@ -45,13 +45,14 @@ export default function HeroLayout4(props) {
           direction="column"
           justifyContent="flex-start"
           letterSpacing="0.49px"
-          width="1120px"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="LOREM IPSUM"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[0]")}
+          {...getOverrideProps(overrides, "LOREM IPSUM")}
         ></Text>
         <Text
           fontFamily="Inter"
@@ -63,13 +64,17 @@ export default function HeroLayout4(props) {
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          width="1120px"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="Ut enim ad minim veniam quis nostrud"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[1]")}
+          {...getOverrideProps(
+            overrides,
+            "Ut enim ad minim veniam quis nostrud"
+          )}
         ></Text>
         <Text
           fontFamily="Inter"
@@ -81,45 +86,46 @@ export default function HeroLayout4(props) {
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          width="1120px"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[2]")}
+          {...getOverrideProps(
+            overrides,
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.ibl"
+          )}
         ></Text>
         <Flex
           gap="8px"
           direction="row"
+          width="fit-content"
           alignItems="flex-start"
           shrink="0"
-          width="466px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0]")}
+          {...getOverrideProps(overrides, "Form")}
         >
           <TextField
             display="flex"
             shrink="0"
             height="36px"
             size="default"
-            labelHidden="true"
+            labelHidden={true}
             variation="default"
-            {...getOverrideProps(
-              overrides,
-              "Flex.Flex[0].Flex[0].TextField[0]"
-            )}
+            {...getOverrideProps(overrides, "TextField")}
           ></TextField>
           <Button
             padding="8px 16px 8px 16px"
             display="flex"
+            width="fit-content"
             shrink="0"
             height="36px"
             size="default"
             variation="primary"
-            children="Primary Button"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Button[0]")}
+            {...getOverrideProps(overrides, "Button")}
           ></Button>
         </Flex>
         <Text
@@ -132,13 +138,17 @@ export default function HeroLayout4(props) {
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          letterSpacing="0.010000000000000009px"
+          letterSpacing="0.01px"
           width="566px"
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[3]")}
+          {...getOverrideProps(
+            overrides,
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.ksj"
+          )}
         ></Text>
       </Flex>
     </Flex>

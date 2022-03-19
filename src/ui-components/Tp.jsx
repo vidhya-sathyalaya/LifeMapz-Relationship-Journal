@@ -7,41 +7,36 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Image, View } from "@aws-amplify/ui-react";
-import HeroLayout3 from "./HeroLayout3";
-export default function HeroLayout2(props) {
+import One from "./One";
+import Two from "./Two";
+import { View } from "@aws-amplify/ui-react";
+export default function Tp(props) {
   const { overrides, ...rest } = props;
   return (
     <View
-      width="1440px"
-      height="858px"
+      width="720px"
+      height="357px"
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "HeroLayout2")}
+      {...getOverrideProps(overrides, "Tp")}
     >
-      <Image
+      <One
         position="absolute"
         top="0%"
-        bottom="0%"
-        height="100%"
+        bottom="20.17%"
         left="0%"
-        right="0%"
-        width="100%"
-        padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "image")}
-      ></Image>
-      <HeroLayout3
-        height="858px"
+        right="56.25%"
+        {...getOverrideProps(overrides, "one")}
+      ></One>
+      <Two
         position="absolute"
-        backgroundColor="rgba(0,0,0,0.5)"
-        display="flex"
-        top="0%"
+        top="22.69%"
         bottom="0%"
-        left="0%"
+        left="52.08%"
         right="0%"
-        {...getOverrideProps(overrides, "HeroLayout3")}
-      ></HeroLayout3>
+        {...getOverrideProps(overrides, "two")}
+      ></Two>
     </View>
   );
 }

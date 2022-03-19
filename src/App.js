@@ -1,40 +1,44 @@
 import './App.css';
 import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
-import {AmplifyProvider} from "@aws-amplify/ui-react";
+
 import awsconfig from './aws-exports';
-import { Frame417, NavBar } from './ui-components';
-import { Frame417Collection } from './ui-components';
-import { CardACollection } from './ui-components';
+import { NavBar } from './ui-components';
+import { FrontPage1 } from './ui-components';
+import { Footer1 } from './ui-components';
 Amplify.configure(awsconfig);
 
 
-
-
 function App() {
+
   const imageOverrides = {
-   "Flex.Flex[2].Image[0]":{
-      src: "https://www.bootdey.com/app/webroot/img/Content/avatar/avatar1.png"
+   "image":{
+      src: "https://www.bootdey.com/app/webroot/img/Content/avatar/avatar1.png",
    },
-   "View.Image[0]":{
-     src: "https://d3i6fh83elv35t.cloudfront.net/static/2020/05/GettyImages-1196354779-1200x814.png"
-   }
+  }
+  const fpg1 = {
+    "image 1":{
+      src: "https://i.ibb.co/xfyV5Dd/Screen-Shot-2022-03-18-at-1-15-07-PM.png",
+    },
+  }
 
-  };
-  console.log("Hiiis")
+  const fott1 ={
+    "image 1":{
+      src: "https://static.vecteezy.com/system/resources/previews/002/448/934/non_2x/couple-chatting-in-the-smartphone-screen-virtual-relationship-dating-app-vector.jpg"
+    },
+  }
   return (
-    <AmplifyProvider>
-    <div className='App'>
-        <p align="center"> Relationship Journal</p>
-          <NavBar overrides={imageOverrides}/>
-         
-            <div>
-          <CardACollection />
-          <CardACollection />
-
-          </div>
-    </div>
-    </AmplifyProvider>
+    // <AmplifyProvider>
+        <div className='App'>
+          <p align="center"> Relationship Journal</p>
+          <NavBar overrides={imageOverrides} />
+       
+        <div>
+          <FrontPage1 overrides={fpg1}/>
+          <Footer1 overrides={fott1}/>
+        </div>
+        </div>
+      // </AmplifyProvider>
   );
 }
 

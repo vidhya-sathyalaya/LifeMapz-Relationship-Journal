@@ -9,8 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Image, Text, View } from "@aws-amplify/ui-react";
 export default function CardD(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <View
       width="320px"
@@ -18,7 +17,7 @@ export default function CardD(props) {
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "View")}
+      {...getOverrideProps(overrides, "CardD")}
     >
       <Image
         position="absolute"
@@ -30,7 +29,7 @@ export default function CardD(props) {
         width="100%"
         borderRadius="8px"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "View.Image[0]")}
+        {...getOverrideProps(overrides, "image")}
       ></Image>
       <Text
         fontFamily="Inter"
@@ -46,8 +45,9 @@ export default function CardD(props) {
         bottom="40px"
         left="calc(50% - 59px - 0px)"
         padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
         children="Find your Partner"
-        {...getOverrideProps(overrides, "View.Text[0]")}
+        {...getOverrideProps(overrides, "Explore")}
       ></Text>
     </View>
   );

@@ -7,10 +7,9 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Button, Flex, IconGroup, Image, Text } from "@aws-amplify/ui-react";
+import { Button, Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
 export default function ProfileA(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="24px"
@@ -21,7 +20,7 @@ export default function ProfileA(props) {
       padding="24px 24px 24px 24px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "ProfileA")}
     >
       <Image
         width="160px"
@@ -30,23 +29,22 @@ export default function ProfileA(props) {
         position="relative"
         borderRadius="160px"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Image[0]")}
+        {...getOverrideProps(overrides, "image")}
       ></Image>
       <Flex
         gap="8px"
         direction="column"
         alignItems="center"
         shrink="0"
-        width="254px"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[0]")}
+        {...getOverrideProps(overrides, "Name")}
       >
         <Text
           fontFamily="Inter"
           fontSize="32px"
           fontWeight="700"
-          color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+          color="rgba(13,26,38,1)"
           lineHeight="40px"
           textAlign="center"
           display="flex"
@@ -55,75 +53,77 @@ export default function ProfileA(props) {
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="Melinda Marcus"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[0]")}
+          {...getOverrideProps(overrides, "Melinda Marcus")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(48.000000938773155,64.00000378489494,80.00000283122063,1)"
+          color="rgba(48,64,80,1)"
           lineHeight="24px"
           textAlign="center"
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          letterSpacing="0.010000000000000009px"
+          letterSpacing="0.01px"
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="Design Engineer at Cloth Studios"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[1]")}
+          {...getOverrideProps(overrides, "Design Engineer at Cloth Studios")}
         ></Text>
       </Flex>
       <Flex
         gap="16px"
         direction="row"
+        width="fit-content"
         alignItems="flex-start"
         shrink="0"
-        width="138px"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[1]")}
+        {...getOverrideProps(overrides, "Followers")}
       >
-        <IconGroup
+        <Icon
           width="24px"
           height="24px"
           shrink="0"
           overflow="hidden"
           position="relative"
           padding="0px 0px 0px 0px"
-          color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
           type="group"
           fontSize="24px"
-          {...getOverrideProps(overrides, "Flex.Flex[1].IconGroup[0]")}
-        ></IconGroup>
+          {...getOverrideProps(overrides, "Icon")}
+        ></Icon>
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(48.000000938773155,64.00000378489494,80.00000283122063,1)"
+          color="rgba(48,64,80,1)"
           lineHeight="24px"
           textAlign="center"
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          letterSpacing="0.010000000000000009px"
+          letterSpacing="0.01px"
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="99 Followers"
-          {...getOverrideProps(overrides, "Flex.Flex[1].Text[0]")}
+          {...getOverrideProps(overrides, "99 Followers")}
         ></Text>
       </Flex>
       <Button
         display="flex"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         size="large"
         variation="primary"
-        children="View Profile"
-        {...getOverrideProps(overrides, "Flex.Button[0]")}
+        {...getOverrideProps(overrides, "Button")}
       ></Button>
     </Flex>
   );

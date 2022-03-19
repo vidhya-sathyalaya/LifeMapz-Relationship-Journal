@@ -9,8 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text, TextField, View } from "@aws-amplify/ui-react";
 export default function MarketingFooter(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <View
       width="1440px"
@@ -18,7 +17,7 @@ export default function MarketingFooter(props) {
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "View")}
+      {...getOverrideProps(overrides, "MarketingFooter")}
     >
       <View
         position="absolute"
@@ -28,7 +27,7 @@ export default function MarketingFooter(props) {
         right="0%"
         padding="0px 0px 0px 0px"
         backgroundColor="rgba(0,0,0,1)"
-        {...getOverrideProps(overrides, "View.View[0]")}
+        {...getOverrideProps(overrides, "Rectangle 738")}
       ></View>
       <Text
         fontFamily="Inter"
@@ -40,13 +39,17 @@ export default function MarketingFooter(props) {
         display="flex"
         direction="column"
         justifyContent="flex-start"
-        letterSpacing="0.010000000000000009px"
+        letterSpacing="0.01px"
         position="absolute"
         bottom="40px"
         left="40px"
         padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
         children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna"
-        {...getOverrideProps(overrides, "View.Text[0]")}
+        {...getOverrideProps(
+          overrides,
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna"
+        )}
       ></Text>
       <Flex
         gap="24px"
@@ -56,7 +59,7 @@ export default function MarketingFooter(props) {
         direction="row"
         alignItems="flex-start"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "View.Flex[0]")}
+        {...getOverrideProps(overrides, "Frame 405")}
       >
         <Flex
           gap="8px"
@@ -65,7 +68,7 @@ export default function MarketingFooter(props) {
           height="152px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "View.Flex[0].Flex[0]")}
+          {...getOverrideProps(overrides, "Frame 403")}
         >
           <Text
             fontFamily="Inter"
@@ -77,13 +80,14 @@ export default function MarketingFooter(props) {
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            letterSpacing="0.010000000000000009px"
+            letterSpacing="0.01px"
             width="272px"
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Lorem ipsum dolor sit amet"
-            {...getOverrideProps(overrides, "View.Flex[0].Flex[0].Text[0]")}
+            {...getOverrideProps(overrides, "Lorem ipsum dolor sit ametpmu")}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -95,13 +99,14 @@ export default function MarketingFooter(props) {
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            letterSpacing="0.010000000000000009px"
+            letterSpacing="0.01px"
             width="272px"
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Consectetur adipiscing"
-            {...getOverrideProps(overrides, "View.Flex[0].Flex[0].Text[1]")}
+            {...getOverrideProps(overrides, "Consectetur adipiscingnxs")}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -113,13 +118,14 @@ export default function MarketingFooter(props) {
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            letterSpacing="0.010000000000000009px"
+            letterSpacing="0.01px"
             width="272px"
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Elit sed do eiusmod"
-            {...getOverrideProps(overrides, "View.Flex[0].Flex[0].Text[2]")}
+            {...getOverrideProps(overrides, "Elit sed do eiusmodnau")}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -131,13 +137,14 @@ export default function MarketingFooter(props) {
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            letterSpacing="0.010000000000000009px"
+            letterSpacing="0.01px"
             width="272px"
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Tempor incididunt ut labore"
-            {...getOverrideProps(overrides, "View.Flex[0].Flex[0].Text[3]")}
+            {...getOverrideProps(overrides, "Tempor incididunt ut labore")}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -149,13 +156,14 @@ export default function MarketingFooter(props) {
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            letterSpacing="0.010000000000000009px"
+            letterSpacing="0.01px"
             width="272px"
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Et dolore magna"
-            {...getOverrideProps(overrides, "View.Flex[0].Flex[0].Text[4]")}
+            {...getOverrideProps(overrides, "Et dolore magna")}
           ></Text>
         </Flex>
         <Flex
@@ -165,7 +173,7 @@ export default function MarketingFooter(props) {
           height="88px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "View.Flex[0].Flex[1]")}
+          {...getOverrideProps(overrides, "Frame 404")}
         >
           <Text
             fontFamily="Inter"
@@ -177,13 +185,14 @@ export default function MarketingFooter(props) {
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            letterSpacing="0.010000000000000009px"
+            letterSpacing="0.01px"
             width="272px"
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Lorem ipsum dolor sit amet"
-            {...getOverrideProps(overrides, "View.Flex[0].Flex[1].Text[0]")}
+            {...getOverrideProps(overrides, "Lorem ipsum dolor sit ametdqn")}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -195,13 +204,14 @@ export default function MarketingFooter(props) {
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            letterSpacing="0.010000000000000009px"
+            letterSpacing="0.01px"
             width="272px"
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Consectetur adipiscing"
-            {...getOverrideProps(overrides, "View.Flex[0].Flex[1].Text[1]")}
+            {...getOverrideProps(overrides, "Consectetur adipiscingikj")}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -213,13 +223,14 @@ export default function MarketingFooter(props) {
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            letterSpacing="0.010000000000000009px"
+            letterSpacing="0.01px"
             width="272px"
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Elit sed do eiusmod"
-            {...getOverrideProps(overrides, "View.Flex[0].Flex[1].Text[2]")}
+            {...getOverrideProps(overrides, "Elit sed do eiusmodjbn")}
           ></Text>
         </Flex>
       </Flex>
@@ -233,13 +244,14 @@ export default function MarketingFooter(props) {
         display="flex"
         direction="column"
         justifyContent="flex-start"
-        letterSpacing="0.010000000000000009px"
+        letterSpacing="0.01px"
         position="absolute"
         bottom="40px"
         right="40px"
         padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
         children="Lorem ipsum dolor sit amet 2021"
-        {...getOverrideProps(overrides, "View.Text[1]")}
+        {...getOverrideProps(overrides, "Lorem ipsum dolor sit amet 2021")}
       ></Text>
       <Flex
         gap="16px"
@@ -248,7 +260,7 @@ export default function MarketingFooter(props) {
         left="40px"
         direction="column"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "View.Flex[1]")}
+        {...getOverrideProps(overrides, "Frame 313")}
       >
         <Text
           fontFamily="Inter"
@@ -264,16 +276,19 @@ export default function MarketingFooter(props) {
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
-          {...getOverrideProps(overrides, "View.Flex[1].Text[0]")}
+          {...getOverrideProps(
+            overrides,
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+          )}
         ></Text>
         <TextField
           display="flex"
           shrink="0"
-          label="Label"
           size="default"
           variation="default"
-          {...getOverrideProps(overrides, "View.Flex[1].TextField[0]")}
+          {...getOverrideProps(overrides, "TextField")}
         ></TextField>
         <Text
           fontFamily="Inter"
@@ -285,13 +300,17 @@ export default function MarketingFooter(props) {
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          letterSpacing="0.010000000000000009px"
+          letterSpacing="0.01px"
           width="471px"
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."
-          {...getOverrideProps(overrides, "View.Flex[1].Text[1]")}
+          {...getOverrideProps(
+            overrides,
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."
+          )}
         ></Text>
       </Flex>
     </View>

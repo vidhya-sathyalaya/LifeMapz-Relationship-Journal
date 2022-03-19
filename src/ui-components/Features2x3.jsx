@@ -7,10 +7,9 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Flex, IconAddBox, Text } from "@aws-amplify/ui-react";
+import { Flex, Icon, Text } from "@aws-amplify/ui-react";
 export default function Features2x3(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="10px"
@@ -20,9 +19,9 @@ export default function Features2x3(props) {
       alignItems="center"
       position="relative"
       padding="40px 140px 40px 140px"
-      backgroundColor="rgba(92.00000211596489,102.00000151991844,112.000000923872,1)"
+      backgroundColor="rgba(92,102,112,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "Features2x3")}
     >
       <Flex
         gap="24px"
@@ -31,9 +30,10 @@ export default function Features2x3(props) {
         alignItems="center"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[0]")}
+        {...getOverrideProps(overrides, "Frame 136rmi")}
       >
         <Flex
           gap="24px"
@@ -44,17 +44,18 @@ export default function Features2x3(props) {
           height="552px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0]")}
+          {...getOverrideProps(overrides, "Frame 136ixr")}
         >
           <Flex
             gap="0"
             direction="column"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="24px 24px 24px 24px"
             backgroundColor="rgba(0,0,0,1)"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Flex[0]")}
+            {...getOverrideProps(overrides, "Frame 384ycb")}
           >
             <Flex
               gap="24px"
@@ -62,14 +63,12 @@ export default function Features2x3(props) {
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
+              objectFit="cover"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[0].Flex[0]"
-              )}
+              {...getOverrideProps(overrides, "Frame 381xgs")}
             >
-              <IconAddBox
+              <Icon
                 width="40px"
                 height="40px"
                 shrink="0"
@@ -77,14 +76,10 @@ export default function Features2x3(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 backgroundColor="rgba(0,0,0,1)"
-                color="rgba(255,255,255,1)"
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[0].Flex[0].Flex[0].IconAddBox[0]"
-                )}
-              ></IconAddBox>
+                {...getOverrideProps(overrides, "Iconfpc")}
+              ></Icon>
               <Flex
                 gap="8px"
                 direction="column"
@@ -95,10 +90,7 @@ export default function Features2x3(props) {
                 height="120px"
                 position="relative"
                 padding="0px 0px 0px 0px"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[0].Flex[0].Flex[0].Flex[0]"
-                )}
+                {...getOverrideProps(overrides, "Frame 380jop")}
               >
                 <Text
                   fontFamily="Inter"
@@ -110,16 +102,14 @@ export default function Features2x3(props) {
                   display="flex"
                   direction="column"
                   justifyContent="flex-start"
-                  width="456px"
                   shrink="0"
                   alignSelf="stretch"
+                  objectFit="cover"
                   position="relative"
                   padding="0px 0px 0px 0px"
+                  whiteSpace="pre-wrap"
                   children="Feature A"
-                  {...getOverrideProps(
-                    overrides,
-                    "Flex.Flex[0].Flex[0].Flex[0].Flex[0].Flex[0].Text[0]"
-                  )}
+                  {...getOverrideProps(overrides, "Feature A")}
                 ></Text>
                 <Text
                   fontFamily="Inter"
@@ -131,16 +121,17 @@ export default function Features2x3(props) {
                   display="flex"
                   direction="column"
                   justifyContent="flex-start"
-                  letterSpacing="0.010000000000000009px"
-                  width="456px"
+                  letterSpacing="0.01px"
                   shrink="0"
                   alignSelf="stretch"
+                  objectFit="cover"
                   position="relative"
                   padding="0px 0px 0px 0px"
+                  whiteSpace="pre-wrap"
                   children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
                   {...getOverrideProps(
                     overrides,
-                    "Flex.Flex[0].Flex[0].Flex[0].Flex[0].Flex[0].Text[1]"
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.ric"
                   )}
                 ></Text>
               </Flex>
@@ -151,10 +142,11 @@ export default function Features2x3(props) {
             direction="column"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="24px 24px 24px 24px"
             backgroundColor="rgba(0,0,0,1)"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Flex[1]")}
+            {...getOverrideProps(overrides, "Frame 385onp")}
           >
             <Flex
               gap="24px"
@@ -162,14 +154,12 @@ export default function Features2x3(props) {
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
+              objectFit="cover"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[1].Flex[0]"
-              )}
+              {...getOverrideProps(overrides, "Frame 381npf")}
             >
-              <IconAddBox
+              <Icon
                 width="40px"
                 height="40px"
                 shrink="0"
@@ -177,14 +167,10 @@ export default function Features2x3(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 backgroundColor="rgba(0,0,0,1)"
-                color="rgba(255,255,255,1)"
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[0].Flex[1].Flex[0].IconAddBox[0]"
-                )}
-              ></IconAddBox>
+                {...getOverrideProps(overrides, "Iconzze")}
+              ></Icon>
               <Flex
                 gap="8px"
                 direction="column"
@@ -195,10 +181,7 @@ export default function Features2x3(props) {
                 height="120px"
                 position="relative"
                 padding="0px 0px 0px 0px"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[0].Flex[1].Flex[0].Flex[0]"
-                )}
+                {...getOverrideProps(overrides, "Frame 380mca")}
               >
                 <Text
                   fontFamily="Inter"
@@ -210,16 +193,14 @@ export default function Features2x3(props) {
                   display="flex"
                   direction="column"
                   justifyContent="flex-start"
-                  width="456px"
                   shrink="0"
                   alignSelf="stretch"
+                  objectFit="cover"
                   position="relative"
                   padding="0px 0px 0px 0px"
+                  whiteSpace="pre-wrap"
                   children="Feature C"
-                  {...getOverrideProps(
-                    overrides,
-                    "Flex.Flex[0].Flex[0].Flex[1].Flex[0].Flex[0].Text[0]"
-                  )}
+                  {...getOverrideProps(overrides, "Feature C")}
                 ></Text>
                 <Text
                   fontFamily="Inter"
@@ -231,16 +212,17 @@ export default function Features2x3(props) {
                   display="flex"
                   direction="column"
                   justifyContent="flex-start"
-                  letterSpacing="0.010000000000000009px"
-                  width="456px"
+                  letterSpacing="0.01px"
                   shrink="0"
                   alignSelf="stretch"
+                  objectFit="cover"
                   position="relative"
                   padding="0px 0px 0px 0px"
+                  whiteSpace="pre-wrap"
                   children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
                   {...getOverrideProps(
                     overrides,
-                    "Flex.Flex[0].Flex[0].Flex[1].Flex[0].Flex[0].Text[1]"
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.oev"
                   )}
                 ></Text>
               </Flex>
@@ -251,10 +233,11 @@ export default function Features2x3(props) {
             direction="column"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="24px 24px 24px 24px"
             backgroundColor="rgba(0,0,0,1)"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Flex[2]")}
+            {...getOverrideProps(overrides, "Frame 386hlp")}
           >
             <Flex
               gap="24px"
@@ -262,14 +245,12 @@ export default function Features2x3(props) {
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
+              objectFit="cover"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[2].Flex[0]"
-              )}
+              {...getOverrideProps(overrides, "Frame 381szn")}
             >
-              <IconAddBox
+              <Icon
                 width="40px"
                 height="40px"
                 shrink="0"
@@ -277,14 +258,10 @@ export default function Features2x3(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 backgroundColor="rgba(0,0,0,1)"
-                color="rgba(255,255,255,1)"
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[0].Flex[2].Flex[0].IconAddBox[0]"
-                )}
-              ></IconAddBox>
+                {...getOverrideProps(overrides, "Iconull")}
+              ></Icon>
               <Flex
                 gap="8px"
                 direction="column"
@@ -295,10 +272,7 @@ export default function Features2x3(props) {
                 height="120px"
                 position="relative"
                 padding="0px 0px 0px 0px"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[0].Flex[2].Flex[0].Flex[0]"
-                )}
+                {...getOverrideProps(overrides, "Frame 380eaf")}
               >
                 <Text
                   fontFamily="Inter"
@@ -310,16 +284,14 @@ export default function Features2x3(props) {
                   display="flex"
                   direction="column"
                   justifyContent="flex-start"
-                  width="456px"
                   shrink="0"
                   alignSelf="stretch"
+                  objectFit="cover"
                   position="relative"
                   padding="0px 0px 0px 0px"
+                  whiteSpace="pre-wrap"
                   children="Feature E"
-                  {...getOverrideProps(
-                    overrides,
-                    "Flex.Flex[0].Flex[0].Flex[2].Flex[0].Flex[0].Text[0]"
-                  )}
+                  {...getOverrideProps(overrides, "Feature E")}
                 ></Text>
                 <Text
                   fontFamily="Inter"
@@ -331,16 +303,17 @@ export default function Features2x3(props) {
                   display="flex"
                   direction="column"
                   justifyContent="flex-start"
-                  letterSpacing="0.010000000000000009px"
-                  width="456px"
+                  letterSpacing="0.01px"
                   shrink="0"
                   alignSelf="stretch"
+                  objectFit="cover"
                   position="relative"
                   padding="0px 0px 0px 0px"
+                  whiteSpace="pre-wrap"
                   children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
                   {...getOverrideProps(
                     overrides,
-                    "Flex.Flex[0].Flex[0].Flex[2].Flex[0].Flex[0].Text[1]"
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.fsj"
                   )}
                 ></Text>
               </Flex>
@@ -356,17 +329,18 @@ export default function Features2x3(props) {
           height="552px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1]")}
+          {...getOverrideProps(overrides, "Frame 395")}
         >
           <Flex
             gap="0"
             direction="column"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="24px 24px 24px 24px"
             backgroundColor="rgba(0,0,0,1)"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1].Flex[0]")}
+            {...getOverrideProps(overrides, "Frame 384bvt")}
           >
             <Flex
               gap="24px"
@@ -374,14 +348,12 @@ export default function Features2x3(props) {
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
+              objectFit="cover"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[1].Flex[0].Flex[0]"
-              )}
+              {...getOverrideProps(overrides, "Frame 381qls")}
             >
-              <IconAddBox
+              <Icon
                 width="40px"
                 height="40px"
                 shrink="0"
@@ -389,14 +361,10 @@ export default function Features2x3(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 backgroundColor="rgba(0,0,0,1)"
-                color="rgba(255,255,255,1)"
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[1].Flex[0].Flex[0].IconAddBox[0]"
-                )}
-              ></IconAddBox>
+                {...getOverrideProps(overrides, "Iconbgl")}
+              ></Icon>
               <Flex
                 gap="8px"
                 direction="column"
@@ -407,10 +375,7 @@ export default function Features2x3(props) {
                 height="120px"
                 position="relative"
                 padding="0px 0px 0px 0px"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[1].Flex[0].Flex[0].Flex[0]"
-                )}
+                {...getOverrideProps(overrides, "Frame 380hrd")}
               >
                 <Text
                   fontFamily="Inter"
@@ -422,16 +387,14 @@ export default function Features2x3(props) {
                   display="flex"
                   direction="column"
                   justifyContent="flex-start"
-                  width="456px"
                   shrink="0"
                   alignSelf="stretch"
+                  objectFit="cover"
                   position="relative"
                   padding="0px 0px 0px 0px"
+                  whiteSpace="pre-wrap"
                   children="Feature B"
-                  {...getOverrideProps(
-                    overrides,
-                    "Flex.Flex[0].Flex[1].Flex[0].Flex[0].Flex[0].Text[0]"
-                  )}
+                  {...getOverrideProps(overrides, "Feature B")}
                 ></Text>
                 <Text
                   fontFamily="Inter"
@@ -443,16 +406,17 @@ export default function Features2x3(props) {
                   display="flex"
                   direction="column"
                   justifyContent="flex-start"
-                  letterSpacing="0.010000000000000009px"
-                  width="456px"
+                  letterSpacing="0.01px"
                   shrink="0"
                   alignSelf="stretch"
+                  objectFit="cover"
                   position="relative"
                   padding="0px 0px 0px 0px"
+                  whiteSpace="pre-wrap"
                   children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
                   {...getOverrideProps(
                     overrides,
-                    "Flex.Flex[0].Flex[1].Flex[0].Flex[0].Flex[0].Text[1]"
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.sfz"
                   )}
                 ></Text>
               </Flex>
@@ -463,10 +427,11 @@ export default function Features2x3(props) {
             direction="column"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="24px 24px 24px 24px"
             backgroundColor="rgba(0,0,0,1)"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1].Flex[1]")}
+            {...getOverrideProps(overrides, "Frame 385spu")}
           >
             <Flex
               gap="24px"
@@ -474,14 +439,12 @@ export default function Features2x3(props) {
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
+              objectFit="cover"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[1].Flex[1].Flex[0]"
-              )}
+              {...getOverrideProps(overrides, "Frame 381crl")}
             >
-              <IconAddBox
+              <Icon
                 width="40px"
                 height="40px"
                 shrink="0"
@@ -489,14 +452,10 @@ export default function Features2x3(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 backgroundColor="rgba(0,0,0,1)"
-                color="rgba(255,255,255,1)"
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[1].Flex[1].Flex[0].IconAddBox[0]"
-                )}
-              ></IconAddBox>
+                {...getOverrideProps(overrides, "Iconcfs")}
+              ></Icon>
               <Flex
                 gap="8px"
                 direction="column"
@@ -507,10 +466,7 @@ export default function Features2x3(props) {
                 height="120px"
                 position="relative"
                 padding="0px 0px 0px 0px"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[1].Flex[1].Flex[0].Flex[0]"
-                )}
+                {...getOverrideProps(overrides, "Frame 380civ")}
               >
                 <Text
                   fontFamily="Inter"
@@ -522,16 +478,14 @@ export default function Features2x3(props) {
                   display="flex"
                   direction="column"
                   justifyContent="flex-start"
-                  width="456px"
                   shrink="0"
                   alignSelf="stretch"
+                  objectFit="cover"
                   position="relative"
                   padding="0px 0px 0px 0px"
+                  whiteSpace="pre-wrap"
                   children="Feature D"
-                  {...getOverrideProps(
-                    overrides,
-                    "Flex.Flex[0].Flex[1].Flex[1].Flex[0].Flex[0].Text[0]"
-                  )}
+                  {...getOverrideProps(overrides, "Feature D")}
                 ></Text>
                 <Text
                   fontFamily="Inter"
@@ -543,16 +497,17 @@ export default function Features2x3(props) {
                   display="flex"
                   direction="column"
                   justifyContent="flex-start"
-                  letterSpacing="0.010000000000000009px"
-                  width="456px"
+                  letterSpacing="0.01px"
                   shrink="0"
                   alignSelf="stretch"
+                  objectFit="cover"
                   position="relative"
                   padding="0px 0px 0px 0px"
+                  whiteSpace="pre-wrap"
                   children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
                   {...getOverrideProps(
                     overrides,
-                    "Flex.Flex[0].Flex[1].Flex[1].Flex[0].Flex[0].Text[1]"
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.jcp"
                   )}
                 ></Text>
               </Flex>
@@ -563,10 +518,11 @@ export default function Features2x3(props) {
             direction="column"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="24px 24px 24px 24px"
             backgroundColor="rgba(0,0,0,1)"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1].Flex[2]")}
+            {...getOverrideProps(overrides, "Frame 386wcu")}
           >
             <Flex
               gap="24px"
@@ -574,14 +530,12 @@ export default function Features2x3(props) {
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
+              objectFit="cover"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[1].Flex[2].Flex[0]"
-              )}
+              {...getOverrideProps(overrides, "Frame 381bzz")}
             >
-              <IconAddBox
+              <Icon
                 width="40px"
                 height="40px"
                 shrink="0"
@@ -589,14 +543,10 @@ export default function Features2x3(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 backgroundColor="rgba(0,0,0,1)"
-                color="rgba(255,255,255,1)"
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[1].Flex[2].Flex[0].IconAddBox[0]"
-                )}
-              ></IconAddBox>
+                {...getOverrideProps(overrides, "Iconxms")}
+              ></Icon>
               <Flex
                 gap="8px"
                 direction="column"
@@ -607,10 +557,7 @@ export default function Features2x3(props) {
                 height="120px"
                 position="relative"
                 padding="0px 0px 0px 0px"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[1].Flex[2].Flex[0].Flex[0]"
-                )}
+                {...getOverrideProps(overrides, "Frame 380srn")}
               >
                 <Text
                   fontFamily="Inter"
@@ -622,16 +569,14 @@ export default function Features2x3(props) {
                   display="flex"
                   direction="column"
                   justifyContent="flex-start"
-                  width="456px"
                   shrink="0"
                   alignSelf="stretch"
+                  objectFit="cover"
                   position="relative"
                   padding="0px 0px 0px 0px"
+                  whiteSpace="pre-wrap"
                   children="Feature F"
-                  {...getOverrideProps(
-                    overrides,
-                    "Flex.Flex[0].Flex[1].Flex[2].Flex[0].Flex[0].Text[0]"
-                  )}
+                  {...getOverrideProps(overrides, "Feature F")}
                 ></Text>
                 <Text
                   fontFamily="Inter"
@@ -643,16 +588,17 @@ export default function Features2x3(props) {
                   display="flex"
                   direction="column"
                   justifyContent="flex-start"
-                  letterSpacing="0.010000000000000009px"
-                  width="456px"
+                  letterSpacing="0.01px"
                   shrink="0"
                   alignSelf="stretch"
+                  objectFit="cover"
                   position="relative"
                   padding="0px 0px 0px 0px"
+                  whiteSpace="pre-wrap"
                   children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
                   {...getOverrideProps(
                     overrides,
-                    "Flex.Flex[0].Flex[1].Flex[2].Flex[0].Flex[0].Text[1]"
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.lxi"
                   )}
                 ></Text>
               </Flex>

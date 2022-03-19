@@ -10,15 +10,13 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import {
   Button,
   Flex,
-  IconCamera,
-  IconFlag,
+  Icon,
   SelectField,
   Text,
   TextField,
 } from "@aws-amplify/ui-react";
 export default function ContactUs(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="24px"
@@ -26,70 +24,76 @@ export default function ContactUs(props) {
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "ContactUs")}
     >
       <Flex
         gap="8px"
         direction="column"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[0]")}
+        {...getOverrideProps(overrides, "Frame 31")}
       >
         <Text
           fontFamily="Inter"
           fontSize="32px"
           fontWeight="700"
-          color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+          color="rgba(13,26,38,1)"
           lineHeight="40px"
           textAlign="left"
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          width="350px"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="Need assistance?"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[0]")}
+          {...getOverrideProps(overrides, "Need assistance?")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(92.00000211596489,102.00000151991844,112.000000923872,1)"
+          color="rgba(92,102,112,1)"
           lineHeight="24px"
           textAlign="left"
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          letterSpacing="0.010000000000000009px"
-          width="350px"
+          letterSpacing="0.01px"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[1]")}
+          {...getOverrideProps(
+            overrides,
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
+          )}
         ></Text>
       </Flex>
       <Flex
         gap="16px"
         direction="row"
+        width="fit-content"
         alignItems="flex-start"
         shrink="0"
-        width="350px"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[1]")}
+        {...getOverrideProps(overrides, "Frame 24")}
       >
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="700"
-          color="rgba(92.00000211596489,102.00000151991844,112.000000923872,1)"
+          color="rgba(92,102,112,1)"
           lineHeight="20px"
           textAlign="left"
           display="flex"
@@ -99,14 +103,15 @@ export default function ContactUs(props) {
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="US HELP CENTER"
-          {...getOverrideProps(overrides, "Flex.Flex[1].Text[0]")}
+          {...getOverrideProps(overrides, "US HELP CENTER")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="700"
-          color="rgba(92.00000211596489,102.00000151991844,112.000000923872,1)"
+          color="rgba(92,102,112,1)"
           lineHeight="20px"
           textAlign="left"
           display="flex"
@@ -116,14 +121,15 @@ export default function ContactUs(props) {
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="/"
-          {...getOverrideProps(overrides, "Flex.Flex[1].Text[1]")}
+          {...getOverrideProps(overrides, "/")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="700"
-          color="rgba(92.00000211596489,102.00000151991844,112.000000923872,1)"
+          color="rgba(92,102,112,1)"
           lineHeight="20px"
           textAlign="left"
           display="flex"
@@ -133,104 +139,102 @@ export default function ContactUs(props) {
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="SUBMIT A REQUEST"
-          {...getOverrideProps(overrides, "Flex.Flex[1].Text[2]")}
+          {...getOverrideProps(overrides, "SUBMIT A REQUEST")}
         ></Text>
       </Flex>
       <SelectField
         display="flex"
         shrink="0"
         alignSelf="stretch"
-        label="Label"
+        objectFit="cover"
         size="large"
         variation="default"
-        {...getOverrideProps(overrides, "Flex.SelectField[0]")}
+        {...getOverrideProps(overrides, "SelectFieldjry")}
       ></SelectField>
       <TextField
         display="flex"
         shrink="0"
         alignSelf="stretch"
-        label="Label"
+        objectFit="cover"
         size="large"
         variation="default"
-        {...getOverrideProps(overrides, "Flex.TextField[0]")}
+        {...getOverrideProps(overrides, "TextFieldudp")}
       ></TextField>
       <SelectField
         display="flex"
         shrink="0"
         alignSelf="stretch"
-        label="Label"
+        objectFit="cover"
         size="large"
         variation="default"
-        {...getOverrideProps(overrides, "Flex.SelectField[1]")}
+        {...getOverrideProps(overrides, "SelectFieldzai")}
       ></SelectField>
       <TextField
         display="flex"
         shrink="0"
         alignSelf="stretch"
-        label="Label"
+        objectFit="cover"
         size="large"
         variation="default"
-        {...getOverrideProps(overrides, "Flex.TextField[1]")}
+        {...getOverrideProps(overrides, "TextFieldhcw")}
       ></TextField>
       <TextField
         display="flex"
         shrink="0"
         alignSelf="stretch"
-        label="Label"
+        objectFit="cover"
         size="large"
         variation="default"
-        {...getOverrideProps(overrides, "Flex.TextField[2]")}
+        {...getOverrideProps(overrides, "TextFieldhmr")}
       ></TextField>
       <Button
         display="flex"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         size="large"
         variation="primary"
-        children="Primary Button"
-        {...getOverrideProps(overrides, "Flex.Button[0]")}
+        {...getOverrideProps(overrides, "Button")}
       ></Button>
       <Flex
         gap="24px"
         direction="row"
+        width="fit-content"
         alignItems="flex-start"
         shrink="0"
-        width="201px"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[2]")}
+        {...getOverrideProps(overrides, "Frame 28")}
       >
         <Flex
           gap="8px"
           direction="row"
+          width="fit-content"
           alignItems="center"
           shrink="0"
           height="24px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[2].Flex[0]")}
+          {...getOverrideProps(overrides, "Frame 28wzp")}
         >
-          <IconCamera
+          <Icon
             width="24px"
             height="24px"
             shrink="0"
             overflow="hidden"
             position="relative"
             padding="0px 0px 0px 0px"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
             type="camera"
             fontSize="24px"
-            {...getOverrideProps(
-              overrides,
-              "Flex.Flex[2].Flex[0].IconCamera[0]"
-            )}
-          ></IconCamera>
+            {...getOverrideProps(overrides, "Iconbpr")}
+          ></Icon>
           <Text
             fontFamily="Inter"
             fontSize="14px"
             fontWeight="400"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            color="rgba(13,26,38,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
@@ -239,37 +243,38 @@ export default function ContactUs(props) {
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Instagram"
-            {...getOverrideProps(overrides, "Flex.Flex[2].Flex[0].Text[0]")}
+            {...getOverrideProps(overrides, "Instagram")}
           ></Text>
         </Flex>
         <Flex
           gap="8px"
           direction="row"
+          width="fit-content"
           alignItems="center"
           shrink="0"
           height="24px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[2].Flex[1]")}
+          {...getOverrideProps(overrides, "Frame 30")}
         >
-          <IconFlag
+          <Icon
             width="24px"
             height="24px"
             shrink="0"
             overflow="hidden"
             position="relative"
             padding="0px 0px 0px 0px"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
             type="flag"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Flex.Flex[2].Flex[1].IconFlag[0]")}
-          ></IconFlag>
+            {...getOverrideProps(overrides, "Iconupl")}
+          ></Icon>
           <Text
             fontFamily="Inter"
             fontSize="14px"
             fontWeight="400"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            color="rgba(13,26,38,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
@@ -278,8 +283,9 @@ export default function ContactUs(props) {
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Twitter"
-            {...getOverrideProps(overrides, "Flex.Flex[2].Flex[1].Text[0]")}
+            {...getOverrideProps(overrides, "Twitter")}
           ></Text>
         </Flex>
       </Flex>

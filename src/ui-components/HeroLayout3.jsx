@@ -9,8 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Text } from "@aws-amplify/ui-react";
 export default function HeroLayout3(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="10px"
@@ -24,7 +23,7 @@ export default function HeroLayout3(props) {
       padding="160px 240px 160px 240px"
       backgroundColor="rgba(0,0,0,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "HeroLayout3")}
     >
       <Flex
         gap="24px"
@@ -35,9 +34,10 @@ export default function HeroLayout3(props) {
         grow="1"
         basis="228px"
         alignSelf="stretch"
+        objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[0]")}
+        {...getOverrideProps(overrides, "Type Lock Up")}
       >
         <Text
           fontFamily="Inter"
@@ -50,22 +50,24 @@ export default function HeroLayout3(props) {
           direction="column"
           justifyContent="flex-start"
           letterSpacing="0.49px"
-          width="960px"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="LOREM IPSUM"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[0]")}
+          {...getOverrideProps(overrides, "LOREM IPSUM")}
         ></Text>
         <Flex
           gap="16px"
           direction="column"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0]")}
+          {...getOverrideProps(overrides, "Main Body")}
         >
           <Text
             fontFamily="Inter"
@@ -77,13 +79,17 @@ export default function HeroLayout3(props) {
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            width="960px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Ut enim ad minim veniam quis nostrud"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Text[0]")}
+            {...getOverrideProps(
+              overrides,
+              "Ut enim ad minim veniam quis nostrud"
+            )}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -95,24 +101,27 @@ export default function HeroLayout3(props) {
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            letterSpacing="0.010000000000000009px"
-            width="960px"
+            letterSpacing="0.01px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Text[1]")}
+            {...getOverrideProps(
+              overrides,
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+            )}
           ></Text>
         </Flex>
         <Button
           display="flex"
+          width="fit-content"
           shrink="0"
-          width="206px"
           size="large"
           variation="primary"
-          children="Primary Button"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Button[0]")}
+          {...getOverrideProps(overrides, "Button")}
         ></Button>
       </Flex>
     </Flex>

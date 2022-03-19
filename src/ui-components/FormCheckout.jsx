@@ -12,8 +12,7 @@ import {
   Button,
   Divider,
   Flex,
-  IconDelete,
-  IconShoppingBag,
+  Icon,
   Image,
   SelectField,
   Text,
@@ -21,8 +20,7 @@ import {
   View,
 } from "@aws-amplify/ui-react";
 export default function FormCheckout(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="24px"
@@ -32,7 +30,7 @@ export default function FormCheckout(props) {
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "FormCheckout")}
     >
       <Flex
         gap="0"
@@ -45,7 +43,7 @@ export default function FormCheckout(props) {
         position="relative"
         padding="32px 0px 32px 0px"
         backgroundColor="rgba(255,255,255,1)"
-        {...getOverrideProps(overrides, "Flex.Flex[0]")}
+        {...getOverrideProps(overrides, "Frame 411")}
       >
         <Flex
           gap="32px"
@@ -58,22 +56,23 @@ export default function FormCheckout(props) {
           height="1084px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0]")}
+          {...getOverrideProps(overrides, "Frame 313")}
         >
           <Flex
             gap="24px"
             direction="column"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 32px 0px 32px"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Flex[0]")}
+            {...getOverrideProps(overrides, "Frame 406")}
           >
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="700"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
@@ -82,59 +81,52 @@ export default function FormCheckout(props) {
               shrink="0"
               position="relative"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Info"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[0].Text[0]"
-              )}
+              {...getOverrideProps(overrides, "Info")}
             ></Text>
             <TextField
               display="flex"
               shrink="0"
               alignSelf="stretch"
-              label="Label"
+              objectFit="cover"
               size="large"
               variation="default"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[0].TextField[0]"
-              )}
+              {...getOverrideProps(overrides, "TextFieldluj")}
             ></TextField>
             <TextField
               display="flex"
               shrink="0"
               alignSelf="stretch"
-              label="Label"
+              objectFit="cover"
               size="large"
               variation="default"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[0].TextField[1]"
-              )}
+              {...getOverrideProps(overrides, "TextFieldrxn")}
             ></TextField>
           </Flex>
           <Divider
-            width="667px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             size="small"
             orientation="horizontal"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Divider[0]")}
+            {...getOverrideProps(overrides, "Dividerhxb")}
           ></Divider>
           <Flex
             gap="24px"
             direction="column"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 32px 0px 32px"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Flex[1]")}
+            {...getOverrideProps(overrides, "Frame 409")}
           >
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="700"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
@@ -143,35 +135,27 @@ export default function FormCheckout(props) {
               shrink="0"
               position="relative"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Shipping"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[1].Text[0]"
-              )}
+              {...getOverrideProps(overrides, "Shippingdyp")}
             ></Text>
             <TextField
               display="flex"
               shrink="0"
               alignSelf="stretch"
-              label="Label"
+              objectFit="cover"
               size="large"
               variation="default"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[1].TextField[0]"
-              )}
+              {...getOverrideProps(overrides, "TextFieldopi")}
             ></TextField>
             <TextField
               display="flex"
               shrink="0"
               alignSelf="stretch"
-              label="Label"
+              objectFit="cover"
               size="large"
               variation="default"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[1].TextField[1]"
-              )}
+              {...getOverrideProps(overrides, "TextFieldeac")}
             ></TextField>
             <Flex
               gap="24px"
@@ -179,12 +163,10 @@ export default function FormCheckout(props) {
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
+              objectFit="cover"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[1].Flex[0]"
-              )}
+              {...getOverrideProps(overrides, "Frame 407")}
             >
               <TextField
                 width="289.5px"
@@ -192,13 +174,9 @@ export default function FormCheckout(props) {
                 grow="1"
                 basis="289.5px"
                 height="74px"
-                label="Label"
                 size="large"
                 variation="default"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[0].Flex[1].Flex[0].TextField[0]"
-                )}
+                {...getOverrideProps(overrides, "TextFieldnnw")}
               ></TextField>
               <SelectField
                 width="289.5px"
@@ -206,13 +184,9 @@ export default function FormCheckout(props) {
                 grow="1"
                 basis="289.5px"
                 height="74px"
-                label="Label"
                 size="large"
                 variation="default"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[0].Flex[1].Flex[0].SelectField[0]"
-                )}
+                {...getOverrideProps(overrides, "SelectFieldnsk")}
               ></SelectField>
             </Flex>
             <Flex
@@ -221,12 +195,10 @@ export default function FormCheckout(props) {
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
+              objectFit="cover"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[1].Flex[1]"
-              )}
+              {...getOverrideProps(overrides, "Frame 408")}
             >
               <TextField
                 width="289.5px"
@@ -234,13 +206,9 @@ export default function FormCheckout(props) {
                 grow="1"
                 basis="289.5px"
                 height="74px"
-                label="Label"
                 size="large"
                 variation="default"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[0].Flex[1].Flex[1].TextField[0]"
-                )}
+                {...getOverrideProps(overrides, "TextFieldwim")}
               ></TextField>
               <SelectField
                 width="289.5px"
@@ -248,38 +216,35 @@ export default function FormCheckout(props) {
                 grow="1"
                 basis="289.5px"
                 height="74px"
-                label="Label"
                 size="large"
                 variation="default"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[0].Flex[1].Flex[1].SelectField[0]"
-                )}
+                {...getOverrideProps(overrides, "SelectFieldcku")}
               ></SelectField>
             </Flex>
           </Flex>
           <Divider
-            width="667px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             size="small"
             orientation="horizontal"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Divider[1]")}
+            {...getOverrideProps(overrides, "Dividerrnp")}
           ></Divider>
           <Flex
             gap="24px"
             direction="column"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 32px 0px 32px"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Flex[2]")}
+            {...getOverrideProps(overrides, "Frame 313ipz")}
           >
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="700"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
@@ -288,35 +253,27 @@ export default function FormCheckout(props) {
               shrink="0"
               position="relative"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Card info"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[2].Text[0]"
-              )}
+              {...getOverrideProps(overrides, "Card info")}
             ></Text>
             <TextField
               display="flex"
               shrink="0"
               alignSelf="stretch"
-              label="Label"
+              objectFit="cover"
               size="large"
               variation="default"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[2].TextField[0]"
-              )}
+              {...getOverrideProps(overrides, "TextFieldrfq")}
             ></TextField>
             <TextField
               display="flex"
               shrink="0"
               alignSelf="stretch"
-              label="Label"
+              objectFit="cover"
               size="large"
               variation="default"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[2].TextField[1]"
-              )}
+              {...getOverrideProps(overrides, "TextFieldexh")}
             ></TextField>
             <Flex
               gap="24px"
@@ -324,12 +281,10 @@ export default function FormCheckout(props) {
               alignItems="flex-start"
               shrink="0"
               alignSelf="stretch"
+              objectFit="cover"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[0].Flex[0].Flex[2].Flex[0]"
-              )}
+              {...getOverrideProps(overrides, "Frame 410")}
             >
               <SelectField
                 width="289.5px"
@@ -337,13 +292,9 @@ export default function FormCheckout(props) {
                 grow="1"
                 basis="289.5px"
                 height="74px"
-                label="Label"
                 size="large"
                 variation="default"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[0].Flex[2].Flex[0].SelectField[0]"
-                )}
+                {...getOverrideProps(overrides, "SelectFieldemf")}
               ></SelectField>
               <SelectField
                 width="289.5px"
@@ -351,13 +302,9 @@ export default function FormCheckout(props) {
                 grow="1"
                 basis="289.5px"
                 height="74px"
-                label="Label"
                 size="large"
                 variation="default"
-                {...getOverrideProps(
-                  overrides,
-                  "Flex.Flex[0].Flex[0].Flex[2].Flex[0].SelectField[1]"
-                )}
+                {...getOverrideProps(overrides, "SelectFieldsim")}
               ></SelectField>
             </Flex>
           </Flex>
@@ -366,13 +313,14 @@ export default function FormCheckout(props) {
       <Flex
         gap="10px"
         direction="row"
+        width="fit-content"
         alignItems="flex-start"
         shrink="0"
         height="934px"
         position="relative"
         padding="32px 0px 32px 0px"
         backgroundColor="rgba(255,255,255,1)"
-        {...getOverrideProps(overrides, "Flex.Flex[1]")}
+        {...getOverrideProps(overrides, "Frame 412")}
       >
         <Flex
           padding="0px 0px 0px 0px"
@@ -380,7 +328,7 @@ export default function FormCheckout(props) {
           height="870px"
           shrink="0"
           position="relative"
-          {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0]")}
+          {...getOverrideProps(overrides, "Group 320")}
         >
           <View
             padding="0px 0px 0px 0px"
@@ -389,27 +337,24 @@ export default function FormCheckout(props) {
             position="absolute"
             top="194px"
             left="32px"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].View[0]")}
+            {...getOverrideProps(overrides, "Group 314")}
           >
             <Image
               position="absolute"
               top="0%"
-              bottom="2.9850746268656714%"
-              height="97.01492537313433%"
+              bottom="2.99%"
+              height="97.01%"
               left="0%"
-              right="78.02469135802468%"
-              width="21.975308641975317%"
+              right="78.02%"
+              width="21.98%"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[0].Image[0]"
-              )}
+              {...getOverrideProps(overrides, "imagexth")}
             ></Image>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="700"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="20px"
               textAlign="left"
               display="flex"
@@ -417,147 +362,132 @@ export default function FormCheckout(props) {
               justifyContent="flex-start"
               letterSpacing="0.49px"
               position="absolute"
-              top="83.5820895522388%"
-              bottom="1.4925373134328357%"
-              left="29.876543209876544%"
-              right="37.53086419753087%"
+              top="83.58%"
+              bottom="1.49%"
+              left="29.88%"
+              right="37.53%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Order Summary"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[0].Text[0]"
-              )}
+              {...getOverrideProps(overrides, "Order Summarylvv")}
             ></Text>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(92.00000211596489,102.00000151991844,112.000000923872,1)"
+              color="rgba(92,102,112,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
               direction="column"
               justifyContent="flex-start"
-              letterSpacing="0.010000000000000009px"
+              letterSpacing="0.01px"
               position="absolute"
-              top="23.88059701492537%"
-              bottom="58.2089552238806%"
-              left="29.876543209876544%"
-              right="59.75308641975309%"
+              top="23.88%"
+              bottom="58.21%"
+              left="29.88%"
+              right="59.75%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Black"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[0].Text[1]"
-              )}
+              {...getOverrideProps(overrides, "Blackwvc")}
             ></Text>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
               direction="column"
               justifyContent="flex-start"
-              letterSpacing="0.010000000000000009px"
+              letterSpacing="0.01px"
               position="absolute"
               top="0%"
-              bottom="82.08955223880598%"
-              left="29.876543209876544%"
-              right="51.85185185185185%"
+              bottom="82.09%"
+              left="29.88%"
+              right="51.85%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Basic Tee"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[0].Text[2]"
-              )}
+              {...getOverrideProps(overrides, "Basic Teecjx")}
             ></Text>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(92.00000211596489,102.00000151991844,112.000000923872,1)"
+              color="rgba(92,102,112,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
               direction="column"
               justifyContent="flex-start"
-              letterSpacing="0.010000000000000009px"
+              letterSpacing="0.01px"
               position="absolute"
-              top="47.76119402985074%"
-              bottom="34.32835820895522%"
-              left="29.876543209876544%"
-              right="59.25925925925925%"
+              top="47.76%"
+              bottom="34.33%"
+              left="29.88%"
+              right="59.26%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Large"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[0].Text[3]"
-              )}
+              {...getOverrideProps(overrides, "Largetvr")}
             ></Text>
-            <IconDelete
+            <Icon
               position="absolute"
               top="0%"
-              bottom="82.08955223880598%"
-              left="94.07407407407408%"
+              bottom="82.09%"
+              left="94.07%"
               right="0%"
               overflow="hidden"
               padding="0px 0px 0px 0px"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
               type="delete"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[0].IconDelete[0]"
-              )}
-            ></IconDelete>
+              {...getOverrideProps(overrides, "Iconlpq")}
+            ></Icon>
             <SelectField
               width="64px"
               position="absolute"
               display="flex"
-              top="77.61194029850746%"
+              top="77.61%"
               bottom="0%"
-              left="84.19753086419753%"
+              left="84.2%"
               right="0%"
               size="small"
-              labelHidden="true"
+              labelHidden={true}
               variation="default"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[0].SelectField[0]"
-              )}
+              {...getOverrideProps(overrides, "SelectFieldsuv")}
             ></SelectField>
           </View>
           <Divider
             position="absolute"
-            top="41.60919540229885%"
-            bottom="58.27586206896552%"
+            top="41.61%"
+            bottom="58.28%"
             left="0%"
             right="0%"
             size="small"
             orientation="horizontal"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].Divider[0]")}
+            {...getOverrideProps(overrides, "Dividerraj")}
           ></Divider>
           <Divider
             position="absolute"
-            top="18.50574712643678%"
-            bottom="81.37931034482759%"
+            top="18.51%"
+            bottom="81.38%"
             left="0%"
             right="0%"
             size="small"
             orientation="horizontal"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].Divider[1]")}
+            {...getOverrideProps(overrides, "Dividerwlu")}
           ></Divider>
           <Divider
             position="absolute"
-            top="8.275862068965518%"
-            bottom="91.60919540229885%"
+            top="8.28%"
+            bottom="91.61%"
             left="0%"
             right="0%"
             size="small"
             orientation="horizontal"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].Divider[2]")}
+            {...getOverrideProps(overrides, "Dividerpqn")}
           ></Divider>
           <View
             padding="0px 0px 0px 0px"
@@ -566,27 +496,24 @@ export default function FormCheckout(props) {
             position="absolute"
             top="395px"
             left="32px"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].View[1]")}
+            {...getOverrideProps(overrides, "Group 315")}
           >
             <Image
               position="absolute"
               top="0%"
-              bottom="2.9850746268656714%"
-              height="97.01492537313433%"
+              bottom="2.99%"
+              height="97.01%"
               left="0%"
-              right="78.02469135802468%"
-              width="21.975308641975317%"
+              right="78.02%"
+              width="21.98%"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[1].Image[0]"
-              )}
+              {...getOverrideProps(overrides, "imageqdo")}
             ></Image>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="700"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="20px"
               textAlign="left"
               display="flex"
@@ -594,127 +521,112 @@ export default function FormCheckout(props) {
               justifyContent="flex-start"
               letterSpacing="0.49px"
               position="absolute"
-              top="83.5820895522388%"
-              bottom="1.4925373134328357%"
-              left="29.876543209876544%"
-              right="37.53086419753087%"
+              top="83.58%"
+              bottom="1.49%"
+              left="29.88%"
+              right="37.53%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Order Summary"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[1].Text[0]"
-              )}
+              {...getOverrideProps(overrides, "Order Summaryzxr")}
             ></Text>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(92.00000211596489,102.00000151991844,112.000000923872,1)"
+              color="rgba(92,102,112,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
               direction="column"
               justifyContent="flex-start"
-              letterSpacing="0.010000000000000009px"
+              letterSpacing="0.01px"
               position="absolute"
-              top="23.88059701492537%"
-              bottom="58.2089552238806%"
-              left="29.876543209876544%"
-              right="59.75308641975309%"
+              top="23.88%"
+              bottom="58.21%"
+              left="29.88%"
+              right="59.75%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Black"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[1].Text[1]"
-              )}
+              {...getOverrideProps(overrides, "Blackinr")}
             ></Text>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
               direction="column"
               justifyContent="flex-start"
-              letterSpacing="0.010000000000000009px"
+              letterSpacing="0.01px"
               position="absolute"
               top="0%"
-              bottom="82.08955223880598%"
-              left="29.876543209876544%"
-              right="51.85185185185185%"
+              bottom="82.09%"
+              left="29.88%"
+              right="51.85%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Basic Tee"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[1].Text[2]"
-              )}
+              {...getOverrideProps(overrides, "Basic Teesmn")}
             ></Text>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(92.00000211596489,102.00000151991844,112.000000923872,1)"
+              color="rgba(92,102,112,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
               direction="column"
               justifyContent="flex-start"
-              letterSpacing="0.010000000000000009px"
+              letterSpacing="0.01px"
               position="absolute"
-              top="47.76119402985074%"
-              bottom="34.32835820895522%"
-              left="29.876543209876544%"
-              right="59.25925925925925%"
+              top="47.76%"
+              bottom="34.33%"
+              left="29.88%"
+              right="59.26%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Large"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[1].Text[3]"
-              )}
+              {...getOverrideProps(overrides, "Largeffs")}
             ></Text>
-            <IconDelete
+            <Icon
               position="absolute"
               top="0%"
-              bottom="82.08955223880598%"
-              left="94.07407407407408%"
+              bottom="82.09%"
+              left="94.07%"
               right="0%"
               overflow="hidden"
               padding="0px 0px 0px 0px"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
               type="delete"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[1].IconDelete[0]"
-              )}
-            ></IconDelete>
+              {...getOverrideProps(overrides, "Iconwwm")}
+            ></Icon>
             <SelectField
               width="64px"
               position="absolute"
               display="flex"
-              top="77.61194029850746%"
+              top="77.61%"
               bottom="0%"
-              left="84.19753086419753%"
+              left="84.2%"
               right="0%"
               size="small"
-              labelHidden="true"
+              labelHidden={true}
               variation="default"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[1].SelectField[0]"
-              )}
+              {...getOverrideProps(overrides, "SelectFieldgdy")}
             ></SelectField>
           </View>
           <Divider
             position="absolute"
-            top="64.71264367816092%"
-            bottom="35.172413793103445%"
+            top="64.71%"
+            bottom="35.17%"
             left="0%"
             right="0%"
             size="small"
             orientation="horizontal"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].Divider[3]")}
+            {...getOverrideProps(overrides, "Dividervpb")}
           ></Divider>
           <View
             padding="0px 0px 0px 0px"
@@ -723,53 +635,49 @@ export default function FormCheckout(props) {
             position="absolute"
             top="596px"
             left="32px"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].View[2]")}
+            {...getOverrideProps(overrides, "Group 316")}
           >
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(48.000000938773155,64.00000378489494,80.00000283122063,1)"
+              color="rgba(48,64,80,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
               direction="column"
               justifyContent="flex-start"
-              letterSpacing="0.010000000000000009px"
+              letterSpacing="0.01px"
               position="absolute"
               top="0%"
               bottom="0%"
               left="0%"
-              right="80.80233726972416%"
+              right="80.8%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Subtotal"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[2].Text[0]"
-              )}
+              {...getOverrideProps(overrides, "Subtotal")}
             ></Text>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="24px"
               textAlign="right"
               display="flex"
               direction="column"
               justifyContent="flex-start"
-              letterSpacing="0.010000000000000009px"
+              letterSpacing="0.01px"
               position="absolute"
               top="0%"
               bottom="0%"
-              left="83.9506172839506%"
+              left="83.95%"
               right="0%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="$320.00"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[2].Text[1]"
-              )}
+              {...getOverrideProps(overrides, "$320.00")}
             ></Text>
           </View>
           <View
@@ -779,53 +687,49 @@ export default function FormCheckout(props) {
             position="absolute"
             top="636px"
             left="32px"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].View[3]")}
+            {...getOverrideProps(overrides, "Group 317")}
           >
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(48.000000938773155,64.00000378489494,80.00000283122063,1)"
+              color="rgba(48,64,80,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
               direction="column"
               justifyContent="flex-start"
-              letterSpacing="0.010000000000000009px"
+              letterSpacing="0.01px"
               position="absolute"
               top="0%"
               bottom="0%"
               left="0%"
-              right="80.211641288098%"
+              right="80.21%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Shipping"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[3].Text[0]"
-              )}
+              {...getOverrideProps(overrides, "Shippingpha")}
             ></Text>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="24px"
               textAlign="right"
               display="flex"
               direction="column"
               justifyContent="flex-start"
-              letterSpacing="0.010000000000000009px"
+              letterSpacing="0.01px"
               position="absolute"
               top="0%"
               bottom="0%"
-              left="87.1604938271605%"
+              left="87.16%"
               right="0%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="$15.00"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[3].Text[1]"
-              )}
+              {...getOverrideProps(overrides, "$15.00")}
             ></Text>
           </View>
           <View
@@ -835,64 +739,60 @@ export default function FormCheckout(props) {
             position="absolute"
             top="676px"
             left="32px"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].View[4]")}
+            {...getOverrideProps(overrides, "Group 318")}
           >
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(48.000000938773155,64.00000378489494,80.00000283122063,1)"
+              color="rgba(48,64,80,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
               direction="column"
               justifyContent="flex-start"
-              letterSpacing="0.010000000000000009px"
+              letterSpacing="0.01px"
               position="absolute"
               top="0%"
               bottom="0%"
               left="0%"
-              right="86.70931121449411%"
+              right="86.71%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Taxes"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[4].Text[0]"
-              )}
+              {...getOverrideProps(overrides, "Taxes")}
             ></Text>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="400"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="24px"
               textAlign="right"
               display="flex"
               direction="column"
               justifyContent="flex-start"
-              letterSpacing="0.010000000000000009px"
+              letterSpacing="0.01px"
               position="absolute"
               top="0%"
               bottom="0%"
-              left="86.41975308641975%"
+              left="86.42%"
               right="0%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="$26.80"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[4].Text[1]"
-              )}
+              {...getOverrideProps(overrides, "$26.80")}
             ></Text>
           </View>
           <Divider
             position="absolute"
-            top="82.29885057471265%"
-            bottom="17.586206896551722%"
-            left="6.823027718550106%"
-            right="6.823027718550106%"
+            top="82.3%"
+            bottom="17.59%"
+            left="6.82%"
+            right="6.82%"
             size="small"
             orientation="horizontal"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].Divider[4]")}
+            {...getOverrideProps(overrides, "Dividerkpw")}
           ></Divider>
           <View
             padding="0px 0px 0px 0px"
@@ -901,13 +801,13 @@ export default function FormCheckout(props) {
             position="absolute"
             top="733px"
             left="32px"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].View[5]")}
+            {...getOverrideProps(overrides, "Group 319")}
           >
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="700"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="20px"
               textAlign="left"
               display="flex"
@@ -918,19 +818,17 @@ export default function FormCheckout(props) {
               top="0%"
               bottom="0%"
               left="0%"
-              right="87.59535707073447%"
+              right="87.6%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Total"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[5].Text[0]"
-              )}
+              {...getOverrideProps(overrides, "Total")}
             ></Text>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="700"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="20px"
               textAlign="right"
               display="flex"
@@ -940,38 +838,35 @@ export default function FormCheckout(props) {
               position="absolute"
               top="0%"
               bottom="0%"
-              left="82.96296296296296%"
+              left="82.96%"
               right="0%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="$361.80"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[5].Text[1]"
-              )}
+              {...getOverrideProps(overrides, "$361.80")}
             ></Text>
           </View>
           <Divider
             position="absolute"
-            top="90.6896551724138%"
-            bottom="9.195402298850574%"
+            top="90.69%"
+            bottom="9.2%"
             left="0%"
             right="0%"
             size="small"
             orientation="horizontal"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].Divider[5]")}
+            {...getOverrideProps(overrides, "Dividerihy")}
           ></Divider>
           <Button
             position="absolute"
             display="flex"
-            top="94.48275862068965%"
+            top="94.48%"
             bottom="0%"
-            left="6.823027718550106%"
-            right="6.823027718550106%"
+            left="6.82%"
+            right="6.82%"
             width="405px"
             size="large"
             variation="primary"
-            children="Place Order"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].Button[0]")}
+            {...getOverrideProps(overrides, "Button")}
           ></Button>
           <View
             padding="0px 0px 0px 0px"
@@ -980,27 +875,24 @@ export default function FormCheckout(props) {
             position="absolute"
             top="105px"
             left="32px"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].View[6]")}
+            {...getOverrideProps(overrides, "Group 313")}
           >
-            <IconShoppingBag
+            <Icon
               position="absolute"
               top="0%"
               bottom="0%"
               left="0%"
-              right="94.07407407407408%"
+              right="94.07%"
               overflow="hidden"
               padding="0px 0px 0px 0px"
               type="shopping_bag"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[6].IconShoppingBag[0]"
-              )}
-            ></IconShoppingBag>
+              {...getOverrideProps(overrides, "Iconcpu")}
+            ></Icon>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="700"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="24px"
               textAlign="left"
               display="flex"
@@ -1009,20 +901,18 @@ export default function FormCheckout(props) {
               position="absolute"
               top="0%"
               bottom="0%"
-              left="9.876543209876543%"
-              right="74.81481481481481%"
+              left="9.88%"
+              right="74.81%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="Cart (2)"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[6].Text[0]"
-              )}
+              {...getOverrideProps(overrides, "Cart (2)")}
             ></Text>
             <Text
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="700"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(13,26,38,1)"
               lineHeight="24px"
               textAlign="right"
               display="flex"
@@ -1031,36 +921,24 @@ export default function FormCheckout(props) {
               position="absolute"
               top="0%"
               bottom="0%"
-              left="84.69135802469135%"
+              left="84.69%"
               right="0%"
               padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
               children="$101.70"
-              {...getOverrideProps(
-                overrides,
-                "Flex.Flex[1].Flex[0].View[6].Text[1]"
-              )}
+              {...getOverrideProps(overrides, "$101.70")}
             ></Text>
           </View>
           <Badge
-            color="rgba(54.00000058114529,94.0000019967556,61.00000016391277,1)"
             position="absolute"
-            backgroundColor="rgba(214.00000244379044,245.00000059604645,219.0000021457672,1)"
+            backgroundColor="rgba(214,245,219,1)"
             display="flex"
             top="0px"
             left="32px"
             width="405px"
-            fontFamily="Inter"
-            fontWeight="700"
-            fontSize="16px"
-            textAlign="left"
-            lineHeight="20px"
-            direction="column"
-            justifyContent="flex-start"
-            letterSpacing="0.49px"
             size="default"
             variation="success"
-            children="Discount - 10% off"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].Badge[0]")}
+            {...getOverrideProps(overrides, "Badge")}
           ></Badge>
         </Flex>
       </Flex>

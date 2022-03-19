@@ -9,8 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function CardA(props) {
-  const { image, overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { image, overrides, ...rest } = props;
   return (
     <Flex
       gap="16px"
@@ -20,63 +19,66 @@ export default function CardA(props) {
       padding="0px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "CardA")}
     >
       <Image
-        width="320px"
         height="400px"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
         src={image?.images}
-        {...getOverrideProps(overrides, "Flex.Image[0]")}
+        {...getOverrideProps(overrides, "image")}
       ></Image>
       <Flex
         gap="8px"
         direction="column"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[0]")}
+        {...getOverrideProps(overrides, "Text Grouping")}
       >
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+          color="rgba(13,26,38,1)"
           lineHeight="24px"
           textAlign="center"
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          letterSpacing="0.010000000000000009px"
-          width="320px"
+          letterSpacing="0.01px"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="Connect with your partner"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[0]")}
+          {...getOverrideProps(overrides, "Classic Long Sleeve T-Shirt")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="14px"
           fontWeight="400"
-          color="rgba(48.000000938773155,64.00000378489494,80.00000283122063,1)"
+          color="rgba(48,64,80,1)"
           lineHeight="24px"
           textAlign="center"
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          width="320px"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
           children="Enjoy your time"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[1]")}
+          {...getOverrideProps(overrides, "$99")}
         ></Text>
       </Flex>
     </Flex>

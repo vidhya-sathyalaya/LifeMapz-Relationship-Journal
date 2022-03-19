@@ -11,14 +11,13 @@ import {
   Button,
   Divider,
   Flex,
-  IconClose,
+  Icon,
   Image,
   Text,
   TextField,
 } from "@aws-amplify/ui-react";
 export default function EditProfile(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="16px"
@@ -28,16 +27,17 @@ export default function EditProfile(props) {
       padding="24px 0px 24px 0px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "EditProfile")}
     >
       <Flex
         gap="24px"
         direction="column"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[0]")}
+        {...getOverrideProps(overrides, "Content")}
       >
         <Flex
           gap="16px"
@@ -45,30 +45,27 @@ export default function EditProfile(props) {
           alignItems="center"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="0px 24px 0px 24px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0]")}
+          {...getOverrideProps(overrides, "Edit Profile")}
         >
-          <IconClose
+          <Icon
             width="24px"
             height="24px"
             shrink="0"
             overflow="hidden"
             position="relative"
             padding="0px 0px 0px 0px"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
             type="close"
             fontSize="24px"
-            {...getOverrideProps(
-              overrides,
-              "Flex.Flex[0].Flex[0].IconClose[0]"
-            )}
-          ></IconClose>
+            {...getOverrideProps(overrides, "Icon")}
+          ></Icon>
           <Text
             fontFamily="Inter"
             fontSize="16px"
             fontWeight="700"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            color="rgba(13,26,38,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
@@ -77,17 +74,18 @@ export default function EditProfile(props) {
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Edit Profile"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Text[0]")}
+            {...getOverrideProps(overrides, "Edit Profiletne")}
           ></Text>
         </Flex>
         <Divider
-          width="640px"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Divider[0]")}
+          {...getOverrideProps(overrides, "Dividerzit")}
         ></Divider>
         <Flex
           gap="16px"
@@ -95,9 +93,10 @@ export default function EditProfile(props) {
           alignItems="center"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="0px 0px 0px 24px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1]")}
+          {...getOverrideProps(overrides, "Profile")}
         >
           <Image
             width="96px"
@@ -106,13 +105,13 @@ export default function EditProfile(props) {
             position="relative"
             borderRadius="160px"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1].Image[0]")}
+            {...getOverrideProps(overrides, "image")}
           ></Image>
           <Text
             fontFamily="Inter"
             fontSize="16px"
             fontWeight="400"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            color="rgba(13,26,38,1)"
             lineHeight="22px"
             textAlign="left"
             display="flex"
@@ -122,8 +121,9 @@ export default function EditProfile(props) {
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Upload New Image"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1].Text[0]")}
+            {...getOverrideProps(overrides, "Upload New Image")}
           ></Text>
         </Flex>
         <Flex
@@ -131,73 +131,63 @@ export default function EditProfile(props) {
           direction="column"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="0px 24px 0px 24px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[2]")}
+          {...getOverrideProps(overrides, "Forms")}
         >
           <TextField
-            label="name"
             display="flex"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             size="default"
             variation="default"
-            {...getOverrideProps(
-              overrides,
-              "Flex.Flex[0].Flex[2].TextField[0]"
-            )}
+            {...getOverrideProps(overrides, "TextFieldzoo")}
           ></TextField>
           <TextField
-            label="location"
             display="flex"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             size="default"
             variation="default"
-            {...getOverrideProps(
-              overrides,
-              "Flex.Flex[0].Flex[2].TextField[1]"
-            )}
+            {...getOverrideProps(overrides, "TextFielddqm")}
           ></TextField>
           <TextField
-            label="email"
             display="flex"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             size="default"
             variation="default"
-            {...getOverrideProps(
-              overrides,
-              "Flex.Flex[0].Flex[2].TextField[2]"
-            )}
+            {...getOverrideProps(overrides, "TextFieldxog")}
           ></TextField>
         </Flex>
         <Divider
-          width="640px"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Divider[1]")}
+          {...getOverrideProps(overrides, "Dividerlcs")}
         ></Divider>
         <Flex
           gap="10px"
           direction="column"
           shrink="0"
-          width="97px"
           position="relative"
           padding="0px 0px 0px 24px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[3]")}
+          {...getOverrideProps(overrides, "Save")}
         >
           <Button
             padding="8px 16px 8px 16px"
             display="flex"
+            width="fit-content"
             shrink="0"
-            width="73px"
             size="default"
             variation="primary"
-            children="Save"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[3].Button[0]")}
+            {...getOverrideProps(overrides, "Button")}
           ></Button>
         </Flex>
       </Flex>

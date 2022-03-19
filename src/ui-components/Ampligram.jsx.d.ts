@@ -5,9 +5,15 @@
  **************************************************************************/
 
 import React from "react";
+import { Images, JournalEntry, TextEntry, User } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type AmpligramProps = React.PropsWithChildren<Partial<FlexProps> & {
+    journalEntry?: JournalEntry;
+    user?: User;
+    textEntry?: TextEntry;
+    images?: Images;
+} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function Ampligram(props: AmpligramProps): React.ReactElement;
