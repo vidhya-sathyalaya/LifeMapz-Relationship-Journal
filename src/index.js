@@ -3,9 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-import Amplify from "aws-amplify";
+import { JournalEntryFeedCollection } from './ui-components';
+import Amplify from 'aws-amplify';
+import "@aws-amplify/ui-react/styles.css";
 import awsExports from "./aws-exports";
+import {AmplifyProvider} from "@aws-amplify/ui-react";
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
+
+
 Amplify.configure(awsExports);
 
 ReactDOM.render(
@@ -20,14 +26,14 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-      <p> Hello World! </p>
-    </div>
-  );
- }
- export default App;
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//       </header>
+//       <p> Hello World! </p>
+//     </div>
+//   );
+//  }
+//  export default App;
  
