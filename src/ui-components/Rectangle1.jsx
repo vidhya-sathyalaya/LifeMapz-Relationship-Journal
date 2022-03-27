@@ -7,31 +7,28 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import CardA from "./CardA";
-import { Flex } from "@aws-amplify/ui-react";
-export default function CardACopied(props) {
+import { View } from "@aws-amplify/ui-react";
+export default function Rectangle1(props) {
   const { overrides, ...rest } = props;
   return (
-    <Flex
-      gap="0"
-      direction="column"
+    <View
+      width="280px"
+      height="64px"
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "CardACopied")}
+      {...getOverrideProps(overrides, "Rectangle1")}
     >
-      <CardA
-        display="flex"
-        gap="16px"
-        direction="column"
-        justifyContent="center"
-        shrink="0"
-        position="relative"
+      <View
+        position="absolute"
+        top="0%"
+        bottom="0%"
+        left="0%"
+        right="0%"
         padding="0px 0px 0px 0px"
-        backgroundColor="rgba(0,85,102,1)"
-        label="Find you partner"
-        {...getOverrideProps(overrides, "CardA")}
-      ></CardA>
-    </Flex>
+        backgroundColor="rgba(196,196,196,1)"
+        {...getOverrideProps(overrides, "Rectangle 1")}
+      ></View>
+    </View>
   );
 }

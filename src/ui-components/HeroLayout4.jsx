@@ -95,7 +95,7 @@ export default function HeroLayout4(props) {
           children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           {...getOverrideProps(
             overrides,
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.ibl"
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.wan"
           )}
         ></Text>
         <Flex
@@ -110,20 +110,34 @@ export default function HeroLayout4(props) {
         >
           <TextField
             display="flex"
+            gap="4px"
+            direction="column"
             shrink="0"
             height="36px"
+            position="relative"
+            padding="0px 0px 0px 0px"
             size="default"
+            isDisabled={false}
             labelHidden={true}
             variation="default"
+            isMultiline={false}
             {...getOverrideProps(overrides, "TextField")}
           ></TextField>
           <Button
-            padding="8px 16px 8px 16px"
             display="flex"
+            gap="10px"
+            direction="row"
             width="fit-content"
+            justifyContent="center"
+            alignItems="center"
             shrink="0"
             height="36px"
+            position="relative"
+            borderRadius="4px"
+            padding="8px 16px 8px 16px"
+            backgroundColor="rgba(4,125,149,1)"
             size="default"
+            isDisabled={false}
             variation="primary"
             {...getOverrideProps(overrides, "Button")}
           ></Button>
@@ -147,7 +161,7 @@ export default function HeroLayout4(props) {
           children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           {...getOverrideProps(
             overrides,
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.ksj"
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.uoe"
           )}
         ></Text>
       </Flex>

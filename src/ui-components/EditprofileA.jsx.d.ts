@@ -5,9 +5,12 @@
  **************************************************************************/
 
 import React from "react";
+import { User } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type NavBarProps = React.PropsWithChildren<Partial<FlexProps> & {
+import { ViewProps } from "@aws-amplify/ui-react";
+export declare type EditprofileAProps = React.PropsWithChildren<Partial<ViewProps> & {
+    edirprofcard?: User;
+} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function NavBar(props: NavBarProps): React.ReactElement;
+export default function EditprofileA(props: EditprofileAProps): React.ReactElement;

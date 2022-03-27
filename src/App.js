@@ -6,6 +6,9 @@ import awsconfig from './aws-exports';
 import { NavBar } from './ui-components';
 import { FrontPage1 } from './ui-components';
 import { Footer1 } from './ui-components';
+import { 
+  Frame418 
+} from './ui-components';
 Amplify.configure(awsconfig);
 
 
@@ -36,6 +39,7 @@ function App() {
         <div>
           <FrontPage1 overrides={fpg1}/>
           <Footer1 overrides={fott1}/>
+          <Frame418 />
         </div>
         </div>
       // </AmplifyProvider>

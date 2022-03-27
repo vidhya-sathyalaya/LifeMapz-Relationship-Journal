@@ -33,12 +33,17 @@ export default function CardE(props) {
         {...getOverrideProps(overrides, "Corners")}
       >
         <Badge
+          display="flex"
           gap="0"
           position="absolute"
-          padding="4px 8px 4px 8px"
-          display="flex"
           top="0px"
           left="0px"
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          borderRadius="99px"
+          padding="4px 8px 4px 8px"
+          backgroundColor="rgba(239,240,240,1)"
           size="small"
           variation="default"
           {...getOverrideProps(overrides, "Badge")}

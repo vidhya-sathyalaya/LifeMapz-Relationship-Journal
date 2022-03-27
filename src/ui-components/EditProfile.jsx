@@ -57,6 +57,15 @@ export default function EditProfile(props) {
             overflow="hidden"
             position="relative"
             padding="0px 0px 0px 0px"
+            viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+            paths={[
+              {
+                d: "M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z",
+                fill: "rgba(13,26,38,1)",
+                fillRule: "nonzero",
+                style: { transform: "translate(20.83%, 20.83%)" },
+              },
+            ]}
             type="close"
             fontSize="24px"
             {...getOverrideProps(overrides, "Icon")}
@@ -76,16 +85,19 @@ export default function EditProfile(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Edit Profile"
-            {...getOverrideProps(overrides, "Edit Profiletne")}
+            {...getOverrideProps(overrides, "Edit Profilerjr")}
           ></Text>
         </Flex>
         <Divider
+          height="1px"
           shrink="0"
           alignSelf="stretch"
           objectFit="cover"
+          position="relative"
+          padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Dividerzit")}
+          {...getOverrideProps(overrides, "Dividernvu")}
         ></Divider>
         <Flex
           gap="16px"
@@ -138,39 +150,63 @@ export default function EditProfile(props) {
         >
           <TextField
             display="flex"
+            gap="4px"
+            direction="column"
             shrink="0"
             alignSelf="stretch"
             objectFit="cover"
+            position="relative"
+            padding="0px 0px 0px 0px"
             size="default"
+            isDisabled={false}
+            labelHidden={false}
             variation="default"
-            {...getOverrideProps(overrides, "TextFieldzoo")}
+            isMultiline={false}
+            {...getOverrideProps(overrides, "TextFieldeet")}
           ></TextField>
           <TextField
             display="flex"
+            gap="4px"
+            direction="column"
             shrink="0"
             alignSelf="stretch"
             objectFit="cover"
+            position="relative"
+            padding="0px 0px 0px 0px"
             size="default"
+            isDisabled={false}
+            labelHidden={false}
             variation="default"
-            {...getOverrideProps(overrides, "TextFielddqm")}
+            isMultiline={false}
+            {...getOverrideProps(overrides, "TextFieldszl")}
           ></TextField>
           <TextField
             display="flex"
+            gap="4px"
+            direction="column"
             shrink="0"
             alignSelf="stretch"
             objectFit="cover"
+            position="relative"
+            padding="0px 0px 0px 0px"
             size="default"
+            isDisabled={false}
+            labelHidden={false}
             variation="default"
-            {...getOverrideProps(overrides, "TextFieldxog")}
+            isMultiline={false}
+            {...getOverrideProps(overrides, "TextFieldswv")}
           ></TextField>
         </Flex>
         <Divider
+          height="1px"
           shrink="0"
           alignSelf="stretch"
           objectFit="cover"
+          position="relative"
+          padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Dividerlcs")}
+          {...getOverrideProps(overrides, "Dividergeb")}
         ></Divider>
         <Flex
           gap="10px"
@@ -181,11 +217,19 @@ export default function EditProfile(props) {
           {...getOverrideProps(overrides, "Save")}
         >
           <Button
-            padding="8px 16px 8px 16px"
             display="flex"
+            gap="10px"
+            direction="row"
             width="fit-content"
+            justifyContent="center"
+            alignItems="center"
             shrink="0"
+            position="relative"
+            borderRadius="4px"
+            padding="8px 16px 8px 16px"
+            backgroundColor="rgba(4,125,149,1)"
             size="default"
+            isDisabled={false}
             variation="primary"
             {...getOverrideProps(overrides, "Button")}
           ></Button>
