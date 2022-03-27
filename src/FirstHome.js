@@ -16,7 +16,7 @@ import {
 Amplify.configure(awsconfig);
 
 
-function Home() {
+function FirstHome() {
   const imageOverrides = {
     "image":{
        src: "https://www.bootdey.com/app/webroot/img/Content/avatar/avatar1.png",
@@ -49,4 +49,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default FirstHome;

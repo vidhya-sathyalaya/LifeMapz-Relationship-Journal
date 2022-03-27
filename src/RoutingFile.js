@@ -3,7 +3,7 @@ import "@aws-amplify/ui-react/styles.css";
 
 import awsconfig from './aws-exports';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import Home from './Home';
+import FirstHome from './FirstHome';
 // import { history } from 'react-router';
 
 Amplify.configure(awsconfig);
@@ -13,9 +13,9 @@ function RoutingFile() {
     <Router >
         <Switch>
             {/* // You can use both the ways to load any component !! */}
-            <Route path='/' render={() => <Home/>} />
+            <Route path='/' render={() => <FirstHome/>} />
 
-            <Route path='/test' ><Home/></Route>
+            <Route path='/test' ><FirstHome/></Route>
         </Switch>
     </Router>
     );
