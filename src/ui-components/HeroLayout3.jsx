@@ -117,9 +117,18 @@ export default function HeroLayout3(props) {
         </Flex>
         <Button
           display="flex"
+          gap="10px"
+          direction="row"
           width="fit-content"
+          justifyContent="center"
+          alignItems="center"
           shrink="0"
+          position="relative"
+          borderRadius="4px"
+          padding="12px 24px 12px 24px"
+          backgroundColor="rgba(4,125,149,1)"
           size="large"
+          isDisabled={false}
           variation="primary"
           {...getOverrideProps(overrides, "Button")}
         ></Button>

@@ -119,7 +119,7 @@ export default function FeaturesText2x2(props) {
               height="176px"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 136dsl")}
+              {...getOverrideProps(overrides, "Frame 136twr")}
             >
               <Icon
                 width="40px"
@@ -128,9 +128,18 @@ export default function FeaturesText2x2(props) {
                 overflow="hidden"
                 position="relative"
                 padding="0px 0px 0px 0px"
+                viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+                paths={[
+                  {
+                    d: "M16 0L2 0C0.89 0 0 0.9 0 2L0 16C0 17.1 0.89 18 2 18L16 18C17.1 18 18 17.1 18 16L18 2C18 0.9 17.1 0 16 0ZM16 16L2 16L2 2L16 2L16 16ZM8 14L10 14L10 10L14 10L14 8L10 8L10 4L8 4L8 8L4 8L4 10L8 10L8 14Z",
+                    fill: "rgba(13,26,38,1)",
+                    fillRule: "nonzero",
+                    style: { transform: "translate(12.5%, 12.5%)" },
+                  },
+                ]}
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(overrides, "Icontop")}
+                {...getOverrideProps(overrides, "Iconvmi")}
               ></Icon>
               <Text
                 fontFamily="Inter"
@@ -171,7 +180,7 @@ export default function FeaturesText2x2(props) {
                 children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 {...getOverrideProps(
                   overrides,
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.nkn"
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.ghl"
                 )}
               ></Text>
             </Flex>
@@ -184,7 +193,7 @@ export default function FeaturesText2x2(props) {
               height="176px"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 376uxl")}
+              {...getOverrideProps(overrides, "Frame 376mzu")}
             >
               <Icon
                 width="40px"
@@ -193,9 +202,18 @@ export default function FeaturesText2x2(props) {
                 overflow="hidden"
                 position="relative"
                 padding="0px 0px 0px 0px"
+                viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+                paths={[
+                  {
+                    d: "M16 0L2 0C0.89 0 0 0.9 0 2L0 16C0 17.1 0.89 18 2 18L16 18C17.1 18 18 17.1 18 16L18 2C18 0.9 17.1 0 16 0ZM16 16L2 16L2 2L16 2L16 16ZM8 14L10 14L10 10L14 10L14 8L10 8L10 4L8 4L8 8L4 8L4 10L8 10L8 14Z",
+                    fill: "rgba(13,26,38,1)",
+                    fillRule: "nonzero",
+                    style: { transform: "translate(12.5%, 12.5%)" },
+                  },
+                ]}
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(overrides, "Iconfke")}
+                {...getOverrideProps(overrides, "Iconcob")}
               ></Icon>
               <Text
                 fontFamily="Inter"
@@ -236,7 +254,7 @@ export default function FeaturesText2x2(props) {
                 children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 {...getOverrideProps(
                   overrides,
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.gsh"
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.kex"
                 )}
               ></Text>
             </Flex>
@@ -261,7 +279,7 @@ export default function FeaturesText2x2(props) {
               height="176px"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 136ivn")}
+              {...getOverrideProps(overrides, "Frame 136xvb")}
             >
               <Icon
                 width="40px"
@@ -270,9 +288,18 @@ export default function FeaturesText2x2(props) {
                 overflow="hidden"
                 position="relative"
                 padding="0px 0px 0px 0px"
+                viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+                paths={[
+                  {
+                    d: "M16 0L2 0C0.89 0 0 0.9 0 2L0 16C0 17.1 0.89 18 2 18L16 18C17.1 18 18 17.1 18 16L18 2C18 0.9 17.1 0 16 0ZM16 16L2 16L2 2L16 2L16 16ZM8 14L10 14L10 10L14 10L14 8L10 8L10 4L8 4L8 8L4 8L4 10L8 10L8 14Z",
+                    fill: "rgba(13,26,38,1)",
+                    fillRule: "nonzero",
+                    style: { transform: "translate(12.5%, 12.5%)" },
+                  },
+                ]}
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(overrides, "Iconcea")}
+                {...getOverrideProps(overrides, "Iconjfo")}
               ></Icon>
               <Text
                 fontFamily="Inter"
@@ -313,7 +340,7 @@ export default function FeaturesText2x2(props) {
                 children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 {...getOverrideProps(
                   overrides,
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.aqv"
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.jan"
                 )}
               ></Text>
             </Flex>
@@ -326,7 +353,7 @@ export default function FeaturesText2x2(props) {
               height="176px"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 376xco")}
+              {...getOverrideProps(overrides, "Frame 376oia")}
             >
               <Icon
                 width="40px"
@@ -335,9 +362,18 @@ export default function FeaturesText2x2(props) {
                 overflow="hidden"
                 position="relative"
                 padding="0px 0px 0px 0px"
+                viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+                paths={[
+                  {
+                    d: "M16 0L2 0C0.89 0 0 0.9 0 2L0 16C0 17.1 0.89 18 2 18L16 18C17.1 18 18 17.1 18 16L18 2C18 0.9 17.1 0 16 0ZM16 16L2 16L2 2L16 2L16 16ZM8 14L10 14L10 10L14 10L14 8L10 8L10 4L8 4L8 8L4 8L4 10L8 10L8 14Z",
+                    fill: "rgba(13,26,38,1)",
+                    fillRule: "nonzero",
+                    style: { transform: "translate(12.5%, 12.5%)" },
+                  },
+                ]}
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(overrides, "Iconhzr")}
+                {...getOverrideProps(overrides, "Iconsln")}
               ></Icon>
               <Text
                 fontFamily="Inter"
@@ -378,7 +414,7 @@ export default function FeaturesText2x2(props) {
                 children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 {...getOverrideProps(
                   overrides,
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.odo"
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.dyi"
                 )}
               ></Text>
             </Flex>

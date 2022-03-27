@@ -7,7 +7,7 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Image, View } from "@aws-amplify/ui-react";
+import { Image, Text, View } from "@aws-amplify/ui-react";
 export default function Sample11(props) {
   const { overrides, ...rest } = props;
   return (
@@ -30,6 +30,29 @@ export default function Sample11(props) {
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Rectangle 1165")}
       ></Image>
+      <Text
+        fontFamily="Roboto"
+        fontSize="96px"
+        fontWeight="400"
+        color="rgba(255,255,255,1)"
+        lineHeight="112.5px"
+        textAlign="left"
+        display="flex"
+        direction="column"
+        justifyContent="flex-start"
+        width="6886px"
+        height="362px"
+        position="absolute"
+        top="1722px"
+        left="246px"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children="MANY PEOPLE FEEL AFRAID OF REALLY OPENING UP AND BEING VULNERABLE BECAUSE THEY DON'T WANT TO BE JUDGED OR REJECTED. AND, IN THIS FEAR, MANY RELATIONSHIPS GET REDUCED TO SUPERFICIALITIES&#xA;-IBEN SANDAHL"
+        {...getOverrideProps(
+          overrides,
+          "MANY PEOPLE FEEL AFRAID OF REALLY OPENING UP AND BEING VULNERABLE BECAUSE THEY DON'T WANT TO BE JUDGED OR REJECTED. AND, IN THIS FEAR, MANY RELATIONSHIPS GET REDUCED TO SUPERFICIALITIES -IBEN SANDAHL"
+        )}
+      ></Text>
     </View>
   );
 }

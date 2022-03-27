@@ -32,14 +32,21 @@ export default function HeroLayout2(props) {
         {...getOverrideProps(overrides, "image")}
       ></Image>
       <HeroLayout3
-        height="858px"
-        position="absolute"
-        backgroundColor="rgba(0,0,0,0.5)"
         display="flex"
+        gap="10px"
+        position="absolute"
         top="0%"
         bottom="0%"
         left="0%"
         right="0%"
+        direction="column"
+        width="1440px"
+        height="858px"
+        justifyContent="center"
+        alignItems="center"
+        overflow="hidden"
+        padding="160px 240px 160px 240px"
+        backgroundColor="rgba(0,0,0,0.5)"
         {...getOverrideProps(overrides, "HeroLayout3")}
       ></HeroLayout3>
     </View>

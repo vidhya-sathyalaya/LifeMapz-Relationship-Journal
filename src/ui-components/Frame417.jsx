@@ -32,14 +32,21 @@ export default function Frame417(props) {
         {...getOverrideProps(overrides, "GettyImages-1196354779-1200x814 1")}
       ></Image>
       <Button
-        position="absolute"
-        padding="8px 16px 8px 16px"
         display="flex"
+        gap="10px"
+        position="absolute"
         top="45px"
         left="372px"
+        direction="row"
         width="220px"
         height="50px"
+        justifyContent="center"
+        alignItems="center"
+        borderRadius="4px"
+        padding="8px 16px 8px 16px"
+        backgroundColor="rgba(4,125,149,1)"
         size="default"
+        isDisabled={false}
         variation="primary"
         alignContent="center"
         children="Connect here"

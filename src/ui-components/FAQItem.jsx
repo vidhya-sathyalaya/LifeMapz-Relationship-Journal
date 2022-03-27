@@ -86,9 +86,12 @@ export default function FAQItem(props) {
         </Flex>
       </Flex>
       <Divider
+        height="1px"
         shrink="0"
         alignSelf="stretch"
         objectFit="cover"
+        position="relative"
+        padding="0px 0px 0px 0px"
         size="small"
         orientation="horizontal"
         {...getOverrideProps(overrides, "Divider")}

@@ -26,7 +26,7 @@ export default function Footer1(props) {
         fontSize="36px"
         fontWeight="400"
         color="rgba(204,53,140,1)"
-        lineHeight="30px"
+        lineHeight="20px"
         textAlign="center"
         display="flex"
         direction="column"

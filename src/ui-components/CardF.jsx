@@ -81,9 +81,14 @@ export default function CardF(props) {
         >
           <Rating
             display="flex"
+            gap="8px"
+            direction="row"
             width="fit-content"
+            alignItems="center"
             shrink="0"
             height="36px"
+            position="relative"
+            padding="0px 0px 0px 0px"
             size="large"
             {...getOverrideProps(overrides, "Rating")}
           ></Rating>
@@ -118,34 +123,55 @@ export default function CardF(props) {
           {...getOverrideProps(overrides, "Tags")}
         >
           <Badge
-            padding="4px 8px 4px 8px"
             display="flex"
+            gap="10px"
+            direction="row"
             width="fit-content"
+            justifyContent="center"
+            alignItems="center"
             shrink="0"
             height="28px"
+            position="relative"
+            borderRadius="99px"
+            padding="4px 8px 4px 8px"
+            backgroundColor="rgba(239,240,240,1)"
             size="small"
             variation="default"
-            {...getOverrideProps(overrides, "Badgeipr")}
+            {...getOverrideProps(overrides, "Badgeind")}
           ></Badge>
           <Badge
-            padding="4px 8px 4px 8px"
             display="flex"
+            gap="10px"
+            direction="row"
             width="fit-content"
+            justifyContent="center"
+            alignItems="center"
             shrink="0"
             height="28px"
+            position="relative"
+            borderRadius="99px"
+            padding="4px 8px 4px 8px"
+            backgroundColor="rgba(239,240,240,1)"
             size="small"
             variation="default"
-            {...getOverrideProps(overrides, "Badgemgn")}
+            {...getOverrideProps(overrides, "Badgeihw")}
           ></Badge>
           <Badge
-            padding="4px 8px 4px 8px"
             display="flex"
+            gap="10px"
+            direction="row"
             width="fit-content"
+            justifyContent="center"
+            alignItems="center"
             shrink="0"
             height="28px"
+            position="relative"
+            borderRadius="99px"
+            padding="4px 8px 4px 8px"
+            backgroundColor="rgba(239,240,240,1)"
             size="small"
             variation="default"
-            {...getOverrideProps(overrides, "Badgeooj")}
+            {...getOverrideProps(overrides, "Badgeylk")}
           ></Badge>
         </Flex>
         <Text
@@ -186,6 +212,15 @@ export default function CardF(props) {
             overflow="hidden"
             position="relative"
             padding="0px 0px 0px 0px"
+            viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+            paths={[
+              {
+                d: "M2 2L18 2L18 14L3.17 14L2 15.17L2 2ZM2 0C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16L18 16C19.1 16 20 15.1 20 14L20 2C20 0.9 19.1 0 18 0L2 0ZM4 10L12 10L12 12L4 12L4 10ZM4 7L16 7L16 9L4 9L4 7ZM4 4L16 4L16 6L4 6L4 4Z",
+                fill: "rgba(13,26,38,1)",
+                fillRule: "nonzero",
+                style: { transform: "translate(8.33%, 8.33%)" },
+              },
+            ]}
             type="chat"
             fontSize="24px"
             {...getOverrideProps(overrides, "Icon")}
@@ -212,9 +247,12 @@ export default function CardF(props) {
           ></Text>
         </Flex>
         <Divider
+          height="1px"
           shrink="0"
           alignSelf="stretch"
           objectFit="cover"
+          position="relative"
+          padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
           {...getOverrideProps(overrides, "Divider")}
@@ -238,7 +276,7 @@ export default function CardF(props) {
             height="24px"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Featuremxq")}
+            {...getOverrideProps(overrides, "Featureket")}
           >
             <Icon
               width="24px"
@@ -247,9 +285,18 @@ export default function CardF(props) {
               overflow="hidden"
               position="relative"
               padding="0px 0px 0px 0px"
+              viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+              paths={[
+                {
+                  d: "M5.59 10.58L1.42 6.41L0 7.82L5.59 13.41L17.59 1.41L16.18 0L5.59 10.58Z",
+                  fill: "rgba(13,26,38,1)",
+                  fillRule: "nonzero",
+                  style: { transform: "translate(14.21%, 23.29%)" },
+                },
+              ]}
               type="check"
               fontSize="24px"
-              {...getOverrideProps(overrides, "Iconfla")}
+              {...getOverrideProps(overrides, "Iconxox")}
             ></Icon>
             <Text
               fontFamily="Inter"
@@ -279,7 +326,7 @@ export default function CardF(props) {
             height="24px"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Featuregxv")}
+            {...getOverrideProps(overrides, "Featuresuv")}
           >
             <Icon
               width="24px"
@@ -288,9 +335,18 @@ export default function CardF(props) {
               overflow="hidden"
               position="relative"
               padding="0px 0px 0px 0px"
+              viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+              paths={[
+                {
+                  d: "M5.59 10.58L1.42 6.41L0 7.82L5.59 13.41L17.59 1.41L16.18 0L5.59 10.58Z",
+                  fill: "rgba(13,26,38,1)",
+                  fillRule: "nonzero",
+                  style: { transform: "translate(14.21%, 23.29%)" },
+                },
+              ]}
               type="check"
               fontSize="24px"
-              {...getOverrideProps(overrides, "Iconajl")}
+              {...getOverrideProps(overrides, "Iconlhm")}
             ></Icon>
             <Text
               fontFamily="Inter"
@@ -320,7 +376,7 @@ export default function CardF(props) {
             height="24px"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Featuretmm")}
+            {...getOverrideProps(overrides, "Featureajh")}
           >
             <Icon
               width="24px"
@@ -329,9 +385,18 @@ export default function CardF(props) {
               overflow="hidden"
               position="relative"
               padding="0px 0px 0px 0px"
+              viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+              paths={[
+                {
+                  d: "M5.59 10.58L1.42 6.41L0 7.82L5.59 13.41L17.59 1.41L16.18 0L5.59 10.58Z",
+                  fill: "rgba(13,26,38,1)",
+                  fillRule: "nonzero",
+                  style: { transform: "translate(14.21%, 23.29%)" },
+                },
+              ]}
               type="check"
               fontSize="24px"
-              {...getOverrideProps(overrides, "Iconiyy")}
+              {...getOverrideProps(overrides, "Iconmym")}
             ></Icon>
             <Text
               fontFamily="Inter"

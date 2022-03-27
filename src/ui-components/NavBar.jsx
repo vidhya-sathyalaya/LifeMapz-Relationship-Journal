@@ -6,10 +6,17 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Flex, Icon, Image, SearchField, Text } from "@aws-amplify/ui-react";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
+import { Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
 export default function NavBar(props) {
-  const { images, overrides, ...rest } = props;
+  const { overrides, ...rest } = props;
+  const dashboardOnClick = useNavigateAction({
+    type: "url",
+    url: "https://www.figma.com/file/GUc4jdIpyeGLdzV8J2R4hl/AWS-Amplify-UI-Kit-(Community)?node-id=861%3A3635",
+  });
   return (
     <Flex
       gap="20px"
@@ -67,7 +74,7 @@ export default function NavBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Logo"
-          {...getOverrideProps(overrides, "Logouxv")}
+          {...getOverrideProps(overrides, "Logopmd")}
         ></Text>
       </Flex>
       <Flex
@@ -80,7 +87,7 @@ export default function NavBar(props) {
         height="24px"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Frame 321ybi")}
+        {...getOverrideProps(overrides, "Frame 321lyh")}
       >
         <Text
           fontFamily="Inter"
@@ -97,7 +104,10 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Signup"
+          children="Home"
+          onClick={() => {
+            dashboardOnClick();
+          }}
           {...getOverrideProps(overrides, "Dashboard")}
         ></Text>
         <Text
@@ -166,30 +176,44 @@ export default function NavBar(props) {
         height="45px"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Frame 321gli")}
+        {...getOverrideProps(overrides, "Frame 321vmv")}
       >
-        <SearchField
-          display="flex"
-          width="300px"
-          shrink="0"
-          height="32px"
-          size="default"
-          labelHidden={true}
-          variation="default"
+        <Text
+          fontFamily="Inter"
+          fontSize="16px"
+          fontWeight="400"
           color="white"
-          {...getOverrideProps(overrides, "SearchField")}
-        ></SearchField>
-        <Icon
-          width="24px"
-          height="24px"
+          lineHeight="24px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="flex-start"
+          letterSpacing="0.01px"
           shrink="0"
-          overflow="hidden"
           position="relative"
           padding="0px 0px 0px 0px"
-          type="notifications"
-          fontSize="24px"
-          {...getOverrideProps(overrides, "Icon")}
-        ></Icon>
+          whiteSpace="pre-wrap"
+          children="SignUp"
+          {...getOverrideProps(overrides, "SignUp")}
+        ></Text>
+        <Text
+          fontFamily="Inter"
+          fontSize="16px"
+          fontWeight="400"
+          color="white"
+          lineHeight="24px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="flex-start"
+          letterSpacing="0.01px"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Login"
+          {...getOverrideProps(overrides, "Login")}
+        ></Text>
         <Image
           width="45px"
           height="45px"
@@ -197,7 +221,6 @@ export default function NavBar(props) {
           position="relative"
           borderRadius="160px"
           padding="0px 0px 0px 0px"
-          src={images?.images}
           {...getOverrideProps(overrides, "image")}
         ></Image>
       </Flex>
