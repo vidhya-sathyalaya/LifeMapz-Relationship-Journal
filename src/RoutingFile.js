@@ -15,7 +15,7 @@ function RoutingFile() {
             {/* // You can use both the ways to load any component !! */}
             <Route path='/' render={() => <FirstHome/>} />
 
-            <Route path='/test' ><FirstHome/></Route>
+            <Route path='/home' ><FirstHome/></Route>
         </Switch>
     </Router>
     );
