@@ -6,3 +6,7 @@ Team Members:
 3. Arjun Borkhatariya
 4. Sulabh Paresh Soneji
 5. Samarth Uday Patel
+
+# To run the frontend : 
+
+        `npm run`
