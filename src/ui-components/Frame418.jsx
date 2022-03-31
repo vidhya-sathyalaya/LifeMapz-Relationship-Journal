@@ -35,9 +35,9 @@ export default function Frame418(props) {
         labelHidden={false}
         variation="default"
         isMultiline={false}
-        label="First name"
-        placeholder="First name"
-        {...getOverrideProps(overrides, "TextFieldfdw")}
+        label="First Name"
+        placeholder="Enter your first name"
+        {...getOverrideProps(overrides, "TextFieldntj")}
       ></TextField>
       <TextField
         display="flex"
@@ -53,9 +53,9 @@ export default function Frame418(props) {
         labelHidden={false}
         variation="default"
         isMultiline={false}
-        label="Last name"
-        placeholder="Last name"
-        {...getOverrideProps(overrides, "TextFieldaww")}
+        label="Last Name"
+        placeholder="Enter your last name"
+        {...getOverrideProps(overrides, "TextFielddoq")}
       ></TextField>
       <TextField
         display="flex"
@@ -89,7 +89,7 @@ export default function Frame418(props) {
         defaultChecked={true}
         isDisabled={false}
         labelPosition="start"
-        {...getOverrideProps(overrides, "Radiokjz")}
+        {...getOverrideProps(overrides, "Radioqjy")}
       ></Radio>
       <Text
         fontFamily="Inter"
@@ -125,7 +125,7 @@ export default function Frame418(props) {
         defaultChecked={true}
         isDisabled={false}
         labelPosition="start"
-        {...getOverrideProps(overrides, "Radiopgd")}
+        {...getOverrideProps(overrides, "Radiotsz")}
       ></Radio>
       <Text
         fontFamily="Inter"
@@ -214,6 +214,8 @@ export default function Frame418(props) {
         right="45px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
+        backgroundColor="white"
+        className="amplify-heading"
         children="Complete User profile"
         {...getOverrideProps(overrides, "Complete User profile")}
       ></Text>

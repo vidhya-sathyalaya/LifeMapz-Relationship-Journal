@@ -9,7 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function CardA(props) {
-  const { image, overrides, ...rest } = props;
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="16px"
@@ -28,7 +28,6 @@ export default function CardA(props) {
         objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        src={image?.images}
         {...getOverrideProps(overrides, "image")}
       ></Image>
       <Flex
@@ -47,7 +46,7 @@ export default function CardA(props) {
           fontWeight="400"
           color="rgba(13,26,38,1)"
           lineHeight="24px"
-          textAlign="center"
+          textAlign="left"
           display="flex"
           direction="column"
           justifyContent="flex-start"
@@ -58,7 +57,7 @@ export default function CardA(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Connect with your partner"
+          children="Classic Long Sleeve T-Shirt"
           {...getOverrideProps(overrides, "Classic Long Sleeve T-Shirt")}
         ></Text>
         <Text
@@ -67,7 +66,7 @@ export default function CardA(props) {
           fontWeight="400"
           color="rgba(48,64,80,1)"
           lineHeight="24px"
-          textAlign="center"
+          textAlign="left"
           display="flex"
           direction="column"
           justifyContent="flex-start"
@@ -77,7 +76,7 @@ export default function CardA(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Enjoy your time"
+          children="$99"
           {...getOverrideProps(overrides, "$99")}
         ></Text>
       </Flex>

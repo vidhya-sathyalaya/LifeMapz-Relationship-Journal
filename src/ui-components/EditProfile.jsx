@@ -85,7 +85,7 @@ export default function EditProfile(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Edit Profile"
-            {...getOverrideProps(overrides, "Edit Profilerjr")}
+            {...getOverrideProps(overrides, "Edit Profileohq")}
           ></Text>
         </Flex>
         <Divider
@@ -97,7 +97,7 @@ export default function EditProfile(props) {
           padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Dividernvu")}
+          {...getOverrideProps(overrides, "Dividermhd")}
         ></Divider>
         <Flex
           gap="16px"
@@ -162,7 +162,7 @@ export default function EditProfile(props) {
             labelHidden={false}
             variation="default"
             isMultiline={false}
-            {...getOverrideProps(overrides, "TextFieldeet")}
+            {...getOverrideProps(overrides, "TextFielduwx")}
           ></TextField>
           <TextField
             display="flex"
@@ -178,7 +178,7 @@ export default function EditProfile(props) {
             labelHidden={false}
             variation="default"
             isMultiline={false}
-            {...getOverrideProps(overrides, "TextFieldszl")}
+            {...getOverrideProps(overrides, "TextFieldpnf")}
           ></TextField>
           <TextField
             display="flex"
@@ -194,7 +194,7 @@ export default function EditProfile(props) {
             labelHidden={false}
             variation="default"
             isMultiline={false}
-            {...getOverrideProps(overrides, "TextFieldswv")}
+            {...getOverrideProps(overrides, "TextFieldbmk")}
           ></TextField>
         </Flex>
         <Divider
@@ -206,7 +206,7 @@ export default function EditProfile(props) {
           padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Dividergeb")}
+          {...getOverrideProps(overrides, "Divideriyz")}
         ></Divider>
         <Flex
           gap="10px"

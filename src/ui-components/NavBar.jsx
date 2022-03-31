@@ -15,13 +15,18 @@ export default function NavBar(props) {
   const { overrides, ...rest } = props;
   const dashboardOnClick = useNavigateAction({
     type: "url",
-    url: "https://www.figma.com/file/GUc4jdIpyeGLdzV8J2R4hl/AWS-Amplify-UI-Kit-(Community)?node-id=861%3A3635",
+    url: "http://localhost:3000/home",
+  });
+  const signUpOnClick = useNavigateAction({
+    target: "_blank",
+    type: "url",
+    url: "http://localhost:3000/signup",
   });
   return (
     <Flex
       gap="20px"
       direction="row"
-      width="100%"
+      width="1440px"
       justifyContent="center"
       alignItems="center"
       position="relative"
@@ -74,7 +79,7 @@ export default function NavBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Logo"
-          {...getOverrideProps(overrides, "Logopmd")}
+          {...getOverrideProps(overrides, "Logojsn")}
         ></Text>
       </Flex>
       <Flex
@@ -87,7 +92,7 @@ export default function NavBar(props) {
         height="24px"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Frame 321lyh")}
+        {...getOverrideProps(overrides, "Frame 321bbd")}
       >
         <Text
           fontFamily="Inter"
@@ -176,7 +181,7 @@ export default function NavBar(props) {
         height="45px"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Frame 321vmv")}
+        {...getOverrideProps(overrides, "Frame 321bwg")}
       >
         <Text
           fontFamily="Inter"
@@ -194,6 +199,9 @@ export default function NavBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="SignUp"
+          onClick={() => {
+            signUpOnClick();
+          }}
           {...getOverrideProps(overrides, "SignUp")}
         ></Text>
         <Text

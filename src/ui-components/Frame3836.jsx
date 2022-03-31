@@ -7,6 +7,7 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import Component6 from "./Component6";
 import { View } from "@aws-amplify/ui-react";
 export default function Frame3836(props) {
   const { overrides, ...rest } = props;
@@ -21,7 +22,7 @@ export default function Frame3836(props) {
       {...rest}
       {...getOverrideProps(overrides, "Frame3836")}
     >
-      <View
+      <Component6
         width="960px"
         height="350px"
         position="absolute"
@@ -29,7 +30,7 @@ export default function Frame3836(props) {
         left="0px"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Component 6")}
-      ></View>
+      ></Component6>
     </View>
   );
 }

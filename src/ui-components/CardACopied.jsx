@@ -29,7 +29,6 @@ export default function CardACopied(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         backgroundColor="rgba(0,85,102,1)"
-        label="Find you partner"
         {...getOverrideProps(overrides, "CardA")}
       ></CardA>
     </Flex>

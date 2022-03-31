@@ -9,7 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Image, View } from "@aws-amplify/ui-react";
 export default function Frame417(props) {
-  const { image, overrides, ...rest } = props;
+  const { overrides, ...rest } = props;
   return (
     <View
       width="961px"
@@ -28,7 +28,6 @@ export default function Frame417(props) {
         top="0px"
         left="0px"
         padding="0px 0px 0px 0px"
-        src={image?.images}
         {...getOverrideProps(overrides, "GettyImages-1196354779-1200x814 1")}
       ></Image>
       <Button
@@ -48,8 +47,6 @@ export default function Frame417(props) {
         size="default"
         isDisabled={false}
         variation="primary"
-        alignContent="center"
-        children="Connect here"
         {...getOverrideProps(overrides, "Button")}
       ></Button>
     </View>

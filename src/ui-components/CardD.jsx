@@ -33,7 +33,7 @@ export default function CardD(props) {
       ></Image>
       <Text
         fontFamily="Inter"
-        fontSize="100"
+        fontSize="32px"
         fontWeight="700"
         color="rgba(255,255,255,1)"
         lineHeight="40px"
@@ -46,7 +46,7 @@ export default function CardD(props) {
         left="calc(50% - 59px - 0px)"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Find your Partner"
+        children="Explore"
         {...getOverrideProps(overrides, "Explore")}
       ></Text>
     </View>

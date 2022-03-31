@@ -7,7 +7,7 @@
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
-export declare type Frame417Props = React.PropsWithChildren<Partial<ViewProps> & {
+export declare type ViewProffileProps = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function Frame417(props: Frame417Props): React.ReactElement;
+export default function ViewProffile(props: ViewProffileProps): React.ReactElement;

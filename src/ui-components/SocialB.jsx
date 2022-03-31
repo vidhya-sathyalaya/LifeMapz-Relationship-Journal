@@ -72,7 +72,7 @@ export default function SocialB(props) {
             ]}
             type="favorite"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Icontky")}
+            {...getOverrideProps(overrides, "Iconprl")}
           ></Icon>
           <Text
             fontFamily="Inter"
@@ -133,7 +133,7 @@ export default function SocialB(props) {
             objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Framesik")}
+            {...getOverrideProps(overrides, "Framewep")}
           >
             <Flex
               gap="16px"
@@ -144,7 +144,7 @@ export default function SocialB(props) {
               height="24px"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Framertd")}
+              {...getOverrideProps(overrides, "Frameeof")}
             >
               <Text
                 fontFamily="Inter"
@@ -212,7 +212,7 @@ export default function SocialB(props) {
               height="24px"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Framemtc")}
+              {...getOverrideProps(overrides, "Framedwp")}
             >
               <Icon
                 width="24px"
@@ -232,7 +232,7 @@ export default function SocialB(props) {
                 ]}
                 type="more_horiz"
                 fontSize="24px"
-                {...getOverrideProps(overrides, "Iconysx")}
+                {...getOverrideProps(overrides, "Iconbcq")}
               ></Icon>
             </Flex>
           </Flex>
@@ -281,7 +281,7 @@ export default function SocialB(props) {
           height="24px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Shareniy")}
+          {...getOverrideProps(overrides, "Sharefce")}
         >
           <Icon
             width="24px"
@@ -301,7 +301,7 @@ export default function SocialB(props) {
             ]}
             type="reply"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconpto")}
+            {...getOverrideProps(overrides, "Iconfsi")}
           ></Icon>
           <Text
             fontFamily="Inter"
@@ -319,7 +319,7 @@ export default function SocialB(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="99"
-            {...getOverrideProps(overrides, "99zak")}
+            {...getOverrideProps(overrides, "99ghg")}
           ></Text>
         </Flex>
         <Flex
@@ -351,7 +351,7 @@ export default function SocialB(props) {
             ]}
             type="shuffle"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconswf")}
+            {...getOverrideProps(overrides, "Iconhkt")}
           ></Icon>
           <Text
             fontFamily="Inter"
@@ -369,7 +369,7 @@ export default function SocialB(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="99"
-            {...getOverrideProps(overrides, "99bis")}
+            {...getOverrideProps(overrides, "99nxm")}
           ></Text>
         </Flex>
         <Flex
@@ -401,7 +401,7 @@ export default function SocialB(props) {
             ]}
             type="favorite_border"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconaun")}
+            {...getOverrideProps(overrides, "Iconreh")}
           ></Icon>
           <Text
             fontFamily="Inter"
@@ -419,7 +419,7 @@ export default function SocialB(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="99"
-            {...getOverrideProps(overrides, "99aro")}
+            {...getOverrideProps(overrides, "99guz")}
           ></Text>
         </Flex>
         <Icon
@@ -440,7 +440,7 @@ export default function SocialB(props) {
           ]}
           type="share"
           fontSize="24px"
-          {...getOverrideProps(overrides, "Iconpif")}
+          {...getOverrideProps(overrides, "Iconnuj")}
         ></Icon>
       </Flex>
     </Flex>

@@ -49,7 +49,6 @@ export default function Createjournalpost(props) {
         left="27px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        fontStyle=""
         children="Write here..."
         {...getOverrideProps(overrides, "Write here...")}
       ></Text>
@@ -103,7 +102,6 @@ export default function Createjournalpost(props) {
         size="small"
         isDisabled={false}
         variation="primary"
-        children="Post"
         {...getOverrideProps(overrides, "Button")}
       ></Button>
       <Icon
