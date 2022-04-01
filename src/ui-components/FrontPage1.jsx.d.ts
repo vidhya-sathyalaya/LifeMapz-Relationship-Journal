@@ -5,11 +5,10 @@
  **************************************************************************/
 
 import React from "react";
-import { Images } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type FrontPage1Props = React.PropsWithChildren<Partial<ViewProps> & {
-    images?: Images;
+    createJournalButton?: String;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;

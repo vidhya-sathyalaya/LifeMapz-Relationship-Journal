@@ -9,7 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Image, Text, View } from "@aws-amplify/ui-react";
 export default function Footer1(props) {
-  const { journalEntry, overrides, ...rest } = props;
+  const { overrides, ...rest } = props;
   return (
     <View
       width="1544px"
@@ -109,7 +109,6 @@ export default function Footer1(props) {
         size="small"
         isDisabled={false}
         variation="primary"
-        children="Sign Up now"
         {...getOverrideProps(overrides, "Button")}
       ></Button>
       <Flex
@@ -137,9 +136,7 @@ export default function Footer1(props) {
           size="small"
           isDisabled={false}
           variation="link"
-          color="maroon"
-          children="Connect with us"
-          {...getOverrideProps(overrides, "Buttondxa")}
+          {...getOverrideProps(overrides, "Buttonzfs")}
         ></Button>
         <Button
           display="flex"
@@ -155,9 +152,7 @@ export default function Footer1(props) {
           size="small"
           isDisabled={false}
           variation="link"
-          color="maroon"
-          children="Journal"
-          {...getOverrideProps(overrides, "Buttonjoa")}
+          {...getOverrideProps(overrides, "Buttonuai")}
         ></Button>
         <Button
           display="flex"
@@ -173,9 +168,7 @@ export default function Footer1(props) {
           size="small"
           isDisabled={false}
           variation="link"
-          color="maroon"
-          children="About us"
-          {...getOverrideProps(overrides, "Buttonfac")}
+          {...getOverrideProps(overrides, "Buttonftx")}
         ></Button>
         <Button
           display="flex"
@@ -191,9 +184,7 @@ export default function Footer1(props) {
           size="small"
           isDisabled={false}
           variation="link"
-          color="maroon"
-          children="Facebook"
-          {...getOverrideProps(overrides, "Buttongfj")}
+          {...getOverrideProps(overrides, "Buttonwgh")}
         ></Button>
         <Button
           display="flex"
@@ -209,9 +200,7 @@ export default function Footer1(props) {
           size="small"
           isDisabled={false}
           variation="link"
-          color="maroon"
-          children="Instagram"
-          {...getOverrideProps(overrides, "Buttonird")}
+          {...getOverrideProps(overrides, "Buttonwlf")}
         ></Button>
       </Flex>
     </View>

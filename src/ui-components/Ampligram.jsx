@@ -9,7 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Divider, Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
 export default function Ampligram(props) {
-  const { journalEntry, user, textEntry, images, overrides, ...rest } = props;
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="8px"
@@ -30,7 +30,7 @@ export default function Ampligram(props) {
         padding="0px 0px 0px 0px"
         size="small"
         orientation="horizontal"
-        {...getOverrideProps(overrides, "Dividerutr")}
+        {...getOverrideProps(overrides, "Dividerpwy")}
       ></Divider>
       <Flex
         gap="16px"
@@ -63,7 +63,7 @@ export default function Ampligram(props) {
             position="relative"
             borderRadius="160px"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "imageoyc")}
+            {...getOverrideProps(overrides, "imagecpq")}
           ></Image>
           <Text
             fontFamily="Inter"
@@ -80,7 +80,7 @@ export default function Ampligram(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children={user?.fname}
+            children="Rene Brandel"
             {...getOverrideProps(overrides, "Rene Brandel")}
           ></Text>
         </Flex>
@@ -114,7 +114,7 @@ export default function Ampligram(props) {
             ]}
             type="more_vert"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconhio")}
+            {...getOverrideProps(overrides, "Iconuyp")}
           ></Icon>
         </Flex>
       </Flex>
@@ -125,8 +125,7 @@ export default function Ampligram(props) {
         objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        src={images?.images}
-        {...getOverrideProps(overrides, "imageznq")}
+        {...getOverrideProps(overrides, "imagenwp")}
       ></Image>
       <Flex
         gap="16px"
@@ -168,7 +167,7 @@ export default function Ampligram(props) {
             ]}
             type="favorite_border"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Icondae")}
+            {...getOverrideProps(overrides, "Iconqyp")}
           ></Icon>
           <Icon
             width="24px"
@@ -188,7 +187,7 @@ export default function Ampligram(props) {
             ]}
             type="chat_bubble_outline"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconjdr")}
+            {...getOverrideProps(overrides, "Iconwat")}
           ></Icon>
           <Icon
             width="24px"
@@ -208,7 +207,7 @@ export default function Ampligram(props) {
             ]}
             type="send"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconfno")}
+            {...getOverrideProps(overrides, "Iconwaq")}
           ></Icon>
         </Flex>
         <Flex
@@ -242,7 +241,7 @@ export default function Ampligram(props) {
             ]}
             type="bookmark_border"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconybc")}
+            {...getOverrideProps(overrides, "Iconjgb")}
           ></Icon>
         </Flex>
       </Flex>
@@ -265,7 +264,7 @@ export default function Ampligram(props) {
           padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Dividernpb")}
+          {...getOverrideProps(overrides, "Dividerora")}
         ></Divider>
         <Flex
           gap="8px"
@@ -293,7 +292,7 @@ export default function Ampligram(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children={user?.fname}
+            children="Firstname Lastname"
             {...getOverrideProps(overrides, "Firstname Lastname")}
           ></Text>
           <Text
@@ -313,7 +312,7 @@ export default function Ampligram(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children={textEntry?.content}
+            children="“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.”"
             {...getOverrideProps(
               overrides,
               "\u201CLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.\u201D"
@@ -335,7 +334,7 @@ export default function Ampligram(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children={journalEntry?.createdAt}
+            children="Timestamp"
             {...getOverrideProps(overrides, "Timestamp")}
           ></Text>
         </Flex>

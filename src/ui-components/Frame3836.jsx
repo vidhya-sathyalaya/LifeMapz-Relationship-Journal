@@ -7,30 +7,30 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import CardA from "./CardA";
-import { Flex } from "@aws-amplify/ui-react";
-export default function CardACopied(props) {
+import Component6 from "./Component6";
+import { View } from "@aws-amplify/ui-react";
+export default function Frame3836(props) {
   const { overrides, ...rest } = props;
   return (
-    <Flex
-      gap="0"
-      direction="column"
+    <View
+      width="960px"
+      height="350px"
+      overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
+      backgroundColor="rgba(255,255,255,1)"
       {...rest}
-      {...getOverrideProps(overrides, "CardACopied")}
+      {...getOverrideProps(overrides, "Frame3836")}
     >
-      <CardA
-        display="flex"
-        gap="16px"
-        direction="column"
-        justifyContent="center"
-        shrink="0"
-        position="relative"
+      <Component6
+        width="960px"
+        height="350px"
+        position="absolute"
+        top="0px"
+        left="0px"
         padding="0px 0px 0px 0px"
-        backgroundColor="rgba(0,85,102,1)"
-        {...getOverrideProps(overrides, "CardA")}
-      ></CardA>
-    </Flex>
+        {...getOverrideProps(overrides, "Component 6")}
+      ></Component6>
+    </View>
   );
 }

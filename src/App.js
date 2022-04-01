@@ -12,6 +12,12 @@ import { JournalEntryPageGrid } from './ui-components';
 import { 
   ViewProfA 
 } from './ui-components';
+import { 
+  Createjournalpost 
+} from './ui-components';
+import { 
+  Contactus2 
+} from './ui-components';
 Amplify.configure(awsconfig);
 
 function App() {
@@ -30,7 +36,9 @@ function App() {
           <CardACollection />
           <CardC overrides={buttonOveride}/>
           <ViewProfA overrides={buttonOveride}/>
-          <Footer2 />
+          <Contactus2 overrides={buttonOveride}/>
+          <Createjournalpost />
+          {/* <Footer2 /> */}
         </AmplifyProvider>
        
     </div>

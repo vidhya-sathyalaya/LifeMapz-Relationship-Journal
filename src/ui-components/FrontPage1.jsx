@@ -6,10 +6,17 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Image, Text, View } from "@aws-amplify/ui-react";
 export default function FrontPage1(props) {
-  const { images, overrides, ...rest } = props;
+  const { createJournalButton, overrides, ...rest } = props;
+  const createJournalOnClick = useNavigateAction({
+    type: "url",
+    url: "http://localhost:3000/createjournal",
+  });
   return (
     <View
       width="1520px"
@@ -37,7 +44,7 @@ export default function FrontPage1(props) {
           fontSize="36px"
           fontWeight="400"
           color="rgba(204,53,140,1)"
-          lineHeight="20px"
+          lineHeight="25px"
           textAlign="center"
           display="flex"
           direction="column"
@@ -45,7 +52,7 @@ export default function FrontPage1(props) {
           width="377px"
           height="55px"
           position="absolute"
-          bottom="346px"
+          bottom="347px"
           left="calc(50% - 188.5px - 503.5px)"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
@@ -65,7 +72,7 @@ export default function FrontPage1(props) {
           width="330px"
           height="44px"
           position="absolute"
-          top="331px"
+          top="404px"
           left="92px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
@@ -75,6 +82,39 @@ export default function FrontPage1(props) {
             "To reignite your relationship, deepen communication and strengthen your bond"
           )}
         ></Text>
+        <View
+          width="182px"
+          height="62px"
+          position="absolute"
+          top="305px"
+          left="171px"
+          overflow="hidden"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(102,0,0,1)"
+          {...getOverrideProps(overrides, "Frame 2")}
+        >
+          <Text
+            fontFamily="Jaldi"
+            fontSize="20px"
+            fontWeight="700"
+            color="rgba(255,255,255,1)"
+            lineHeight="20px"
+            textAlign="center"
+            display="flex"
+            direction="column"
+            justifyContent="flex-start"
+            position="absolute"
+            top="21px"
+            left="34px"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children="Create Journal"
+            onClick={() => {
+              createJournalOnClick();
+            }}
+            {...getOverrideProps(overrides, "Create Journal")}
+          ></Text>
+        </View>
       </View>
       <Image
         position="absolute"
@@ -85,8 +125,6 @@ export default function FrontPage1(props) {
         right="0%"
         width="64.88%"
         padding="0px 0px 0px 0px"
-        src={images?.images}
-        maxWidth="100%"
         {...getOverrideProps(overrides, "image 1")}
       ></Image>
     </View>

@@ -13,7 +13,7 @@ export default function Footer2(props) {
   const { overrides, ...rest } = props;
   return (
     <View
-      width="100%"
+      width="7377px"
       height="2354px"
       position="relative"
       padding="0px 0px 0px 0px"

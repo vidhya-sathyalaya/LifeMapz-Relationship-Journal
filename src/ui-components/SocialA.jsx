@@ -154,7 +154,7 @@ export default function SocialA(props) {
               ]}
               type="arrow_forward"
               fontSize="24px"
-              {...getOverrideProps(overrides, "Iconicw")}
+              {...getOverrideProps(overrides, "Iconfbf")}
             ></Icon>
             <Text
               fontFamily="Inter"
@@ -205,7 +205,7 @@ export default function SocialA(props) {
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
               children="Share"
-              {...getOverrideProps(overrides, "Sharelgf")}
+              {...getOverrideProps(overrides, "Sharevmk")}
             ></Text>
             <Icon
               width="24px"
@@ -225,7 +225,7 @@ export default function SocialA(props) {
               ]}
               type="bookmark_border"
               fontSize="24px"
-              {...getOverrideProps(overrides, "Iconuqk")}
+              {...getOverrideProps(overrides, "Iconghm")}
             ></Icon>
             <Icon
               width="24px"
@@ -245,7 +245,7 @@ export default function SocialA(props) {
               ]}
               type="share"
               fontSize="24px"
-              {...getOverrideProps(overrides, "Iconrql")}
+              {...getOverrideProps(overrides, "Iconaus")}
             ></Icon>
             <Icon
               width="24px"
@@ -265,7 +265,7 @@ export default function SocialA(props) {
               ]}
               type="more_vert"
               fontSize="24px"
-              {...getOverrideProps(overrides, "Iconzdh")}
+              {...getOverrideProps(overrides, "Icontor")}
             ></Icon>
           </Flex>
         </Flex>
@@ -308,7 +308,7 @@ export default function SocialA(props) {
           ]}
           type="arrow_forward"
           fontSize="24px"
-          {...getOverrideProps(overrides, "Iconvld")}
+          {...getOverrideProps(overrides, "Iconkrc")}
         ></Icon>
         <Text
           fontFamily="Inter"
@@ -329,7 +329,7 @@ export default function SocialA(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Read more"
-          {...getOverrideProps(overrides, "Read moreyux")}
+          {...getOverrideProps(overrides, "Read morezcc")}
         ></Text>
       </Flex>
     </Flex>

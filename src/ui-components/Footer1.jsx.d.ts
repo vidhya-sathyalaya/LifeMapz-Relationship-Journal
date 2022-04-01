@@ -5,12 +5,9 @@
  **************************************************************************/
 
 import React from "react";
-import { JournalEntry } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type Footer1Props = React.PropsWithChildren<Partial<ViewProps> & {
-    journalEntry?: JournalEntry;
-} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function Footer1(props: Footer1Props): React.ReactElement;

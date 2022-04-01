@@ -35,9 +35,9 @@ export default function Frame418(props) {
         labelHidden={false}
         variation="default"
         isMultiline={false}
-        label="First name"
-        placeholder="First name"
-        {...getOverrideProps(overrides, "TextFieldich")}
+        label="First Name"
+        placeholder="Enter your first name"
+        {...getOverrideProps(overrides, "TextFieldntj")}
       ></TextField>
       <TextField
         display="flex"
@@ -53,9 +53,9 @@ export default function Frame418(props) {
         labelHidden={false}
         variation="default"
         isMultiline={false}
-        label="Last name"
-        placeholder="Last name"
-        {...getOverrideProps(overrides, "TextFieldxsx")}
+        label="Last Name"
+        placeholder="Enter your last name"
+        {...getOverrideProps(overrides, "TextFielddoq")}
       ></TextField>
       <TextField
         display="flex"
@@ -79,8 +79,8 @@ export default function Frame418(props) {
         display="flex"
         gap="16px"
         position="absolute"
-        top="345px"
-        left="96px"
+        top="349px"
+        left="112px"
         direction="row"
         justifyContent="center"
         alignItems="center"
@@ -89,7 +89,7 @@ export default function Frame418(props) {
         defaultChecked={true}
         isDisabled={false}
         labelPosition="start"
-        {...getOverrideProps(overrides, "Radiodwt")}
+        {...getOverrideProps(overrides, "Radioqjy")}
       ></Radio>
       <Text
         fontFamily="Inter"
@@ -115,8 +115,8 @@ export default function Frame418(props) {
         display="flex"
         gap="16px"
         position="absolute"
-        top="347px"
-        left="237px"
+        top="349px"
+        left="266px"
         direction="row"
         justifyContent="center"
         alignItems="center"
@@ -125,7 +125,7 @@ export default function Frame418(props) {
         defaultChecked={true}
         isDisabled={false}
         labelPosition="start"
-        {...getOverrideProps(overrides, "Radioddb")}
+        {...getOverrideProps(overrides, "Radiotsz")}
       ></Radio>
       <Text
         fontFamily="Inter"
@@ -198,11 +198,10 @@ export default function Frame418(props) {
         ></Text>
       </View>
       <Text
-        fontFamily="Inter"
-        fontSize="14px"
-        fontWeight="400"
+        fontFamily="Jaldi"
+        fontSize="24px"
+        fontWeight="700"
         color="rgba(0,0,0,1)"
-        fontStyle="italic"
         lineHeight="20px"
         textAlign="center"
         display="flex"
@@ -215,6 +214,8 @@ export default function Frame418(props) {
         right="45px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
+        backgroundColor="white"
+        className="amplify-heading"
         children="Complete User profile"
         {...getOverrideProps(overrides, "Complete User profile")}
       ></Text>

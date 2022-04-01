@@ -6,8 +6,8 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type ContactUsProps = React.PropsWithChildren<Partial<FlexProps> & {
+import { ViewProps } from "@aws-amplify/ui-react";
+export declare type Component6Props = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function ContactUs(props: ContactUsProps): React.ReactElement;
+export default function Component6(props: Component6Props): React.ReactElement;
