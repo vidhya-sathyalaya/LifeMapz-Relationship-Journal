@@ -5,12 +5,9 @@
  **************************************************************************/
 
 import React from "react";
-import { Images } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type Frame417Props = React.PropsWithChildren<Partial<ViewProps> & {
-    image?: Images;
-} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function Frame417(props: Frame417Props): React.ReactElement;

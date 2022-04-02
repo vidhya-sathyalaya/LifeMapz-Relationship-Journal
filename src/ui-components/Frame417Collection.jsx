@@ -26,6 +26,7 @@ export default function Frame417Collection(props) {
   return (
     <Collection
       type="grid"
+      templateColumns="1fr 1fr"
       autoFlow="row"
       alignItems="stretch"
       justifyContent="stretch"

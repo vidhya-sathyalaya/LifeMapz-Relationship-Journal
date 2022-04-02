@@ -32,7 +32,8 @@ import { useAuthenticator } from "@aws-amplify/ui-react";
 import { Amplify } from "aws-amplify";
 
 import { Login } from "./auth-components/Login.js";
-import { Home } from "./auth-components/Home.js";
+// if class based component then import without curly braces as imported the Home component
+import Home from "./auth-components/Home.js";
 import "./styles.css";
 
 import awsExports from "./aws-exports";

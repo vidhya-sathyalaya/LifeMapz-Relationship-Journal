@@ -7,20 +7,9 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import {
-  Divider,
-  Flex,
-  IconBookmarkBorder,
-  IconChatBubbleOutline,
-  IconFavoriteBorder,
-  IconMoreVert,
-  IconSend,
-  Image,
-  Text,
-} from "@aws-amplify/ui-react";
+import { Divider, Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
 export default function Ampligram(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="8px"
@@ -30,15 +19,18 @@ export default function Ampligram(props) {
       padding="0px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "Ampligram")}
     >
       <Divider
-        width="640px"
+        height="1px"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
+        position="relative"
+        padding="0px 0px 0px 0px"
         size="small"
         orientation="horizontal"
-        {...getOverrideProps(overrides, "Flex.Divider[0]")}
+        {...getOverrideProps(overrides, "Dividerpwy")}
       ></Divider>
       <Flex
         gap="16px"
@@ -47,9 +39,10 @@ export default function Ampligram(props) {
         alignItems="center"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         position="relative"
         padding="16px 16px 16px 16px"
-        {...getOverrideProps(overrides, "Flex.Flex[0]")}
+        {...getOverrideProps(overrides, "Header")}
       >
         <Flex
           gap="16px"
@@ -61,7 +54,7 @@ export default function Ampligram(props) {
           height="65px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0]")}
+          {...getOverrideProps(overrides, "Profile")}
         >
           <Image
             width="65px"
@@ -70,62 +63,69 @@ export default function Ampligram(props) {
             position="relative"
             borderRadius="160px"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Image[0]")}
+            {...getOverrideProps(overrides, "imagecpq")}
           ></Image>
           <Text
             fontFamily="Inter"
             fontSize="16px"
             fontWeight="400"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            color="rgba(13,26,38,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            letterSpacing="0.010000000000000009px"
+            letterSpacing="0.01px"
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Rene Brandel"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Text[0]")}
+            {...getOverrideProps(overrides, "Rene Brandel")}
           ></Text>
         </Flex>
         <Flex
           gap="10px"
           direction="row"
+          width="fit-content"
           justifyContent="flex-end"
           alignItems="center"
           shrink="0"
           height="24px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1]")}
+          {...getOverrideProps(overrides, "Overflow")}
         >
-          <IconMoreVert
+          <Icon
             width="24px"
             height="24px"
             shrink="0"
             overflow="hidden"
             position="relative"
             padding="0px 0px 0px 0px"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+            paths={[
+              {
+                d: "M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z",
+                fill: "rgba(13,26,38,1)",
+                fillRule: "nonzero",
+                style: { transform: "translate(41.67%, 16.67%)" },
+              },
+            ]}
             type="more_vert"
             fontSize="24px"
-            {...getOverrideProps(
-              overrides,
-              "Flex.Flex[0].Flex[1].IconMoreVert[0]"
-            )}
-          ></IconMoreVert>
+            {...getOverrideProps(overrides, "Iconuyp")}
+          ></Icon>
         </Flex>
       </Flex>
       <Image
-        width="640px"
         height="408px"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Image[0]")}
+        {...getOverrideProps(overrides, "imagenwp")}
       ></Image>
       <Flex
         gap="16px"
@@ -133,62 +133,82 @@ export default function Ampligram(props) {
         alignItems="flex-start"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         position="relative"
         padding="16px 16px 16px 16px"
-        {...getOverrideProps(overrides, "Flex.Flex[1]")}
+        {...getOverrideProps(overrides, "Options")}
       >
         <Flex
           gap="24px"
           direction="row"
+          width="fit-content"
           alignItems="flex-start"
           shrink="0"
           height="24px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0]")}
+          {...getOverrideProps(overrides, "Share")}
         >
-          <IconFavoriteBorder
+          <Icon
             width="24px"
             height="24px"
             shrink="0"
             overflow="hidden"
             position="relative"
             padding="0px 0px 0px 0px"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+            paths={[
+              {
+                d: "M14.5 0C12.76 0 11.09 0.81 10 2.09C8.91 0.81 7.24 0 5.5 0C2.42 0 0 2.42 0 5.5C0 9.28 3.4 12.36 8.55 17.04L10 18.35L11.45 17.03C16.6 12.36 20 9.28 20 5.5C20 2.42 17.58 0 14.5 0ZM10.1 15.55L10 15.65L9.9 15.55C5.14 11.24 2 8.39 2 5.5C2 3.5 3.5 2 5.5 2C7.04 2 8.54 2.99 9.07 4.36L10.94 4.36C11.46 2.99 12.96 2 14.5 2C16.5 2 18 3.5 18 5.5C18 8.39 14.86 11.24 10.1 15.55Z",
+                fill: "rgba(13,26,38,1)",
+                fillRule: "nonzero",
+                style: { transform: "translate(8.33%, 12.5%)" },
+              },
+            ]}
             type="favorite_border"
             fontSize="24px"
-            {...getOverrideProps(
-              overrides,
-              "Flex.Flex[1].Flex[0].IconFavoriteBorder[0]"
-            )}
-          ></IconFavoriteBorder>
-          <IconChatBubbleOutline
+            {...getOverrideProps(overrides, "Iconqyp")}
+          ></Icon>
+          <Icon
             width="24px"
             height="24px"
             shrink="0"
             overflow="hidden"
             position="relative"
             padding="0px 0px 0px 0px"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+            paths={[
+              {
+                d: "M18 0L2 0C0.9 0 0 0.9 0 2L0 20L4 16L18 16C19.1 16 20 15.1 20 14L20 2C20 0.9 19.1 0 18 0ZM18 14L4 14L2 16L2 2L18 2L18 14Z",
+                fill: "rgba(13,26,38,1)",
+                fillRule: "nonzero",
+                style: { transform: "translate(8.33%, 8.33%)" },
+              },
+            ]}
             type="chat_bubble_outline"
             fontSize="24px"
-            {...getOverrideProps(
-              overrides,
-              "Flex.Flex[1].Flex[0].IconChatBubbleOutline[0]"
-            )}
-          ></IconChatBubbleOutline>
-          <IconSend
+            {...getOverrideProps(overrides, "Iconwat")}
+          ></Icon>
+          <Icon
             width="24px"
             height="24px"
             shrink="0"
             overflow="hidden"
             position="relative"
             padding="0px 0px 0px 0px"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+            paths={[
+              {
+                d: "M2.01 3.03L9.52 6.25L2 5.25L2.01 3.03ZM9.51 11.75L2 14.97L2 12.75L9.51 11.75ZM0.00999999 0L0 7L15 9L0 11L0.00999999 18L21 9L0.00999999 0Z",
+                fill: "rgba(13,26,38,1)",
+                fillRule: "nonzero",
+                style: { transform: "translate(8.33%, 12.5%)" },
+              },
+            ]}
             type="send"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Flex.Flex[1].Flex[0].IconSend[0]")}
-          ></IconSend>
+            {...getOverrideProps(overrides, "Iconwaq")}
+          ></Icon>
         </Flex>
         <Flex
           gap="10px"
@@ -201,23 +221,28 @@ export default function Ampligram(props) {
           height="24px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[1].Flex[1]")}
+          {...getOverrideProps(overrides, "Bookmark")}
         >
-          <IconBookmarkBorder
+          <Icon
             width="24px"
             height="24px"
             shrink="0"
             overflow="hidden"
             position="relative"
             padding="0px 0px 0px 0px"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
+            paths={[
+              {
+                d: "M12 0L2 0C0.9 0 0 0.9 0 2L0 18L7 15L14 18L14 2C14 0.9 13.1 0 12 0ZM12 15L7 12.82L2 15L2 2L12 2L12 15Z",
+                fill: "rgba(13,26,38,1)",
+                fillRule: "nonzero",
+                style: { transform: "translate(20.83%, 12.5%)" },
+              },
+            ]}
             type="bookmark_border"
             fontSize="24px"
-            {...getOverrideProps(
-              overrides,
-              "Flex.Flex[1].Flex[1].IconBookmarkBorder[0]"
-            )}
-          ></IconBookmarkBorder>
+            {...getOverrideProps(overrides, "Iconjgb")}
+          ></Icon>
         </Flex>
       </Flex>
       <Flex
@@ -225,81 +250,92 @@ export default function Ampligram(props) {
         direction="column"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[2]")}
+        {...getOverrideProps(overrides, "Body")}
       >
         <Divider
-          width="640px"
+          height="1px"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
+          position="relative"
+          padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Flex.Flex[2].Divider[0]")}
+          {...getOverrideProps(overrides, "Dividerora")}
         ></Divider>
         <Flex
           gap="8px"
           direction="column"
           shrink="0"
           alignSelf="stretch"
+          objectFit="cover"
           position="relative"
           padding="16px 16px 16px 16px"
-          {...getOverrideProps(overrides, "Flex.Flex[2].Flex[0]")}
+          {...getOverrideProps(overrides, "Area")}
         >
           <Text
             fontFamily="Inter"
             fontSize="16px"
             fontWeight="700"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            color="rgba(13,26,38,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            width="608px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Firstname Lastname"
-            {...getOverrideProps(overrides, "Flex.Flex[2].Flex[0].Text[0]")}
+            {...getOverrideProps(overrides, "Firstname Lastname")}
           ></Text>
           <Text
             fontFamily="Inter"
             fontSize="16px"
             fontWeight="400"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            color="rgba(13,26,38,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            letterSpacing="0.010000000000000009px"
-            width="608px"
+            letterSpacing="0.01px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.”"
-            {...getOverrideProps(overrides, "Flex.Flex[2].Flex[0].Text[1]")}
+            {...getOverrideProps(
+              overrides,
+              "\u201CLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.\u201D"
+            )}
           ></Text>
           <Text
             fontFamily="Inter"
             fontSize="14px"
             fontWeight="400"
-            color="rgba(92.00000211596489,102.00000151991844,112.000000923872,1)"
+            color="rgba(92,102,112,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            width="608px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Timestamp"
-            {...getOverrideProps(overrides, "Flex.Flex[2].Flex[0].Text[2]")}
+            {...getOverrideProps(overrides, "Timestamp")}
           ></Text>
         </Flex>
       </Flex>

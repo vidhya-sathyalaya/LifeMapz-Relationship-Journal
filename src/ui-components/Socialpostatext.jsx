@@ -7,11 +7,9 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import SocialA from "./SocialA";
 import { Flex } from "@aws-amplify/ui-react";
 export default function Socialpostatext(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
@@ -19,23 +17,16 @@ export default function Socialpostatext(props) {
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "Socialpostatext")}
     >
       <Flex
         gap="0"
         direction="column"
         shrink="0"
-        width="960px"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[0]")}
-      >
-        <SocialA
-          display="flex"
-          shrink="0"
-          {...getOverrideProps(overrides, "Flex.Flex[0].SocialA[0]")}
-        ></SocialA>
-      </Flex>
+        {...getOverrideProps(overrides, "Social_post_a_text")}
+      ></Flex>
     </Flex>
   );
 }

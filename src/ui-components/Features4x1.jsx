@@ -9,8 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
 export default function Features4x1(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="10px"
@@ -20,9 +19,9 @@ export default function Features4x1(props) {
       alignItems="center"
       position="relative"
       padding="40px 140px 40px 140px"
-      backgroundColor="rgba(239.00000095367432,240.00000089406967,240.00000089406967,1)"
+      backgroundColor="rgba(239,240,240,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "Features4x1")}
     >
       <Flex
         gap="24px"
@@ -31,9 +30,10 @@ export default function Features4x1(props) {
         alignItems="center"
         shrink="0"
         alignSelf="stretch"
+        objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Flex.Flex[0]")}
+        {...getOverrideProps(overrides, "Frame 136")}
       >
         <Flex
           gap="16px"
@@ -44,43 +44,48 @@ export default function Features4x1(props) {
           alignSelf="stretch"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0]")}
+          {...getOverrideProps(overrides, "Frame 139")}
         >
           <Text
             fontFamily="Inter"
             fontSize="32px"
             fontWeight="700"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            color="rgba(13,26,38,1)"
             lineHeight="40px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            width="272px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Feature A"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Text[0]")}
+            {...getOverrideProps(overrides, "Feature A")}
           ></Text>
           <Text
             fontFamily="Inter"
             fontSize="14px"
             fontWeight="400"
-            color="rgba(48.000000938773155,64.00000378489494,80.00000283122063,1)"
+            color="rgba(48,64,80,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            width="272px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Text[1]")}
+            {...getOverrideProps(
+              overrides,
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.mwj"
+            )}
           ></Text>
         </Flex>
         <Flex
@@ -92,43 +97,48 @@ export default function Features4x1(props) {
           alignSelf="stretch"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1]")}
+          {...getOverrideProps(overrides, "Frame 140")}
         >
           <Text
             fontFamily="Inter"
             fontSize="32px"
             fontWeight="700"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            color="rgba(13,26,38,1)"
             lineHeight="40px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            width="272px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Feature B"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1].Text[0]")}
+            {...getOverrideProps(overrides, "Feature B")}
           ></Text>
           <Text
             fontFamily="Inter"
             fontSize="14px"
             fontWeight="400"
-            color="rgba(48.000000938773155,64.00000378489494,80.00000283122063,1)"
+            color="rgba(48,64,80,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            width="272px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[1].Text[1]")}
+            {...getOverrideProps(
+              overrides,
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.cfz"
+            )}
           ></Text>
         </Flex>
         <Flex
@@ -140,43 +150,48 @@ export default function Features4x1(props) {
           alignSelf="stretch"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[2]")}
+          {...getOverrideProps(overrides, "Frame 141")}
         >
           <Text
             fontFamily="Inter"
             fontSize="32px"
             fontWeight="700"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            color="rgba(13,26,38,1)"
             lineHeight="40px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            width="272px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Feature C"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[2].Text[0]")}
+            {...getOverrideProps(overrides, "Feature C")}
           ></Text>
           <Text
             fontFamily="Inter"
             fontSize="14px"
             fontWeight="400"
-            color="rgba(48.000000938773155,64.00000378489494,80.00000283122063,1)"
+            color="rgba(48,64,80,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            width="272px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[2].Text[1]")}
+            {...getOverrideProps(
+              overrides,
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.zhs"
+            )}
           ></Text>
         </Flex>
         <Flex
@@ -188,43 +203,48 @@ export default function Features4x1(props) {
           alignSelf="stretch"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Flex.Flex[0].Flex[3]")}
+          {...getOverrideProps(overrides, "Frame 142")}
         >
           <Text
             fontFamily="Inter"
             fontSize="32px"
             fontWeight="700"
-            color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+            color="rgba(13,26,38,1)"
             lineHeight="40px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            width="272px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Feature D"
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[3].Text[0]")}
+            {...getOverrideProps(overrides, "Feature D")}
           ></Text>
           <Text
             fontFamily="Inter"
             fontSize="14px"
             fontWeight="400"
-            color="rgba(48.000000938773155,64.00000378489494,80.00000283122063,1)"
+            color="rgba(48,64,80,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
-            width="272px"
             shrink="0"
             alignSelf="stretch"
+            objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
             children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
-            {...getOverrideProps(overrides, "Flex.Flex[0].Flex[3].Text[1]")}
+            {...getOverrideProps(
+              overrides,
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.tqm"
+            )}
           ></Text>
         </Flex>
       </Flex>

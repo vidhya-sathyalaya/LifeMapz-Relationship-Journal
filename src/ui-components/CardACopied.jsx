@@ -10,8 +10,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import CardA from "./CardA";
 import { Flex } from "@aws-amplify/ui-react";
 export default function CardACopied(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const overrides = { ...overridesProp };
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
@@ -19,15 +18,18 @@ export default function CardACopied(props) {
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "Flex")}
+      {...getOverrideProps(overrides, "CardACopied")}
     >
       <CardA
-        backgroundColor="rgba(0,85.00004053115845,102.00000151991844,1)"
         display="flex"
+        gap="16px"
+        direction="column"
+        justifyContent="center"
         shrink="0"
-        width="320px"
-        label="Find you partner"
-        {...getOverrideProps(overrides, "Flex.CardA[0]")}
+        position="relative"
+        padding="0px 0px 0px 0px"
+        backgroundColor="rgba(0,85,102,1)"
+        {...getOverrideProps(overrides, "CardA")}
       ></CardA>
     </Flex>
   );
