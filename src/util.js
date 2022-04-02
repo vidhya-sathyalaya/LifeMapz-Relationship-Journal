@@ -4,7 +4,11 @@ class AWSDateUtil {
     static getCurrentAWSDate()
     {
         const current = new Date();
-        return `${current.getFullYear()}-${current.getMonth()}-${current.getDate()}`
+        var day = String(current.getDate()).padStart(2, '0');
+        var mon = String(current.getMonth() + 1).padStart(2, '0'); 
+        var year = current.getFullYear();
+
+        return `${year}-${mon}-${day}Z`
     }
 
     static getAWSTimeStamp()
