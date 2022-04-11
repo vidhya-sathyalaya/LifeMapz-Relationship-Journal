@@ -8,7 +8,7 @@ import "@aws-amplify/ui-react/styles.css";
 import { AmplifyProvider, Authenticator } from "@aws-amplify/ui-react";
 import awsconfig from './aws-exports';
 import awsExports from "./aws-exports";
-
+import { JournalEntryFeedCollection } from './ui-components_AboutUs_ContactUs';
 Amplify.configure(awsExports);
 Amplify.configure(awsconfig);
 ReactDOM.render(
