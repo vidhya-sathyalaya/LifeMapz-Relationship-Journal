@@ -1,12 +1,15 @@
-import { useAuthenticator } from "@aws-amplify/ui-react";
+import { Authenticator, useAuthenticator } from "@aws-amplify/ui-react";
 import React from 'react';
 import { DefaultHeadingExample } from "./Test.js";
 import Amplify, { Auth } from 'aws-amplify';
 
-import { Frame418 } from '../ui-components';
-
+import  Frame418  from './Frame418';
+import CompleteSignup  from "./CompleteSignup.js";
 // importing datastore to do an entry
 import { DataStore } from '@aws-amplify/datastore';
+
+import { API } from 'aws-amplify';
+// import * as queries from './graphql/queries';
 
 // const { signOut, user } = useAuthenticator();
 
@@ -15,7 +18,14 @@ class Home extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {cognitoUsername: null , email: null };
+    this.state = {
+      cognito_username: '' ,
+      fname: '',
+      lame: '',
+      email:'',
+      dob:'',
+      gender:'',  
+    };
 
     // console.log(Auth.user.attributes.username);
 
@@ -38,20 +48,33 @@ class Home extends React.Component {
     Auth.currentUserInfo().then(user => {
     // this.setState({user});
     // testing and printing what is in user object
-    // console.log(user.username);
-    this.setState({cognitoUsername : user.username});
+    console.log(user.username);
+    this.setState({cognito_username : user.username});
     this.setState({email : user.attributes.email});
     });
     }
 
-  // fetchUserProfile(){
+  fetchUserProfile(){
 
-  //   const userProfile = await DataStore.query(User,
-  //     c => c.date_created('gt', AWSDateUtil.getStartOfDayAsTimeStamp())
-  //     .date_created('le', AWSDateUtil.getEndOfDayAsTimeStamp())
-  //     .entry_type('eq', "Text"));
+    // const userProfile = await DataStore.query(User,
+    //   c => c.date_created('gt', AWSDateUtil.getStartOfDayAsTimeStamp())
+    //   .date_created('le', AWSDateUtil.getEndOfDayAsTimeStamp())
+    //   .entry_type('eq', "Text"));
 
-  // }
+    //   const userProfile = await DataStore.query(User,
+    //     c => c.date_created('gt', AWSDateUtil.getStartOfDayAsTimeStamp())
+    //     .date_created('le', AWSDateUtil.getEndOfDayAsTimeStamp())
+    //     .entry_type('eq', "Text"));
+
+        // const oneTodo = await API.graphql({ query: queries.getUser, variables: { id: 'some id' }});
+
+  }
+
+  signOut = () => {
+    Auth.signOut()
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
+  }
 
   render() {
     return (
@@ -59,9 +82,11 @@ class Home extends React.Component {
         <main>
           {/* <h1>Hello {user.username}</h1>
           <button onClick={signOut}>Sign out</button> */}
+          <button onClick={this.signOut} className="signOutButton">SignOut</button>
           <h1>Home Page</h1>
           {/* <DefaultHeadingExample /> */}
-          <Frame418 />
+          {/* <Frame418 /> */}
+          < CompleteSignup />
         </main>
       </div>
     );

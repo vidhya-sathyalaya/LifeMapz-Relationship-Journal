@@ -43,13 +43,13 @@ enum GenderValue {
 
 type User @model @auth(rules: [{allow: public}]) {
   id: ID!
+  cognito_username: String
   fname: String!
   lname: String!
   email: AWSEmail!
-  password: String!
-  gender: GenderValue
   dob: AWSDate
-  journalID: ID! @index(name: "byJournal")
+  gender: GenderValue
   JournalEntries: [JournalEntry] @hasMany(indexName: "byUser", fields: ["id"])
+  journalID: ID! @index(name: "byJournal")
 }
  

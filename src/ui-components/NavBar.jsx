@@ -6,10 +6,22 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
 export default function NavBar(props) {
   const { overrides, ...rest } = props;
+  const dashboardOnClick = useNavigateAction({
+    type: "url",
+    url: "http://localhost:3000/home",
+  });
+  const signUpOnClick = useNavigateAction({
+    target: "_blank",
+    type: "url",
+    url: "http://localhost:3000/signup",
+  });
   return (
     <Flex
       gap="20px"
@@ -19,7 +31,7 @@ export default function NavBar(props) {
       alignItems="center"
       position="relative"
       padding="24px 32px 24px 32px"
-      backgroundColor="rgba(255,255,255,1)"
+      backgroundColor="black"
       {...rest}
       {...getOverrideProps(overrides, "NavBar")}
     >
@@ -86,7 +98,7 @@ export default function NavBar(props) {
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(0,0,0,1)"
+          color="white"
           lineHeight="24px"
           textAlign="left"
           display="flex"
@@ -97,14 +109,17 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Dashboard"
+          children="Home"
+          onClick={() => {
+            dashboardOnClick();
+          }}
           {...getOverrideProps(overrides, "Dashboard")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(0,0,0,1)"
+          color="white"
           lineHeight="24px"
           textAlign="left"
           display="flex"
@@ -115,14 +130,14 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Jobs"
+          children="Journal"
           {...getOverrideProps(overrides, "Jobs")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(0,0,0,1)"
+          color="white"
           lineHeight="24px"
           textAlign="left"
           display="flex"
@@ -133,14 +148,14 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Applicants"
+          children="About us"
           {...getOverrideProps(overrides, "Applicants")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(0,0,0,1)"
+          color="white"
           lineHeight="24px"
           textAlign="left"
           display="flex"
@@ -151,7 +166,7 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Company"
+          children="Contact"
           {...getOverrideProps(overrides, "Company")}
         ></Text>
       </Flex>
@@ -172,7 +187,7 @@ export default function NavBar(props) {
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(0,0,0,1)"
+          color="white"
           lineHeight="24px"
           textAlign="left"
           display="flex"
@@ -184,13 +199,16 @@ export default function NavBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="SignUp"
+          onClick={() => {
+            signUpOnClick();
+          }}
           {...getOverrideProps(overrides, "SignUp")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(0,0,0,1)"
+          color="white"
           lineHeight="24px"
           textAlign="left"
           display="flex"

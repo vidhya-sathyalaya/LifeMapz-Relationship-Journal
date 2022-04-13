@@ -4,6 +4,7 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
+export { default as Contactus2 } from "./Contactus2";
 export { default as CardE } from "./CardE";
 export { default as Ampligram } from "./Ampligram";
 export { default as MarketingPricing } from "./MarketingPricing";
@@ -12,6 +13,8 @@ export { default as HeroLayout1 } from "./HeroLayout1";
 export { default as HeroLayout3 } from "./HeroLayout3";
 export { default as ProductDetail } from "./ProductDetail";
 export { default as SideBar } from "./SideBar";
+export { default as Aboutus } from "./Aboutus";
+export { default as FrontPage1 } from "./FrontPage1";
 export { default as CardF } from "./CardF";
 export { default as Footer2 } from "./Footer2";
 export { default as Createjournalpost } from "./Createjournalpost";
@@ -24,6 +27,7 @@ export { default as Component1 } from "./Component1";
 export { default as CardB } from "./CardB";
 export { default as Frame3836 } from "./Frame3836";
 export { default as Component6 } from "./Component6";
+// export { default as ContactUS } from "./ContactUS";
 export { default as NavBar } from "./NavBar";
 export { default as CardC } from "./CardC";
 export { default as Features2x3 } from "./Features2x3";
