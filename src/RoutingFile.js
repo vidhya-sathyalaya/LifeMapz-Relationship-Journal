@@ -5,6 +5,7 @@ import awsconfig from './aws-exports';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import FirstHome from './FirstHome';
 import Signup from './Signup';
+import AboutUsContactUs from './AboutUsContactUs';
 // import { history } from 'react-router';
 
 Amplify.configure(awsconfig);
@@ -17,6 +18,7 @@ function RoutingFile() {
             <Route exact path='/' render={() => <FirstHome/>} />
             <Route  path='/home' ><FirstHome/></Route>
             <Route  path='/signup'><Signup/></Route>
+            <Route path='/aboutUs'><AboutUsContactUs/></Route>
         </Switch>
     </Router>
     );
