@@ -435,7 +435,7 @@ export const schema = {
                     "name": "journalID",
                     "isArray": false,
                     "type": "ID",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "createdAt": {
@@ -509,5 +509,5 @@ export const schema = {
         }
     },
     "nonModels": {},
-    "version": "128970000c223ef5e431cff84e487f83"
+    "version": "d51fe4c2aa72754ef7666d7aac957ada"
 };

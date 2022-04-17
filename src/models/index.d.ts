@@ -90,7 +90,7 @@ export declare class User {
   readonly dob?: string | null;
   readonly gender?: GenderValue | keyof typeof GenderValue | null;
   readonly JournalEntries?: (JournalEntry | null)[] | null;
-  readonly journalID: string;
+  readonly journalID?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<User, UserMetaData>);

@@ -50,6 +50,6 @@ type User @model @auth(rules: [{allow: public}]) {
   dob: AWSDate
   gender: GenderValue
   JournalEntries: [JournalEntry] @hasMany(indexName: "byUser", fields: ["id"])
-  journalID: ID! @index(name: "byJournal")
+  journalID: ID @index(name: "byJournal")
 }
  

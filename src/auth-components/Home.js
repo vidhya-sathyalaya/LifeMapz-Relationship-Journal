@@ -9,9 +9,35 @@ import CompleteSignup  from "./CompleteSignup.js";
 import { DataStore } from '@aws-amplify/datastore';
 
 import { API } from 'aws-amplify';
-// import * as queries from './graphql/queries';
+// import * as queries from '../graphql/queries';
 
 // const { signOut, user } = useAuthenticator();
+
+// const userProfileAvailable = false;
+
+export const getUser = /* GraphQL */ `
+  query GetUser($email: AWSEmail!) {
+    getUser(email: $email) {
+      id
+      cognito_username
+      fname
+      lname
+      email
+      dob
+      gender
+      JournalEntries {
+        nextToken
+        startedAt
+      }
+      journalID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
 
 
 class Home extends React.Component {
@@ -20,11 +46,7 @@ class Home extends React.Component {
     super(props);
     this.state = {
       cognito_username: '' ,
-      fname: '',
-      lame: '',
-      email:'',
-      dob:'',
-      gender:'',  
+      userProfileAvailable:false,
     };
 
     // console.log(Auth.user.attributes.username);
@@ -42,6 +64,7 @@ class Home extends React.Component {
     {
         // this.setState( {cognitoUsername : Auth.user.attributes.username });
         this.getCurrentUserInfo();
+        this.fetchUserProfile();
     }
 
   getCurrentUserInfo() {
@@ -54,7 +77,7 @@ class Home extends React.Component {
     });
     }
 
-  fetchUserProfile(){
+  async fetchUserProfile(){
 
     // const userProfile = await DataStore.query(User,
     //   c => c.date_created('gt', AWSDateUtil.getStartOfDayAsTimeStamp())
@@ -65,8 +88,20 @@ class Home extends React.Component {
     //     c => c.date_created('gt', AWSDateUtil.getStartOfDayAsTimeStamp())
     //     .date_created('le', AWSDateUtil.getEndOfDayAsTimeStamp())
     //     .entry_type('eq', "Text"));
+    try{
+        const user = await API.graphql({ query: getUser, variables: { email: this.state.email }});
+        console.log(user);
+        if(user.data == null){
+          this.state.userProfileAvailable = false;
+        }
+        else{
+          this.state.userProfileAvailable= true;
+        }
+    }
+    catch(err){
+        console.log(err);
+    }
 
-        // const oneTodo = await API.graphql({ query: queries.getUser, variables: { id: 'some id' }});
 
   }
 
@@ -77,6 +112,18 @@ class Home extends React.Component {
   }
 
   render() {
+    const userRegistered = this.state.userProfileAvailable;
+    let comp;
+
+    if (userRegistered) {
+
+      comp = <h1>Hello You are at Home page </h1>
+
+    } else {
+
+      comp = <CompleteSignup/>
+
+    }
     return (
       <div className="container">
         <main>
@@ -84,9 +131,7 @@ class Home extends React.Component {
           <button onClick={signOut}>Sign out</button> */}
           <button onClick={this.signOut} className="signOutButton">SignOut</button>
           <h1>Home Page</h1>
-          {/* <DefaultHeadingExample /> */}
-          {/* <Frame418 /> */}
-          < CompleteSignup />
+          {comp}
         </main>
       </div>
     );
