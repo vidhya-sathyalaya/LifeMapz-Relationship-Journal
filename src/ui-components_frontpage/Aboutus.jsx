@@ -15,7 +15,7 @@ export default function Aboutus(props) {
   const { overrides, ...rest } = props;
   const buttonOnClick = useNavigateAction({
     type: "url",
-    url: "https://localhost:3000/contactus",
+    url: "http://localhost:3000/contactus",
   });
   const linkedinlogopngTwoZeroTwoSixTwoOnClick = useNavigateAction({
     target: "_blank",

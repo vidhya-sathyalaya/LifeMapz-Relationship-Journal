@@ -9,6 +9,7 @@ import Signup from './Signup';
 import { Aboutus } from './ui-components_aboutus';
 import { Contactus2 } from './ui-components_contactus';
 // import { history } from 'react-router';
+import { Login } from "./auth-components/Login.js";
 
 Amplify.configure(awsconfig);
 
@@ -21,6 +22,7 @@ function RoutingFile() {
             <Route  path='/signup'><Signup/></Route>
             <Route path='/aboutus'><Aboutus/></Route>
             <Route path='/contactus'><Contactus2/></Route>
+            <Route path='/login'><Login/></Route>
         </Switch>
     </Router>
     );

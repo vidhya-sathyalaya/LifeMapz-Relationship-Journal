@@ -26,9 +26,12 @@ export default function NavBar(props) {
     url: "http://localhost:3000/contactus",
   });
   const signUpOnClick = useNavigateAction({
-    target: "_blank",
     type: "url",
     url: "http://localhost:3000/signup",
+  });
+  const loginOnClick = useNavigateAction({
+    type: "url",
+    url: "http://localhost:3000/login",
   });
   return (
     <Flex
@@ -234,6 +237,9 @@ export default function NavBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Login"
+          onClick={() => {
+            loginOnClick();
+          }}
           {...getOverrideProps(overrides, "Login")}
         ></Text>
         <Image
