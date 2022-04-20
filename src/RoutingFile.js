@@ -7,7 +7,7 @@ import FirstHome from './FirstHome';
 import Signup from './Signup';
 // import Aboutuspage from './Aboutuspage';
 import { Aboutus } from './ui-components_aboutus';
-import { Contactus2 } from './ui-components';
+import { Contactus2 } from './ui-components_contactus';
 // import { history } from 'react-router';
 
 Amplify.configure(awsconfig);
