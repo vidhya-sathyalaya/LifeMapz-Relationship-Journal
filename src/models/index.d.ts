@@ -83,14 +83,14 @@ export declare class Journal {
 
 export declare class User {
   readonly id: string;
+  readonly cognito_username?: string | null;
   readonly fname: string;
   readonly lname: string;
   readonly email: string;
-  readonly password: string;
-  readonly gender?: GenderValue | keyof typeof GenderValue | null;
   readonly dob?: string | null;
-  readonly journalID: string;
+  readonly gender?: GenderValue | keyof typeof GenderValue | null;
   readonly JournalEntries?: (JournalEntry | null)[] | null;
+  readonly journalID?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<User, UserMetaData>);
