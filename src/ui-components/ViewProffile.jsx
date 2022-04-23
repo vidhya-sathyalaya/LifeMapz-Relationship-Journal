@@ -17,7 +17,7 @@ export default function ViewProffile(props) {
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(245,187,199,1)"
+      backgroundImage="linear-gradient(-90deg, rgba(0,0,0,0), rgba(255,255,255,0))"
       {...rest}
       {...getOverrideProps(overrides, "ViewProffile")}
     >
@@ -220,7 +220,6 @@ export default function ViewProffile(props) {
       ></Image>
       <Button
         display="flex"
-        gap="0"
         position="absolute"
         top="246px"
         left="95px"
@@ -228,7 +227,6 @@ export default function ViewProffile(props) {
         justifyContent="center"
         alignItems="center"
         borderRadius="4px"
-        padding="8px 12px 8px 12px"
         backgroundColor="rgba(4,125,149,1)"
         size="small"
         isDisabled={false}

@@ -32,7 +32,7 @@ export default function FeaturesText2x2(props) {
         objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Frame 136")}
+        {...getOverrideProps(overrides, "Frame 136132111477")}
       >
         <Flex
           gap="16px"
@@ -119,7 +119,7 @@ export default function FeaturesText2x2(props) {
               height="176px"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 136rwx")}
+              {...getOverrideProps(overrides, "Frame 136131112131")}
             >
               <Icon
                 width="40px"
@@ -139,7 +139,7 @@ export default function FeaturesText2x2(props) {
                 ]}
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(overrides, "Iconphs")}
+                {...getOverrideProps(overrides, "Icon131112128")}
               ></Icon>
               <Text
                 fontFamily="Inter"
@@ -180,7 +180,7 @@ export default function FeaturesText2x2(props) {
                 children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 {...getOverrideProps(
                   overrides,
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.zno"
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.131112127"
                 )}
               ></Text>
             </Flex>
@@ -193,7 +193,7 @@ export default function FeaturesText2x2(props) {
               height="176px"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 376qiw")}
+              {...getOverrideProps(overrides, "Frame 376131112132")}
             >
               <Icon
                 width="40px"
@@ -213,7 +213,7 @@ export default function FeaturesText2x2(props) {
                 ]}
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(overrides, "Iconcxi")}
+                {...getOverrideProps(overrides, "Icon131112133")}
               ></Icon>
               <Text
                 fontFamily="Inter"
@@ -254,7 +254,7 @@ export default function FeaturesText2x2(props) {
                 children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 {...getOverrideProps(
                   overrides,
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.piq"
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.131112135"
                 )}
               ></Text>
             </Flex>
@@ -279,7 +279,7 @@ export default function FeaturesText2x2(props) {
               height="176px"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 136kbg")}
+              {...getOverrideProps(overrides, "Frame 136131112140")}
             >
               <Icon
                 width="40px"
@@ -299,7 +299,7 @@ export default function FeaturesText2x2(props) {
                 ]}
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(overrides, "Iconxaf")}
+                {...getOverrideProps(overrides, "Icon131112141")}
               ></Icon>
               <Text
                 fontFamily="Inter"
@@ -340,7 +340,7 @@ export default function FeaturesText2x2(props) {
                 children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 {...getOverrideProps(
                   overrides,
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.zbn"
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.131112143"
                 )}
               ></Text>
             </Flex>
@@ -353,7 +353,7 @@ export default function FeaturesText2x2(props) {
               height="176px"
               position="relative"
               padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 376ewg")}
+              {...getOverrideProps(overrides, "Frame 376131112144")}
             >
               <Icon
                 width="40px"
@@ -373,7 +373,7 @@ export default function FeaturesText2x2(props) {
                 ]}
                 type="add_box"
                 fontSize="40px"
-                {...getOverrideProps(overrides, "Iconokw")}
+                {...getOverrideProps(overrides, "Icon131112145")}
               ></Icon>
               <Text
                 fontFamily="Inter"
@@ -414,7 +414,7 @@ export default function FeaturesText2x2(props) {
                 children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 {...getOverrideProps(
                   overrides,
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.bpy"
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.131112147"
                 )}
               ></Text>
             </Flex>

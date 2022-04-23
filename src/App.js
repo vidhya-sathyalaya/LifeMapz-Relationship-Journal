@@ -3,9 +3,8 @@ import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 import awsconfig from './aws-exports';
 import { NavBar } from './ui-components';
-import { FrontPage1 } from './ui-components';
 import { Footer1 } from './ui-components';
-import { Frame418 } from './ui-components';
+import { SocialACardCollection } from './ui-components';
 Amplify.configure(awsconfig);
 
 
@@ -34,9 +33,8 @@ function App() {
           <NavBar overrides={imageOverrides} />
        
         <div>
-          <FrontPage1 overrides={fpg1}/>
           <Footer1 overrides={fott1}/>
-          {/* <Frame418 /> */}
+          <SocialACardCollection />
         </div>
         </div>
       // </AmplifyProvider>

@@ -373,6 +373,13 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
+                "cognito_username": {
+                    "name": "cognito_username",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "fname": {
                     "name": "fname",
                     "isArray": false,
@@ -390,24 +397,8 @@ export const schema = {
                 "email": {
                     "name": "email",
                     "isArray": false,
-                    "type": "AWSEmail",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "password": {
-                    "name": "password",
-                    "isArray": false,
                     "type": "String",
                     "isRequired": true,
-                    "attributes": []
-                },
-                "gender": {
-                    "name": "gender",
-                    "isArray": false,
-                    "type": {
-                        "enum": "GenderValue"
-                    },
-                    "isRequired": false,
                     "attributes": []
                 },
                 "dob": {
@@ -417,11 +408,13 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "journalID": {
-                    "name": "journalID",
+                "gender": {
+                    "name": "gender",
                     "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
+                    "type": {
+                        "enum": "GenderValue"
+                    },
+                    "isRequired": false,
                     "attributes": []
                 },
                 "JournalEntries": {
@@ -437,6 +430,13 @@ export const schema = {
                         "connectionType": "HAS_MANY",
                         "associatedWith": "userID"
                     }
+                },
+                "journalID": {
+                    "name": "journalID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": false,
+                    "attributes": []
                 },
                 "createdAt": {
                     "name": "createdAt",
@@ -461,6 +461,16 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "getUserByEmail",
+                        "queryField": "getUserByEmail",
+                        "fields": [
+                            "email"
+                        ]
+                    }
                 },
                 {
                     "type": "key",
@@ -509,5 +519,5 @@ export const schema = {
         }
     },
     "nonModels": {},
-    "version": "4622d837bbee18482f9603035a3e63cb"
+    "version": "0504205d268c007051ad6882bf1cd407"
 };

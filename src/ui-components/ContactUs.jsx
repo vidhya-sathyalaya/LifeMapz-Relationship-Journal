@@ -158,7 +158,7 @@ export default function ContactUs(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        {...getOverrideProps(overrides, "SelectFieldwvp")}
+        {...getOverrideProps(overrides, "SelectField17642105")}
       ></SelectField>
       <TextField
         display="flex"
@@ -174,7 +174,7 @@ export default function ContactUs(props) {
         labelHidden={false}
         variation="default"
         isMultiline={false}
-        {...getOverrideProps(overrides, "TextFieldrbo")}
+        {...getOverrideProps(overrides, "TextField17642106")}
       ></TextField>
       <SelectField
         display="flex"
@@ -190,7 +190,7 @@ export default function ContactUs(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        {...getOverrideProps(overrides, "SelectFieldnbo")}
+        {...getOverrideProps(overrides, "SelectField17642107")}
       ></SelectField>
       <TextField
         display="flex"
@@ -206,7 +206,7 @@ export default function ContactUs(props) {
         labelHidden={false}
         variation="default"
         isMultiline={false}
-        {...getOverrideProps(overrides, "TextFieldooh")}
+        {...getOverrideProps(overrides, "TextField17642108")}
       ></TextField>
       <TextField
         display="flex"
@@ -222,7 +222,7 @@ export default function ContactUs(props) {
         labelHidden={false}
         variation="default"
         isMultiline={false}
-        {...getOverrideProps(overrides, "TextFieldgwz")}
+        {...getOverrideProps(overrides, "TextField17642109")}
       ></TextField>
       <Button
         display="flex"
@@ -250,7 +250,7 @@ export default function ContactUs(props) {
         shrink="0"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Frame 28")}
+        {...getOverrideProps(overrides, "Frame 2817642111")}
       >
         <Flex
           gap="8px"
@@ -261,7 +261,7 @@ export default function ContactUs(props) {
           height="24px"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Frame 28web")}
+          {...getOverrideProps(overrides, "Frame 2817642112")}
         >
           <Icon
             width="24px"
@@ -281,7 +281,7 @@ export default function ContactUs(props) {
             ]}
             type="camera"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconvxx")}
+            {...getOverrideProps(overrides, "Icon17642113")}
           ></Icon>
           <Text
             fontFamily="Inter"
@@ -330,7 +330,7 @@ export default function ContactUs(props) {
             ]}
             type="flag"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Icongwx")}
+            {...getOverrideProps(overrides, "Icon17642116")}
           ></Icon>
           <Text
             fontFamily="Inter"

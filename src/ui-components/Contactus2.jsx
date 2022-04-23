@@ -7,7 +7,7 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Image, Text, TextField, View } from "@aws-amplify/ui-react";
+import { Button, Image, Text, TextField, View } from "@aws-amplify/ui-react";
 export default function Contactus2(props) {
   const { overrides, ...rest } = props;
   return (
@@ -17,7 +17,7 @@ export default function Contactus2(props) {
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(245,187,199,1)"
+      backgroundImage="linear-gradient(-90deg, rgba(244,186,199,0.17), rgba(0,26,255,0.12))"
       {...rest}
       {...getOverrideProps(overrides, "Contactus2")}
     >
@@ -111,7 +111,7 @@ export default function Contactus2(props) {
         variation="default"
         isMultiline={false}
         label="Fname"
-        {...getOverrideProps(overrides, "TextFieldjrn")}
+        {...getOverrideProps(overrides, "TextField29823347")}
       ></TextField>
       <TextField
         display="flex"
@@ -129,7 +129,7 @@ export default function Contactus2(props) {
         variation="default"
         isMultiline={false}
         label="E mail"
-        {...getOverrideProps(overrides, "TextFieldrdp")}
+        {...getOverrideProps(overrides, "TextField29823361")}
       ></TextField>
       <TextField
         display="flex"
@@ -146,7 +146,7 @@ export default function Contactus2(props) {
         variation="default"
         isMultiline={false}
         label="Lname"
-        {...getOverrideProps(overrides, "TextFieldptp")}
+        {...getOverrideProps(overrides, "TextField29823354")}
       ></TextField>
       <TextField
         display="flex"
@@ -165,8 +165,25 @@ export default function Contactus2(props) {
         isMultiline={true}
         placeholder="Write Here..."
         label="Message"
-        {...getOverrideProps(overrides, "TextFieldopw")}
+        {...getOverrideProps(overrides, "TextField29823368")}
       ></TextField>
+      <Button
+        display="flex"
+        gap="10px"
+        position="absolute"
+        top="633px"
+        left="277px"
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        borderRadius="4px"
+        padding="12px 24px 12px 24px"
+        backgroundColor="rgba(102,0,0,1)"
+        size="large"
+        isDisabled={false}
+        variation="primary"
+        {...getOverrideProps(overrides, "Button")}
+      ></Button>
     </View>
   );
 }

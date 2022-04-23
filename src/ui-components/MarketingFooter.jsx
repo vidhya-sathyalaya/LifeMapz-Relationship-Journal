@@ -87,7 +87,10 @@ export default function MarketingFooter(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Lorem ipsum dolor sit amet"
-            {...getOverrideProps(overrides, "Lorem ipsum dolor sit ametzst")}
+            {...getOverrideProps(
+              overrides,
+              "Lorem ipsum dolor sit amet18022169"
+            )}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -106,7 +109,7 @@ export default function MarketingFooter(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Consectetur adipiscing"
-            {...getOverrideProps(overrides, "Consectetur adipiscingebr")}
+            {...getOverrideProps(overrides, "Consectetur adipiscing18022171")}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -125,7 +128,7 @@ export default function MarketingFooter(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Elit sed do eiusmod"
-            {...getOverrideProps(overrides, "Elit sed do eiusmodgmq")}
+            {...getOverrideProps(overrides, "Elit sed do eiusmod18022173")}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -192,7 +195,10 @@ export default function MarketingFooter(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Lorem ipsum dolor sit amet"
-            {...getOverrideProps(overrides, "Lorem ipsum dolor sit ametrkh")}
+            {...getOverrideProps(
+              overrides,
+              "Lorem ipsum dolor sit amet18022168"
+            )}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -211,7 +217,7 @@ export default function MarketingFooter(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Consectetur adipiscing"
-            {...getOverrideProps(overrides, "Consectetur adipiscingmbn")}
+            {...getOverrideProps(overrides, "Consectetur adipiscing18022170")}
           ></Text>
           <Text
             fontFamily="Inter"
@@ -230,7 +236,7 @@ export default function MarketingFooter(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Elit sed do eiusmod"
-            {...getOverrideProps(overrides, "Elit sed do eiusmodewt")}
+            {...getOverrideProps(overrides, "Elit sed do eiusmod18022172")}
           ></Text>
         </Flex>
       </Flex>

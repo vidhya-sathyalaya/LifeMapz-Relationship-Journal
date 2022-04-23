@@ -6,8 +6,11 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
+import { Images } from "../models";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type NavBarProps = React.PropsWithChildren<Partial<FlexProps> & {
+    images?: Images;
+} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function NavBar(props: NavBarProps): React.ReactElement;

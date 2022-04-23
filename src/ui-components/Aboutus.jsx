@@ -15,7 +15,7 @@ export default function Aboutus(props) {
   const { overrides, ...rest } = props;
   const buttonOnClick = useNavigateAction({
     type: "url",
-    url: "https://localhost:3000/contactus",
+    url: "http://localhost:3000/contactus",
   });
   const linkedinlogopngTwoZeroTwoSixTwoOnClick = useNavigateAction({
     target: "_blank",
@@ -49,7 +49,7 @@ export default function Aboutus(props) {
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(245,187,199,1)"
+      backgroundImage="linear-gradient(-90deg, rgba(244,186,199,0.25), rgba(0,26,255,0))"
       {...rest}
       {...getOverrideProps(overrides, "Aboutus")}
     >
@@ -415,7 +415,6 @@ export default function Aboutus(props) {
       ></Icon>
       <Button
         display="flex"
-        gap="0"
         position="absolute"
         top="820px"
         left="668px"
@@ -425,7 +424,6 @@ export default function Aboutus(props) {
         justifyContent="center"
         alignItems="center"
         borderRadius="4px"
-        padding="8px 12px 8px 12px"
         backgroundColor="rgba(102,0,0,1)"
         size="small"
         isDisabled={false}
@@ -476,7 +474,7 @@ export default function Aboutus(props) {
         ]}
         type="link"
         fontSize="37.77px"
-        {...getOverrideProps(overrides, "Iconriw")}
+        {...getOverrideProps(overrides, "Icon29883389")}
       ></Icon>
       <Icon
         width="37.77px"
@@ -497,7 +495,7 @@ export default function Aboutus(props) {
         ]}
         type="link"
         fontSize="37.77px"
-        {...getOverrideProps(overrides, "Iconohl")}
+        {...getOverrideProps(overrides, "Icon29893392")}
       ></Icon>
       <Image
         width="43px"
@@ -530,7 +528,7 @@ export default function Aboutus(props) {
         ]}
         type="link"
         fontSize="37.77px"
-        {...getOverrideProps(overrides, "Iconmgq")}
+        {...getOverrideProps(overrides, "Icon29893396")}
       ></Icon>
       <Image
         width="43px"
@@ -563,7 +561,7 @@ export default function Aboutus(props) {
         ]}
         type="link"
         fontSize="37.77px"
-        {...getOverrideProps(overrides, "Iconohp")}
+        {...getOverrideProps(overrides, "Icon29893400")}
       ></Icon>
       <Image
         width="43px"
@@ -596,7 +594,7 @@ export default function Aboutus(props) {
         ]}
         type="link"
         fontSize="37.77px"
-        {...getOverrideProps(overrides, "Iconozy")}
+        {...getOverrideProps(overrides, "Icon29893404")}
       ></Icon>
       <Image
         width="43px"
@@ -629,7 +627,7 @@ export default function Aboutus(props) {
         ]}
         type="link"
         fontSize="37.77px"
-        {...getOverrideProps(overrides, "Iconxjn")}
+        {...getOverrideProps(overrides, "Icon29893408")}
       ></Icon>
     </View>
   );

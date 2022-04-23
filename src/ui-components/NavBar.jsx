@@ -12,15 +12,26 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
 export default function NavBar(props) {
-  const { overrides, ...rest } = props;
+  const { images, overrides, ...rest } = props;
   const dashboardOnClick = useNavigateAction({
     type: "url",
     url: "http://localhost:3000/home",
   });
+  const applicantsOnClick = useNavigateAction({
+    type: "url",
+    url: "http://localhost:3000/aboutus",
+  });
+  const companyOnClick = useNavigateAction({
+    type: "url",
+    url: "http://localhost:3000/contactus",
+  });
   const signUpOnClick = useNavigateAction({
-    target: "_blank",
     type: "url",
     url: "http://localhost:3000/signup",
+  });
+  const loginOnClick = useNavigateAction({
+    type: "url",
+    url: "http://localhost:3000/login",
   });
   return (
     <Flex
@@ -149,6 +160,9 @@ export default function NavBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="About us"
+          onClick={() => {
+            applicantsOnClick();
+          }}
           {...getOverrideProps(overrides, "Applicants")}
         ></Text>
         <Text
@@ -167,6 +181,9 @@ export default function NavBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Contact"
+          onClick={() => {
+            companyOnClick();
+          }}
           {...getOverrideProps(overrides, "Company")}
         ></Text>
       </Flex>
@@ -220,6 +237,9 @@ export default function NavBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Login"
+          onClick={() => {
+            loginOnClick();
+          }}
           {...getOverrideProps(overrides, "Login")}
         ></Text>
         <Image

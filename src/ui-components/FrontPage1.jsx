@@ -6,10 +6,17 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Image, Text, View } from "@aws-amplify/ui-react";
 export default function FrontPage1(props) {
   const { overrides, ...rest } = props;
+  const createJournalOnClick = useNavigateAction({
+    type: "url",
+    url: "http://localhost:3000/createjournal",
+  });
   return (
     <View
       width="1520px"
@@ -37,7 +44,7 @@ export default function FrontPage1(props) {
           fontSize="36px"
           fontWeight="400"
           color="rgba(204,53,140,1)"
-          lineHeight="30px"
+          lineHeight="25px"
           textAlign="center"
           display="flex"
           direction="column"
@@ -45,7 +52,7 @@ export default function FrontPage1(props) {
           width="377px"
           height="55px"
           position="absolute"
-          bottom="346px"
+          bottom="347px"
           left="calc(50% - 188.5px - 503.5px)"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
@@ -102,6 +109,9 @@ export default function FrontPage1(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Create Journal"
+            onClick={() => {
+              createJournalOnClick();
+            }}
             {...getOverrideProps(overrides, "Create Journal")}
           ></Text>
         </View>
@@ -115,7 +125,6 @@ export default function FrontPage1(props) {
         right="0%"
         width="64.88%"
         padding="0px 0px 0px 0px"
-        maxWidth="100%"
         {...getOverrideProps(overrides, "image 1")}
       ></Image>
     </View>
