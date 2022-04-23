@@ -41,12 +41,13 @@ enum GenderValue {
   NONBINARY
 }
 
-type User @model @auth(rules: [{allow: public}]) {
+type User @model @auth(rules: [{allow: public}])
+ {
   id: ID!
   cognito_username: String
   fname: String!
   lname: String!
-  email: AWSEmail!
+  email: String!  @index(name: "getUserByEmail", queryField: "getUserByEmail")
   dob: AWSDate
   gender: GenderValue
   JournalEntries: [JournalEntry] @hasMany(indexName: "byUser", fields: ["id"])

@@ -364,3 +364,38 @@ export const syncUsers = /* GraphQL */ `
     }
   }
 `;
+export const getUserByEmail = /* GraphQL */ `
+  query GetUserByEmail(
+    $email: String!
+    $sortDirection: ModelSortDirection
+    $filter: ModelUserFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    getUserByEmail(
+      email: $email
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        cognito_username
+        fname
+        lname
+        email
+        dob
+        gender
+        journalID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;

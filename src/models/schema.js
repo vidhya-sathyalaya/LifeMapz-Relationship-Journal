@@ -397,7 +397,7 @@ export const schema = {
                 "email": {
                     "name": "email",
                     "isArray": false,
-                    "type": "AWSEmail",
+                    "type": "String",
                     "isRequired": true,
                     "attributes": []
                 },
@@ -465,6 +465,16 @@ export const schema = {
                 {
                     "type": "key",
                     "properties": {
+                        "name": "getUserByEmail",
+                        "queryField": "getUserByEmail",
+                        "fields": [
+                            "email"
+                        ]
+                    }
+                },
+                {
+                    "type": "key",
+                    "properties": {
                         "name": "byJournal",
                         "fields": [
                             "journalID"
@@ -509,5 +519,5 @@ export const schema = {
         }
     },
     "nonModels": {},
-    "version": "d51fe4c2aa72754ef7666d7aac957ada"
+    "version": "0504205d268c007051ad6882bf1cd407"
 };

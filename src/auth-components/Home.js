@@ -9,46 +9,59 @@ import CompleteSignup  from "./CompleteSignup.js";
 import { DataStore } from '@aws-amplify/datastore';
 
 import { API } from 'aws-amplify';
-// import * as queries from '../graphql/queries';
+import * as queries from '../graphql/queries';
 
 // const { signOut, user } = useAuthenticator();
 
 // const userProfileAvailable = false;
 
-export const getUser = /* GraphQL */ `
-  query GetUser($email: AWSEmail!) {
-    getUser(email: $email) {
-      id
-      cognito_username
-      fname
-      lname
-      email
-      dob
-      gender
-      JournalEntries {
-        nextToken
-        startedAt
+export const getUserByEmail = /* GraphQL */ `
+  query GetUserByEmail(
+    $email: String!
+    $sortDirection: ModelSortDirection
+    $filter: ModelUserFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    getUserByEmail(
+      email: $email
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        cognito_username
+        fname
+        lname
+        email
+        dob
+        gender
+        journalID
+        createdAt
+        updatedAt
       }
-      journalID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      nextToken
+      startedAt
     }
   }
 `;
+
 
 
 class Home extends React.Component {
 
   constructor(props) {
     super(props);
+    this.email = '';
     this.state = {
       cognito_username: '' ,
+      email: '', 
       userProfileAvailable:false,
     };
-
+    this.email = this.componentDidMount.bind(this);
+  
     // console.log(Auth.user.attributes.username);
 
     // this will give every detail of the current authenticated user of the app
@@ -60,9 +73,9 @@ class Home extends React.Component {
 
   }
 
+
   componentDidMount()
     {
-        // this.setState( {cognitoUsername : Auth.user.attributes.username });
         this.getCurrentUserInfo();
         this.fetchUserProfile();
     }
@@ -71,7 +84,10 @@ class Home extends React.Component {
     Auth.currentUserInfo().then(user => {
     // this.setState({user});
     // testing and printing what is in user object
+    console.log("In the get UserInfo function")
     console.log(user.username);
+    console.log(user.attributes.email);
+    this.email = user.attributes.email;
     this.setState({cognito_username : user.username});
     this.setState({email : user.attributes.email});
     });
@@ -88,10 +104,13 @@ class Home extends React.Component {
     //     c => c.date_created('gt', AWSDateUtil.getStartOfDayAsTimeStamp())
     //     .date_created('le', AWSDateUtil.getEndOfDayAsTimeStamp())
     //     .entry_type('eq', "Text"));
+
     try{
-        const user = await API.graphql({ query: getUser, variables: { email: this.state.email }});
+        console.log("Fetch profile email" + this.email);
+        const user = await API.graphql({ query: getUserByEmail, variables: { email : this.email }});
+        
         console.log(user);
-        if(user.data == null){
+        if(user.data.getUserByEmail == null){
           this.state.userProfileAvailable = false;
         }
         else{
