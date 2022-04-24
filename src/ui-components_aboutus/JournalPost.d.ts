@@ -5,14 +5,12 @@
  **************************************************************************/
 
 import React from "react";
-import { JournalEntry, TextEntry, User } from "../models";
+import { JournalEntry } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
-export declare type SocialAProps = React.PropsWithChildren<Partial<FlexProps> & {
+export declare type JournalPostProps = React.PropsWithChildren<Partial<FlexProps> & {
     journalentry?: JournalEntry;
-    user?: User;
-    textEntry?: TextEntry;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function SocialA(props: SocialAProps): React.ReactElement;
+export default function JournalPost(props: JournalPostProps): React.ReactElement;

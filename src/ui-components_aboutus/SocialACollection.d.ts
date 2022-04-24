@@ -5,14 +5,15 @@
  **************************************************************************/
 
 import React from "react";
-import { JournalEntry, TextEntry, User } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type SocialAProps = React.PropsWithChildren<Partial<FlexProps> & {
-    journalentry?: JournalEntry;
-    user?: User;
-    textEntry?: TextEntry;
+import { CollectionProps } from "@aws-amplify/ui-react";
+export declare type SocialACollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+    items?: any[];
+    overrideItems?: ({ item: any, index: number }: {
+        item: any;
+        index: any;
+    }) => Record<string, string>;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function SocialA(props: SocialAProps): React.ReactElement;
+export default function SocialACollection(props: SocialACollectionProps): React.ReactElement;

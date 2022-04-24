@@ -49,7 +49,7 @@ export default function Aboutus(props) {
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(245,187,199,1)"
+      backgroundImage="linear-gradient(-90deg, rgba(244,186,199,0.25), rgba(0,26,255,0))"
       {...rest}
       {...getOverrideProps(overrides, "Aboutus")}
     >
@@ -360,6 +360,7 @@ export default function Aboutus(props) {
         position="absolute"
         top="561px"
         left="894px"
+        src="https://media-exp1.licdn.com/dms/image/C4D03AQG1vIMp6yTvVw/profile-displayphoto-shrink_800_800/0/1607792214000?e=1655942400&v=beta&t=mJURL629SI1uDVXrMRC6Qa0FGLzpnK8EFHeVmGrHyHI"
         {...getOverrideProps(overrides, "Ellipse 10")}
       ></Icon>
       <Icon
@@ -415,7 +416,6 @@ export default function Aboutus(props) {
       ></Icon>
       <Button
         display="flex"
-        gap="0"
         position="absolute"
         top="820px"
         left="668px"
@@ -425,7 +425,6 @@ export default function Aboutus(props) {
         justifyContent="center"
         alignItems="center"
         borderRadius="4px"
-        padding="8px 12px 8px 12px"
         backgroundColor="rgba(102,0,0,1)"
         size="small"
         isDisabled={false}
@@ -441,196 +440,66 @@ export default function Aboutus(props) {
         height="32px"
         position="absolute"
         top="720px"
-        left="366px"
+        left="575px"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "linkedin-logo-png-2026 1")}
-      ></Image>
-      <Image
-        width="43px"
-        height="32px"
-        position="absolute"
-        top="720px"
-        left="558px"
-        padding="0px 0px 0px 0px"
+        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
         onClick={() => {
           linkedinlogopngTwoZeroTwoSixTwoOnClick();
         }}
         {...getOverrideProps(overrides, "linkedin-logo-png-2026 2")}
       ></Image>
-      <Icon
-        width="37.77px"
-        height="45px"
-        position="absolute"
-        top="716px"
-        left="599px"
-        overflow="hidden"
-        padding="0px 0px 0px 0px"
-        viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
-        paths={[
-          {
-            d: "M15 0L11 0L11 2L15 2C16.65 2 18 3.35 18 5C18 6.65 16.65 8 15 8L11 8L11 10L15 10C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0ZM9 8L5 8C3.35 8 2 6.65 2 5C2 3.35 3.35 2 5 2L9 2L9 0L5 0C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10L9 10L9 8ZM6 4L14 4L14 6L6 6L6 4Z",
-            fill: "rgba(13,26,38,1)",
-            fillRule: "nonzero",
-            style: { transform: "translate(8.33%, 29.17%)" },
-          },
-        ]}
-        type="link"
-        fontSize="37.77px"
-        {...getOverrideProps(overrides, "Iconriw")}
-      ></Icon>
-      <Icon
-        width="37.77px"
-        height="45px"
-        position="absolute"
-        top="716px"
-        left="409px"
-        overflow="hidden"
-        padding="0px 0px 0px 0px"
-        viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
-        paths={[
-          {
-            d: "M15 0L11 0L11 2L15 2C16.65 2 18 3.35 18 5C18 6.65 16.65 8 15 8L11 8L11 10L15 10C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0ZM9 8L5 8C3.35 8 2 6.65 2 5C2 3.35 3.35 2 5 2L9 2L9 0L5 0C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10L9 10L9 8ZM6 4L14 4L14 6L6 6L6 4Z",
-            fill: "rgba(13,26,38,1)",
-            fillRule: "nonzero",
-            style: { transform: "translate(8.33%, 29.17%)" },
-          },
-        ]}
-        type="link"
-        fontSize="37.77px"
-        {...getOverrideProps(overrides, "Iconohl")}
-      ></Icon>
       <Image
         width="43px"
         height="32px"
         position="absolute"
         top="720px"
-        left="366px"
+        left="388px"
         padding="0px 0px 0px 0px"
+        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
         onClick={() => {
           linkedinlogopngTwoZeroTwoSixSixOnClick();
         }}
         {...getOverrideProps(overrides, "linkedin-logo-png-2026 6")}
       ></Image>
-      <Icon
-        width="37.77px"
-        height="45px"
-        position="absolute"
-        top="716px"
-        left="409px"
-        overflow="hidden"
-        padding="0px 0px 0px 0px"
-        viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
-        paths={[
-          {
-            d: "M15 0L11 0L11 2L15 2C16.65 2 18 3.35 18 5C18 6.65 16.65 8 15 8L11 8L11 10L15 10C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0ZM9 8L5 8C3.35 8 2 6.65 2 5C2 3.35 3.35 2 5 2L9 2L9 0L5 0C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10L9 10L9 8ZM6 4L14 4L14 6L6 6L6 4Z",
-            fill: "rgba(13,26,38,1)",
-            fillRule: "nonzero",
-            style: { transform: "translate(8.33%, 29.17%)" },
-          },
-        ]}
-        type="link"
-        fontSize="37.77px"
-        {...getOverrideProps(overrides, "Iconmgq")}
-      ></Icon>
       <Image
         width="43px"
         height="32px"
         position="absolute"
         top="720px"
-        left="735px"
+        left="748px"
         padding="0px 0px 0px 0px"
+        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
         onClick={() => {
           linkedinlogopngTwoZeroTwoSixSevenOnClick();
         }}
         {...getOverrideProps(overrides, "linkedin-logo-png-2026 7")}
       ></Image>
-      <Icon
-        width="37.77px"
-        height="45px"
-        position="absolute"
-        top="716px"
-        left="778px"
-        overflow="hidden"
-        padding="0px 0px 0px 0px"
-        viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
-        paths={[
-          {
-            d: "M15 0L11 0L11 2L15 2C16.65 2 18 3.35 18 5C18 6.65 16.65 8 15 8L11 8L11 10L15 10C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0ZM9 8L5 8C3.35 8 2 6.65 2 5C2 3.35 3.35 2 5 2L9 2L9 0L5 0C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10L9 10L9 8ZM6 4L14 4L14 6L6 6L6 4Z",
-            fill: "rgba(13,26,38,1)",
-            fillRule: "nonzero",
-            style: { transform: "translate(8.33%, 29.17%)" },
-          },
-        ]}
-        type="link"
-        fontSize="37.77px"
-        {...getOverrideProps(overrides, "Iconohp")}
-      ></Icon>
       <Image
         width="43px"
         height="32px"
         position="absolute"
         top="720px"
-        left="917px"
+        left="934px"
         padding="0px 0px 0px 0px"
+        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
         onClick={() => {
           linkedinlogopngTwoZeroTwoSixEightOnClick();
         }}
         {...getOverrideProps(overrides, "linkedin-logo-png-2026 8")}
       ></Image>
-      <Icon
-        width="37.77px"
-        height="45px"
-        position="absolute"
-        top="716px"
-        left="960px"
-        overflow="hidden"
-        padding="0px 0px 0px 0px"
-        viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
-        paths={[
-          {
-            d: "M15 0L11 0L11 2L15 2C16.65 2 18 3.35 18 5C18 6.65 16.65 8 15 8L11 8L11 10L15 10C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0ZM9 8L5 8C3.35 8 2 6.65 2 5C2 3.35 3.35 2 5 2L9 2L9 0L5 0C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10L9 10L9 8ZM6 4L14 4L14 6L6 6L6 4Z",
-            fill: "rgba(13,26,38,1)",
-            fillRule: "nonzero",
-            style: { transform: "translate(8.33%, 29.17%)" },
-          },
-        ]}
-        type="link"
-        fontSize="37.77px"
-        {...getOverrideProps(overrides, "Iconozy")}
-      ></Icon>
       <Image
         width="43px"
         height="32px"
         position="absolute"
         top="720px"
-        left="1098px"
+        left="1116px"
         padding="0px 0px 0px 0px"
+        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
         onClick={() => {
           linkedinlogopngTwoZeroTwoSixNineOnClick();
         }}
         {...getOverrideProps(overrides, "linkedin-logo-png-2026 9")}
       ></Image>
-      <Icon
-        width="37.77px"
-        height="45px"
-        position="absolute"
-        top="716px"
-        left="1141px"
-        overflow="hidden"
-        padding="0px 0px 0px 0px"
-        viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
-        paths={[
-          {
-            d: "M15 0L11 0L11 2L15 2C16.65 2 18 3.35 18 5C18 6.65 16.65 8 15 8L11 8L11 10L15 10C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0ZM9 8L5 8C3.35 8 2 6.65 2 5C2 3.35 3.35 2 5 2L9 2L9 0L5 0C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10L9 10L9 8ZM6 4L14 4L14 6L6 6L6 4Z",
-            fill: "rgba(13,26,38,1)",
-            fillRule: "nonzero",
-            style: { transform: "translate(8.33%, 29.17%)" },
-          },
-        ]}
-        type="link"
-        fontSize="37.77px"
-        {...getOverrideProps(overrides, "Iconxjn")}
-      ></Icon>
     </View>
   );
 }

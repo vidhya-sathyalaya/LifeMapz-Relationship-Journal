@@ -8,13 +8,13 @@
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import Sample11 from "./Sample11";
-import { Icon, Image, SearchField, Text, View } from "@aws-amplify/ui-react";
+import { Image, Text, View } from "@aws-amplify/ui-react";
 export default function Footer2(props) {
   const { overrides, ...rest } = props;
   return (
     <View
-      width="7377px"
-      height="2354px"
+      width="6647px"
+      height="1848px"
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
@@ -42,41 +42,6 @@ export default function Footer2(props) {
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Screen Shot 2022-03-18 at 1.36")}
       ></Image>
-      <SearchField
-        display="flex"
-        gap="4px"
-        position="absolute"
-        top="37.38%"
-        bottom="46.81%"
-        left="5.65%"
-        right="59.97%"
-        direction="column"
-        width="2536.36px"
-        padding="0px 0px 0px 0px"
-        size="large"
-        isDisabled={false}
-        labelHidden={true}
-        variation="quiet"
-        {...getOverrideProps(overrides, "SearchField")}
-      ></SearchField>
-      <Icon
-        width="133.5px"
-        height="133.5px"
-        viewBox={{ minX: 0, minY: 0, width: 133.5, height: 133.5 }}
-        paths={[
-          {
-            d: "M105.836 27.6642L74.3892 102.795L64.5992 77.43L62.2258 71.2742L56.1442 68.9008L30.705 59.0367L105.836 27.6642ZM133.5 0L0 55.8475L0 63.1158L50.73 82.77L70.31 133.5L77.5783 133.5L133.5 0Z",
-            fill: "rgba(13,26,38,1)",
-            fillRule: "nonzero",
-          },
-        ]}
-        position="absolute"
-        top="42.31%"
-        bottom="52.02%"
-        left="35.58%"
-        right="62.61%"
-        {...getOverrideProps(overrides, "Vector")}
-      ></Icon>
       <Text
         fontFamily="Reenie Beanie"
         fontSize="288px"
