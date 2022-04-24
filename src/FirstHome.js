@@ -42,7 +42,7 @@ function FirstHome() {
          <div>
            <FrontPage1 overrides={fpg1}/>
            <Footer1 overrides={fott1}/>
-           <Frame418 />
+           {/* <Frame418 /> */}
          </div>
          </div>
        // </AmplifyProvider>
