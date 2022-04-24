@@ -31,7 +31,7 @@ export default function Features2x2(props) {
         objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Frame 136")}
+        {...getOverrideProps(overrides, "Frame 136132911500")}
       >
         <Flex
           gap="24px"
@@ -43,7 +43,7 @@ export default function Features2x2(props) {
           objectFit="cover"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Frame 136uvb")}
+          {...getOverrideProps(overrides, "Frame 136131112097")}
         >
           <Flex
             gap="16px"
@@ -57,7 +57,7 @@ export default function Features2x2(props) {
             position="relative"
             padding="160px 40px 40px 40px"
             backgroundColor="rgba(255,255,255,1)"
-            {...getOverrideProps(overrides, "Frame 374csq")}
+            {...getOverrideProps(overrides, "Frame 374131112098")}
           >
             <Text
               fontFamily="Inter"
@@ -98,7 +98,7 @@ export default function Features2x2(props) {
               children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
               {...getOverrideProps(
                 overrides,
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.ztj"
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.131112100"
               )}
             ></Text>
           </Flex>
@@ -114,7 +114,7 @@ export default function Features2x2(props) {
             position="relative"
             padding="160px 40px 40px 40px"
             backgroundColor="rgba(255,255,255,1)"
-            {...getOverrideProps(overrides, "Frame 373rpv")}
+            {...getOverrideProps(overrides, "Frame 373131112093")}
           >
             <Text
               fontFamily="Inter"
@@ -155,7 +155,7 @@ export default function Features2x2(props) {
               children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
               {...getOverrideProps(
                 overrides,
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.auc"
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.130011914"
               )}
             ></Text>
           </Flex>
@@ -184,7 +184,7 @@ export default function Features2x2(props) {
             position="relative"
             padding="160px 40px 40px 40px"
             backgroundColor="rgba(255,255,255,1)"
-            {...getOverrideProps(overrides, "Frame 374ikt")}
+            {...getOverrideProps(overrides, "Frame 374132911494")}
           >
             <Text
               fontFamily="Inter"
@@ -225,7 +225,7 @@ export default function Features2x2(props) {
               children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
               {...getOverrideProps(
                 overrides,
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.suo"
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.132911496"
               )}
             ></Text>
           </Flex>
@@ -241,7 +241,7 @@ export default function Features2x2(props) {
             position="relative"
             padding="160px 40px 40px 40px"
             backgroundColor="rgba(255,255,255,1)"
-            {...getOverrideProps(overrides, "Frame 373vba")}
+            {...getOverrideProps(overrides, "Frame 373132911497")}
           >
             <Text
               fontFamily="Inter"
@@ -282,7 +282,7 @@ export default function Features2x2(props) {
               children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
               {...getOverrideProps(
                 overrides,
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.rjo"
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.132911499"
               )}
             ></Text>
           </Flex>

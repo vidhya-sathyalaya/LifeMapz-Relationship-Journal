@@ -42,7 +42,6 @@ export default function CardE(props) {
           justifyContent="center"
           alignItems="center"
           borderRadius="99px"
-          padding="4px 8px 4px 8px"
           backgroundColor="rgba(239,240,240,1)"
           size="small"
           variation="default"

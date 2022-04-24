@@ -17,6 +17,10 @@ export default function NavBar(props) {
     type: "url",
     url: "http://localhost:3000/home",
   });
+  const jobsOnClick = useNavigateAction({
+    type: "url",
+    url: "http://localhost:3000/journalentry",
+  });
   const applicantsOnClick = useNavigateAction({
     type: "url",
     url: "http://localhost:3000/aboutus",
@@ -142,6 +146,9 @@ export default function NavBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Journal"
+          onClick={() => {
+            jobsOnClick();
+          }}
           {...getOverrideProps(overrides, "Jobs")}
         ></Text>
         <Text

@@ -48,7 +48,7 @@ export default function EditProfile(props) {
           objectFit="cover"
           position="relative"
           padding="0px 24px 0px 24px"
-          {...getOverrideProps(overrides, "Edit Profile")}
+          {...getOverrideProps(overrides, "Edit Profile18413032")}
         >
           <Icon
             width="24px"
@@ -85,7 +85,7 @@ export default function EditProfile(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Edit Profile"
-            {...getOverrideProps(overrides, "Edit Profileohq")}
+            {...getOverrideProps(overrides, "Edit Profile18413034")}
           ></Text>
         </Flex>
         <Divider
@@ -97,7 +97,7 @@ export default function EditProfile(props) {
           padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Dividermhd")}
+          {...getOverrideProps(overrides, "Divider21894178")}
         ></Divider>
         <Flex
           gap="16px"
@@ -162,7 +162,7 @@ export default function EditProfile(props) {
             labelHidden={false}
             variation="default"
             isMultiline={false}
-            {...getOverrideProps(overrides, "TextFielduwx")}
+            {...getOverrideProps(overrides, "TextField18352991")}
           ></TextField>
           <TextField
             display="flex"
@@ -178,7 +178,7 @@ export default function EditProfile(props) {
             labelHidden={false}
             variation="default"
             isMultiline={false}
-            {...getOverrideProps(overrides, "TextFieldpnf")}
+            {...getOverrideProps(overrides, "TextField18352996")}
           ></TextField>
           <TextField
             display="flex"
@@ -194,7 +194,7 @@ export default function EditProfile(props) {
             labelHidden={false}
             variation="default"
             isMultiline={false}
-            {...getOverrideProps(overrides, "TextFieldbmk")}
+            {...getOverrideProps(overrides, "TextField18353001")}
           ></TextField>
         </Flex>
         <Divider
@@ -206,7 +206,7 @@ export default function EditProfile(props) {
           padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Divideriyz")}
+          {...getOverrideProps(overrides, "Divider21894164")}
         ></Divider>
         <Flex
           gap="10px"
@@ -226,7 +226,6 @@ export default function EditProfile(props) {
             shrink="0"
             position="relative"
             borderRadius="4px"
-            padding="8px 16px 8px 16px"
             backgroundColor="rgba(4,125,149,1)"
             size="default"
             isDisabled={false}

@@ -30,7 +30,7 @@ export default function Ampligram(props) {
         padding="0px 0px 0px 0px"
         size="small"
         orientation="horizontal"
-        {...getOverrideProps(overrides, "Dividerpwy")}
+        {...getOverrideProps(overrides, "Divider15693705")}
       ></Divider>
       <Flex
         gap="16px"
@@ -63,7 +63,7 @@ export default function Ampligram(props) {
             position="relative"
             borderRadius="160px"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "imagecpq")}
+            {...getOverrideProps(overrides, "image23423389")}
           ></Image>
           <Text
             fontFamily="Inter"
@@ -114,7 +114,7 @@ export default function Ampligram(props) {
             ]}
             type="more_vert"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconuyp")}
+            {...getOverrideProps(overrides, "Icon16554775")}
           ></Icon>
         </Flex>
       </Flex>
@@ -125,7 +125,7 @@ export default function Ampligram(props) {
         objectFit="cover"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "imagenwp")}
+        {...getOverrideProps(overrides, "image15693496")}
       ></Image>
       <Flex
         gap="16px"
@@ -167,7 +167,7 @@ export default function Ampligram(props) {
             ]}
             type="favorite_border"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconqyp")}
+            {...getOverrideProps(overrides, "Icon16554774")}
           ></Icon>
           <Icon
             width="24px"
@@ -187,7 +187,7 @@ export default function Ampligram(props) {
             ]}
             type="chat_bubble_outline"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconwat")}
+            {...getOverrideProps(overrides, "Icon16554880")}
           ></Icon>
           <Icon
             width="24px"
@@ -207,7 +207,7 @@ export default function Ampligram(props) {
             ]}
             type="send"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconwaq")}
+            {...getOverrideProps(overrides, "Icon16554772")}
           ></Icon>
         </Flex>
         <Flex
@@ -241,7 +241,7 @@ export default function Ampligram(props) {
             ]}
             type="bookmark_border"
             fontSize="24px"
-            {...getOverrideProps(overrides, "Iconjgb")}
+            {...getOverrideProps(overrides, "Icon16554773")}
           ></Icon>
         </Flex>
       </Flex>
@@ -264,7 +264,7 @@ export default function Ampligram(props) {
           padding="0px 0px 0px 0px"
           size="small"
           orientation="horizontal"
-          {...getOverrideProps(overrides, "Dividerora")}
+          {...getOverrideProps(overrides, "Divider15693698")}
         ></Divider>
         <Flex
           gap="8px"

@@ -17,7 +17,7 @@ export default function Footer1(props) {
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(245,187,199,1)"
+      backgroundImage="linear-gradient(-90deg, rgba(255,255,255,1))"
       {...rest}
       {...getOverrideProps(overrides, "Footer1")}
     >
@@ -96,7 +96,6 @@ export default function Footer1(props) {
       ></Image>
       <Button
         display="flex"
-        gap="0"
         position="absolute"
         top="165px"
         left="229px"
@@ -104,12 +103,11 @@ export default function Footer1(props) {
         justifyContent="center"
         alignItems="center"
         borderRadius="4px"
-        padding="8px 12px 8px 12px"
         backgroundColor="rgba(102,0,0,1)"
         size="small"
         isDisabled={false}
         variation="primary"
-        {...getOverrideProps(overrides, "Button")}
+        {...getOverrideProps(overrides, "Button28983172")}
       ></Button>
       <Flex
         gap="0"
@@ -124,7 +122,6 @@ export default function Footer1(props) {
       >
         <Button
           display="flex"
-          gap="0"
           direction="row"
           width="171px"
           height="56px"
@@ -132,15 +129,13 @@ export default function Footer1(props) {
           alignItems="center"
           shrink="0"
           position="relative"
-          padding="8px 12px 8px 12px"
           size="small"
           isDisabled={false}
           variation="link"
-          {...getOverrideProps(overrides, "Buttonzfs")}
+          {...getOverrideProps(overrides, "Button28993179")}
         ></Button>
         <Button
           display="flex"
-          gap="0"
           direction="row"
           width="95px"
           height="56px"
@@ -148,15 +143,13 @@ export default function Footer1(props) {
           alignItems="center"
           shrink="0"
           position="relative"
-          padding="8px 12px 8px 12px"
           size="small"
           isDisabled={false}
           variation="link"
-          {...getOverrideProps(overrides, "Buttonuai")}
+          {...getOverrideProps(overrides, "Button28993187")}
         ></Button>
         <Button
           display="flex"
-          gap="0"
           direction="row"
           width="107px"
           height="55px"
@@ -164,15 +157,13 @@ export default function Footer1(props) {
           alignItems="center"
           shrink="0"
           position="relative"
-          padding="8px 12px 8px 12px"
           size="small"
           isDisabled={false}
           variation="link"
-          {...getOverrideProps(overrides, "Buttonftx")}
+          {...getOverrideProps(overrides, "Button28993195")}
         ></Button>
         <Button
           display="flex"
-          gap="0"
           direction="row"
           width="112px"
           height="56px"
@@ -180,15 +171,13 @@ export default function Footer1(props) {
           alignItems="center"
           shrink="0"
           position="relative"
-          padding="8px 12px 8px 12px"
           size="small"
           isDisabled={false}
           variation="link"
-          {...getOverrideProps(overrides, "Buttonwgh")}
+          {...getOverrideProps(overrides, "Button28993203")}
         ></Button>
         <Button
           display="flex"
-          gap="0"
           direction="row"
           width="116px"
           height="56px"
@@ -196,11 +185,10 @@ export default function Footer1(props) {
           alignItems="center"
           shrink="0"
           position="relative"
-          padding="8px 12px 8px 12px"
           size="small"
           isDisabled={false}
           variation="link"
-          {...getOverrideProps(overrides, "Buttonwlf")}
+          {...getOverrideProps(overrides, "Button28993211")}
         ></Button>
       </Flex>
     </View>

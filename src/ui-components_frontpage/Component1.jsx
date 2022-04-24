@@ -48,11 +48,10 @@ export default function Component1(props) {
         left="75.84%"
         right="7.84%"
         direction="row"
-        alignItems="flex-start"
         overflow="hidden"
         padding="0px 0px 0px 0px"
         level="6"
-        {...getOverrideProps(overrides, "Headinghwy")}
+        {...getOverrideProps(overrides, "Heading28553204")}
       ></Heading>
       <Divider
         position="absolute"
@@ -79,12 +78,11 @@ export default function Component1(props) {
         alignItems="center"
         overflow="hidden"
         borderRadius="4px"
-        padding="8px 16px 8px 16px"
         backgroundColor="rgba(4,125,149,1)"
         size="default"
         isDisabled={false}
         variation="primary"
-        {...getOverrideProps(overrides, "Buttonmvl")}
+        {...getOverrideProps(overrides, "Button28553192")}
       ></Button>
       <Button
         display="flex"
@@ -99,12 +97,11 @@ export default function Component1(props) {
         alignItems="center"
         overflow="hidden"
         borderRadius="4px"
-        padding="8px 16px 8px 16px"
         backgroundColor="rgba(4,125,149,1)"
         size="default"
         isDisabled={false}
         variation="primary"
-        {...getOverrideProps(overrides, "Buttonvzd")}
+        {...getOverrideProps(overrides, "Button28553206")}
       ></Button>
       <TextField
         display="flex"
@@ -134,7 +131,6 @@ export default function Component1(props) {
         left="20.98%"
         right="54.53%"
         direction="column"
-        width="300px"
         overflow="hidden"
         padding="0px 0px 0px 0px"
         size="large"
@@ -154,11 +150,10 @@ export default function Component1(props) {
         right="48.82%"
         direction="row"
         width="441px"
-        alignItems="flex-start"
         overflow="hidden"
         padding="0px 0px 0px 0px"
         level="4"
-        {...getOverrideProps(overrides, "Headinghom")}
+        {...getOverrideProps(overrides, "Heading28553155")}
       ></Heading>
       <Heading
         display="flex"
@@ -170,11 +165,10 @@ export default function Component1(props) {
         right="7.84%"
         direction="row"
         width="214px"
-        alignItems="flex-start"
         overflow="hidden"
         padding="0px 0px 0px 0px"
         level="4"
-        {...getOverrideProps(overrides, "Headingqpd")}
+        {...getOverrideProps(overrides, "Heading28553200")}
       ></Heading>
     </View>
   );

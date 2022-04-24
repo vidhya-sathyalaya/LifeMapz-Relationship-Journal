@@ -66,7 +66,7 @@ export default function ProductDetail(props) {
             objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame 7dnn")}
+            {...getOverrideProps(overrides, "Frame 717155817")}
           >
             <Text
               fontFamily="Inter"
@@ -120,7 +120,7 @@ export default function ProductDetail(props) {
             padding="0px 0px 0px 0px"
             size="small"
             orientation="horizontal"
-            {...getOverrideProps(overrides, "Dividerini")}
+            {...getOverrideProps(overrides, "Divider17155820")}
           ></Divider>
           <Flex
             gap="8px"
@@ -130,7 +130,7 @@ export default function ProductDetail(props) {
             objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame 7nyd")}
+            {...getOverrideProps(overrides, "Frame 717155821")}
           >
             <Text
               fontFamily="Inter"
@@ -184,7 +184,7 @@ export default function ProductDetail(props) {
             padding="0px 0px 0px 0px"
             size="small"
             orientation="horizontal"
-            {...getOverrideProps(overrides, "Dividertmv")}
+            {...getOverrideProps(overrides, "Divider17155824")}
           ></Divider>
           <Flex
             gap="8px"
@@ -194,7 +194,7 @@ export default function ProductDetail(props) {
             objectFit="cover"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame 7cwb")}
+            {...getOverrideProps(overrides, "Frame 717155825")}
           >
             <Text
               fontFamily="Inter"
@@ -242,14 +242,13 @@ export default function ProductDetail(props) {
         </Flex>
       </Flex>
       <Divider
-        width="1px"
         height="1098px"
         shrink="0"
         position="relative"
         padding="0px 0px 0px 0px"
         size="small"
         orientation="vertical"
-        {...getOverrideProps(overrides, "Divider")}
+        {...getOverrideProps(overrides, "Divider17155840")}
       ></Divider>
       <Flex
         gap="24px"
@@ -338,12 +337,11 @@ export default function ProductDetail(props) {
             justifyContent="center"
             alignItems="center"
             borderRadius="4px"
-            padding="8px 16px 8px 16px"
             backgroundColor="rgba(4,125,149,1)"
             size="default"
             isDisabled={false}
             variation="primary"
-            {...getOverrideProps(overrides, "Button")}
+            {...getOverrideProps(overrides, "Button17155806")}
           ></Button>
           <Flex
             gap="24px"
@@ -353,7 +351,7 @@ export default function ProductDetail(props) {
             direction="row"
             alignItems="flex-start"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame 28ujr")}
+            {...getOverrideProps(overrides, "Frame 2817642489")}
           >
             <Button
               display="flex"
@@ -367,11 +365,10 @@ export default function ProductDetail(props) {
               position="relative"
               borderRadius="4px"
               padding="12px 24px 12px 24px"
-              backgroundColor="rgba(239,240,240,1)"
               size="large"
               isDisabled={true}
               variation="primary"
-              {...getOverrideProps(overrides, "Buttonvhz")}
+              {...getOverrideProps(overrides, "Button17155807")}
             ></Button>
             <Button
               display="flex"
@@ -389,7 +386,7 @@ export default function ProductDetail(props) {
               size="large"
               isDisabled={false}
               variation="primary"
-              {...getOverrideProps(overrides, "Buttonpmt")}
+              {...getOverrideProps(overrides, "Button17155809")}
             ></Button>
             <Button
               display="flex"
@@ -407,7 +404,7 @@ export default function ProductDetail(props) {
               size="large"
               isDisabled={false}
               variation="primary"
-              {...getOverrideProps(overrides, "Buttonthv")}
+              {...getOverrideProps(overrides, "Button17155811")}
             ></Button>
             <Button
               display="flex"
@@ -425,7 +422,7 @@ export default function ProductDetail(props) {
               size="large"
               isDisabled={false}
               variation="primary"
-              {...getOverrideProps(overrides, "Buttonnwi")}
+              {...getOverrideProps(overrides, "Button17155813")}
             ></Button>
           </Flex>
           <Flex
@@ -436,7 +433,7 @@ export default function ProductDetail(props) {
             direction="row"
             alignItems="flex-start"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame 28att")}
+            {...getOverrideProps(overrides, "Frame 2817642490")}
           >
             <Button
               display="flex"
@@ -454,7 +451,7 @@ export default function ProductDetail(props) {
               size="large"
               isDisabled={false}
               variation="primary"
-              {...getOverrideProps(overrides, "Buttoneen")}
+              {...getOverrideProps(overrides, "Button17155808")}
             ></Button>
             <Button
               display="flex"
@@ -472,7 +469,7 @@ export default function ProductDetail(props) {
               size="large"
               isDisabled={false}
               variation="primary"
-              {...getOverrideProps(overrides, "Buttontil")}
+              {...getOverrideProps(overrides, "Button17155810")}
             ></Button>
             <Button
               display="flex"
@@ -490,7 +487,7 @@ export default function ProductDetail(props) {
               size="large"
               isDisabled={false}
               variation="primary"
-              {...getOverrideProps(overrides, "Buttonayp")}
+              {...getOverrideProps(overrides, "Button17155812")}
             ></Button>
             <Button
               display="flex"
@@ -508,7 +505,7 @@ export default function ProductDetail(props) {
               size="large"
               isDisabled={false}
               variation="primary"
-              {...getOverrideProps(overrides, "Buttonela")}
+              {...getOverrideProps(overrides, "Button17155814")}
             ></Button>
           </Flex>
           <Text
