@@ -20,13 +20,12 @@ export default function CardD(props) {
       {...getOverrideProps(overrides, "CardD")}
     >
       <Image
+        width="320px"
         position="absolute"
-        top="0%"
-        bottom="0%"
-        height="100%"
-        left="0%"
-        right="0%"
-        width="100%"
+        top="0px"
+        bottom="0px"
+        height="calc(100% - 0px)"
+        left="calc(50% - 160px - 0px)"
         borderRadius="8px"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "image")}
