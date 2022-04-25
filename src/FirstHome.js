@@ -7,12 +7,12 @@ import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 
 import awsconfig from './aws-exports';
-import { NavBar } from './ui-components_frontpage';
-import { FrontPage1 } from './ui-components_frontpage';
-import { Footer1 } from './ui-components_frontpage';
+import { NavBar } from './ui-components';
+import { FrontPage1 } from './ui-components';
+import { Footer1 } from './ui-components';
 import { 
   Frame418 
-} from './ui-components_frontpage';
+} from './ui-components';
 Amplify.configure(awsconfig);
 
 
