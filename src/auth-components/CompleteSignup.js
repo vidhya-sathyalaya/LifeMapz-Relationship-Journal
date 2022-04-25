@@ -11,8 +11,11 @@ import  Frame418  from './Frame418';
 // importing datastore to do an entry
 import { DataStore } from '@aws-amplify/datastore';
 
-import { API } from 'aws-amplify';
-// import * as queries from './graphql/queries';
+import { API, graphqlOperation } from 'aws-amplify';
+
+// importing mutations for creations
+import createUser from '../graphql/mutations';
+import * as mutations from '../graphql/mutations';
 
 // const { signOut, user } = useAuthenticator();
 
@@ -25,6 +28,8 @@ class CompleteSignup extends React.Component {
     this.onChangeDate = this.onChangeDate.bind(this);
     this.onChangeFname = this.onChangeFname.bind(this);
     this.onChangeLname = this.onChangeLname.bind(this);
+    this.onChangeGender = this.onChangeGender.bind(this);
+    this.saveProfile = this.saveProfile.bind(this);
 
     this.state = {
       cognito_username: '' ,
@@ -69,6 +74,17 @@ class CompleteSignup extends React.Component {
         this.setState({
             dob: e.target.value
         });
+    }
+
+    onChangeGender(e) {
+      this.setState({
+        gender: e.target.value
+    });
+    }
+
+    async saveProfile() {
+      const savedProfile = await API.graphql({ query: mutations.createUser, variables: {input: this.state}});
+      console.log(savedProfile);
     }
 
   render() {
@@ -141,11 +157,12 @@ class CompleteSignup extends React.Component {
           ></TextField>
             {/* EDIT STARTS */}
             <RadioGroupField
-            label="Language"
-            name="language"
+            name="gender"
             direction="column"
+            onChange={this.onChangeGender}
             >
             <Radio 
+            key="MALE"
             value="MALE"
             display="flex"
             gap="16px"
@@ -162,8 +179,24 @@ class CompleteSignup extends React.Component {
             labelPosition="default"
             >Male
             </Radio>
-            <Radio value="css">css</Radio>
-            <Radio value="javascript">javascript</Radio>
+            <Radio
+            key="FEMALE"
+            value="FEMALE"
+            display="flex"
+            gap="16px"
+            position="absolute"
+            top="349px"
+            left="266px"
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            padding="0px 0px 0px 0px"
+            size="large"
+            defaultChecked={false}
+            isDisabled={false}
+            labelPosition="default"
+          >Female
+          </Radio>
             </RadioGroupField>
 
             {/* EDIT ENDS */}
@@ -283,6 +316,8 @@ class CompleteSignup extends React.Component {
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
               children="Save Profile"
+              onSubmit={this.saveProfile}
+              onClick = {this.saveProfile}
             ></Button>
           </View>
           <Text

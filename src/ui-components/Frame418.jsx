@@ -144,7 +144,7 @@ export default function Frame418(props) {
         left="calc(50% - 150px - -5px)"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Female"
+        children="Female  "
         {...getOverrideProps(overrides, "Female")}
       ></Text>
       <Text

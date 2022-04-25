@@ -3,6 +3,8 @@ import React from 'react';
 import { DefaultHeadingExample } from "./Test.js";
 import Amplify, { Auth } from 'aws-amplify';
 
+import Aboutus from '../ui-components/Aboutus.jsx'
+
 import  Frame418  from './Frame418';
 import CompleteSignup  from "./CompleteSignup.js";
 // importing datastore to do an entry
