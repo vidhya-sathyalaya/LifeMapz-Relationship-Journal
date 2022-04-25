@@ -5,18 +5,44 @@
  **************************************************************************/
 
 /* eslint-disable */
-import React from "react";
-// import {
-//   getOverrideProps,
-//   useNavigateAction,
-// } from "@aws-amplify/ui-react/internal";
 import { Button, Icon, Image, Text, View } from "@aws-amplify/ui-react";
-export default function ViewProffile(props) {
-  // const { overrides, ...rest } = props;
-  // const buttonOnClick = useNavigateAction({
-  //   type: "url",
-  //   url: "http://localhost:3000/editprofile",
-  // });
+import React, { useEffect, useState } from "react";
+
+import * as queries from '../graphql/queries';
+import { API, graphqlOperation } from 'aws-amplify';
+
+
+
+export default function ViewProfile(props) {
+
+  // declaring react hooks
+  const [fname, setFName] = useState("");
+  const [lname, setLName] = useState("");
+  const [dob, setDOB] = useState("");
+  const [email, setEmail] = useState("");
+  const [gender, setGender] = useState("");
+  
+
+  // this function is just used to fetch the full name of the user
+  const getUserInfo = async () => {
+    const user = await API.graphql({ query: queries.getUser , variables: { id : sessionStorage.getItem('userID') }});
+    console.log("[getFromName]");
+    setFName(user.data.getUser.fname);
+    setLName(user.data.getUser.lname);
+    setDOB(user.data.getUser.dob);
+    setEmail(user.data.getUser.email);
+    setGender(user.data.getUser.gender);
+  };
+
+
+  // useEffect is just like compoenent did mount for function based component
+  useEffect(() => {
+    // storeUserID();
+    getUserInfo();
+}, []);
+
+
+
   return (
     <View
       width="935px"
@@ -77,8 +103,7 @@ export default function ViewProffile(props) {
         left="334px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Fname"
-      ></Text>
+      >{fname}</Text>
       <Text
         fontFamily="Inter"
         fontSize="14px"
@@ -95,8 +120,7 @@ export default function ViewProffile(props) {
         left="430px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Lname"
-      ></Text>
+      >{lname}</Text>
       <Text
         fontFamily="Inter"
         fontSize="14px"
@@ -114,7 +138,7 @@ export default function ViewProffile(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="id here"
-      ></Text>
+      >{email}</Text>
       <Text
         fontFamily="Inter"
         fontSize="14px"
@@ -149,8 +173,7 @@ export default function ViewProffile(props) {
         left="430px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="gender here"
-      ></Text>
+      >{gender}</Text>
       <Text
         fontFamily="Inter"
         fontSize="14px"
@@ -185,8 +208,7 @@ export default function ViewProffile(props) {
         left="434px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="dobhere"
-      ></Text>
+      >{dob}</Text>
       <Text
         fontFamily="Inter"
         fontSize="14px"
@@ -203,7 +225,7 @@ export default function ViewProffile(props) {
         left="334px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Birth date: "
+        children="Birth Date: "
       ></Text>
       <Image
         width="578px"

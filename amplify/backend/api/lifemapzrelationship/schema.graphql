@@ -41,8 +41,7 @@ enum GenderValue {
   NONBINARY
 }
 
-type User @model @auth(rules: [{allow: public}])
- {
+type User @model @auth(rules: [{allow: public}]) {
   id: ID!
   cognito_username: String
   fname: String!

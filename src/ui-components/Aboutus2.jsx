@@ -266,8 +266,7 @@ export default function Aboutus2(props) {
         size="small"
         isDisabled={false}
         variation="primary"
-        fontSize="300"
-        children="Contact us"
+        children="Conatct us"
         onClick={() => {
           buttonOnClick();
         }}

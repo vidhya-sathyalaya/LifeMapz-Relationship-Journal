@@ -3,7 +3,7 @@
   "serviceConfiguration": {
     "apiName": "lifemapzrelationship",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "/tmp/amplify-cd76e805-4110-4828-9a1e-317e5d4b07c4/amplify/backend/api/lifemapzrelationship/schema.graphql",
+    "gqlSchemaPath": "/tmp/amplify-de96a976-5a3a-4f9c-b45d-49b1b7263b57/amplify/backend/api/lifemapzrelationship/schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
       "keyDescription": "api key description",

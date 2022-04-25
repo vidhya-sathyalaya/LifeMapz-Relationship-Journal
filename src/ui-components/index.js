@@ -5,7 +5,9 @@
  **************************************************************************/
 
 export { default as Contactus2 } from "./Contactus2";
+export { default as Writeajournal } from "./Writeajournal";
 export { default as CardE } from "./CardE";
+export { default as MacBookPro142 } from "./MacBookPro142";
 export { default as SocialACardCollection } from "./SocialACardCollection";
 export { default as Component2 } from "./Component2";
 export { default as Ampligram } from "./Ampligram";
@@ -37,6 +39,7 @@ export { default as Component6 } from "./Component6";
 export { default as ContactUS } from "./ContactUS";
 export { default as NavBar } from "./NavBar";
 export { default as CardC } from "./CardC";
+export { default as Component4 } from "./Component4";
 export { default as Features2x3 } from "./Features2x3";
 export { default as Footer1 } from "./Footer1";
 export { default as Frame418 } from "./Frame418";
@@ -50,6 +53,7 @@ export { default as Frame417 } from "./Frame417";
 export { default as Features2x2 } from "./Features2x2";
 export { default as FAQItem } from "./FAQItem";
 export { default as HeroLayout4 } from "./HeroLayout4";
+export { default as Newfooter } from "./Newfooter";
 export { default as MarketingFooter } from "./MarketingFooter";
 export { default as FormCheckout } from "./FormCheckout";
 export { default as CardACopied } from "./CardACopied";

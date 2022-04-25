@@ -14,6 +14,10 @@ import { DataStore } from '@aws-amplify/datastore';
 import { API, graphqlOperation } from 'aws-amplify';
 import EmailForm from './EmailForm';
 
+// testing 
+// import ViewProffile from './ViewProfile';
+import ViewProfile from "./ViewProfile";
+
 // importing mutations for creations
 import createUser from '../graphql/mutations';
 import * as mutations from '../graphql/mutations';
@@ -104,6 +108,7 @@ class CreateJournal extends React.Component {
         <main>
           <button onClick={this.saveJournal} className="signOutButton">Click Me!</button>
           <EmailForm/>
+          {/* <ViewProfile/> */}
         </main>
       </div>
       );
