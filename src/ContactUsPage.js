@@ -3,7 +3,7 @@ import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 
 import awsconfig from './aws-exports';
-import { Contactus2, NavBar } from './ui-components_frontpage';
+import { Contactus2, NavBar } from './ui-components';
 
 Amplify.configure(awsconfig);
 

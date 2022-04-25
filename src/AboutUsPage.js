@@ -3,8 +3,8 @@ import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 
 import awsconfig from './aws-exports';
-import { NavBar } from './ui-components_frontpage';
-import Aboutus2 from './ui-components_aboutus/Aboutus2';
+import { NavBar } from './ui-components';
+import Aboutus2 from './ui-components/Aboutus2';
 Amplify.configure(awsconfig);
 
 
