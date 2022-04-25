@@ -36,12 +36,12 @@ function FirstHome() {
    return (
      // <AmplifyProvider>
          <div className='App'>
-           <p align="center"> Relationship Journal</p>
+           {/* <p align="center"> Relationship Journal</p> */}
            <NavBar overrides={imageOverrides} />
         
          <div>
            <FrontPage1 overrides={fpg1}/>
-           <Footer1 overrides={fott1}/>
+           {/* <Footer1 overrides={fott1}/> */}
            {/* <Frame418 /> */}
          </div>
          </div>

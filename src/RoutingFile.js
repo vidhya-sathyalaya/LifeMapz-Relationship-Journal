@@ -5,12 +5,12 @@ import awsconfig from './aws-exports';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import FirstHome from './FirstHome';
 import Signup from './Signup';
-// import Aboutuspage from './Aboutuspage';
-import { Aboutus2, Frame419 } from './ui-components_aboutus';
-import { Contactus2 } from './ui-components_contactus';
 // import { history } from 'react-router';
 import { Login } from "./auth-components/Login.js";
 import JournalEntry from './pages/JournalEntry';
+import AboutUsPage from './AboutUsPage';
+import ContactUsPage from './ContactUsPage';
+import CreateJournalPage from './CreateJournalPage';
 
 Amplify.configure(awsconfig);
 
@@ -21,11 +21,11 @@ function RoutingFile() {
             <Route exact path='/' render={() => <FirstHome/>} />
             <Route  path='/home' ><FirstHome/></Route>
             <Route  path='/signup'><Signup/></Route>
-            <Route path='/aboutus'><Aboutus2/></Route>
-            <Route path='/contactus'><Contactus2/></Route>
+            <Route path='/aboutus'><AboutUsPage/></Route>
+            <Route path='/contactus'><ContactUsPage/></Route>
             <Route path='/login'><Login/></Route>
             <Route path='/journalentry'><JournalEntry/></Route>
-            <Route path='/createjournal'><Frame419/></Route>
+            <Route path='/createjournal'><CreateJournalPage/></Route>
         </Switch>
     </Router>
     );
