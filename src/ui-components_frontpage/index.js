@@ -5,7 +5,9 @@
  **************************************************************************/
 
 export { default as Contactus2 } from "./Contactus2";
+export { default as Writeajournal } from "./Writeajournal";
 export { default as CardE } from "./CardE";
+export { default as MacBookPro142 } from "./MacBookPro142";
 export { default as SocialACardCollection } from "./SocialACardCollection";
 export { default as Component2 } from "./Component2";
 export { default as Ampligram } from "./Ampligram";
@@ -19,9 +21,11 @@ export { default as Aboutus } from "./Aboutus";
 export { default as SocialACollection } from "./SocialACollection";
 export { default as FrontPage1 } from "./FrontPage1";
 export { default as MonthPicker } from "./MonthPicker";
+export { default as Frame419 } from "./Frame419";
 export { default as CardF } from "./CardF";
 export { default as DayPicker } from "./DayPicker";
 export { default as Footer2 } from "./Footer2";
+export { default as Aboutus2 } from "./Aboutus2";
 export { default as Createjournalpost } from "./Createjournalpost";
 export { default as SocialA } from "./SocialA";
 export { default as Sample11 } from "./Sample11";
@@ -35,6 +39,7 @@ export { default as Component6 } from "./Component6";
 export { default as ContactUS } from "./ContactUS";
 export { default as NavBar } from "./NavBar";
 export { default as CardC } from "./CardC";
+export { default as Component4 } from "./Component4";
 export { default as Features2x3 } from "./Features2x3";
 export { default as Footer1 } from "./Footer1";
 export { default as Frame418 } from "./Frame418";

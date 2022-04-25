@@ -37,11 +37,15 @@ export default function NavBar(props) {
     type: "url",
     url: "http://localhost:3000/login",
   });
+  const imageOnClick = useNavigateAction({
+    type: "url",
+    url: "http://localhost:3000/viewprofile",
+  });
   return (
     <Flex
       gap="20px"
       direction="row"
-      width="1440px"
+      width="100%"
       justifyContent="center"
       alignItems="center"
       position="relative"
@@ -256,6 +260,9 @@ export default function NavBar(props) {
           position="relative"
           borderRadius="160px"
           padding="0px 0px 0px 0px"
+          onClick={() => {
+            imageOnClick();
+          }}
           {...getOverrideProps(overrides, "image")}
         ></Image>
       </Flex>

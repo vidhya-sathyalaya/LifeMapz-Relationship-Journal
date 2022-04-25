@@ -168,8 +168,8 @@ export default function Aboutus(props) {
         ]}
         position="absolute"
         top="287px"
-        left="616px"
-        {...getOverrideProps(overrides, "Ellipse 4")}
+        left="803px"
+        {...getOverrideProps(overrides, "Ellipse 5")}
       ></Icon>
       <Icon
         width="125px"
@@ -183,8 +183,9 @@ export default function Aboutus(props) {
         ]}
         position="absolute"
         top="287px"
-        left="803px"
-        {...getOverrideProps(overrides, "Ellipse 5")}
+        left="613px"
+        backgroundImage="https://i.ibb.co/tXkx3m3/1517020861925.jpg"
+        {...getOverrideProps(overrides, "Ellipse 13")}
       ></Icon>
       <Text
         fontFamily="Inter"

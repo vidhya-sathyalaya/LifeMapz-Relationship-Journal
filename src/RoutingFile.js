@@ -7,11 +7,11 @@ import FirstHome from './FirstHome';
 import Signup from './Signup';
 // import { history } from 'react-router';
 import { Login } from "./auth-components/Login.js";
-import JournalEntry from './pages/JournalEntry';
 import AboutUsPage from './AboutUsPage';
 import ContactUsPage from './ContactUsPage';
 import CreateJournalPage from './CreateJournalPage';
 import ViewProfilePage from './ViewProfilePage';
+import JournalPage from './JournalPage';
 
 Amplify.configure(awsconfig);
 
@@ -25,7 +25,7 @@ function RoutingFile() {
             <Route path='/aboutus'><AboutUsPage/></Route>
             <Route path='/contactus'><ContactUsPage/></Route>
             <Route path='/login'><Login/></Route>
-            <Route path='/journalentry'><JournalEntry/></Route>
+            <Route path='/journalentry'><JournalPage/></Route>
             <Route path='/createjournal'><CreateJournalPage/></Route>
             <Route path='/viewprofile'><ViewProfilePage/></Route>
         </Switch>

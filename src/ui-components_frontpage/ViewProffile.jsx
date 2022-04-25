@@ -6,10 +6,17 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Button, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function ViewProffile(props) {
   const { overrides, ...rest } = props;
+  const buttonOnClick = useNavigateAction({
+    type: "url",
+    url: "http://localhost:3000/editprofile",
+  });
   return (
     <View
       width="935px"
@@ -17,7 +24,8 @@ export default function ViewProffile(props) {
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
-      backgroundImage="linear-gradient(-90deg, rgba(0,0,0,0), rgba(255,255,255,0))"
+      backgroundImage="linear-gradient(-90deg, rgba(227,155,172,0.24), rgba(79,93,223,0.15))"
+      color="grey"
       {...rest}
       {...getOverrideProps(overrides, "ViewProffile")}
     >
@@ -213,26 +221,33 @@ export default function ViewProffile(props) {
         width="578px"
         height="524px"
         position="absolute"
-        top="71px"
-        left="465px"
+        top="69px"
+        left="406px"
         padding="0px 0px 0px 0px"
-        src="https://i.ibb.co/zmV705m/Screen-Shot-2022-04-23-at-4-52-33-PM.png"
+        src="https://i.ibb.co/1709bXQ/111.png"
         {...getOverrideProps(overrides, "pngegg 2")}
       ></Image>
       <Button
         display="flex"
         position="absolute"
-        top="246px"
-        left="95px"
+        top="44.31%"
+        bottom="50%"
+        left="8.56%"
+        right="77.01%"
         direction="row"
+        width="135px"
+        height="34px"
         justifyContent="center"
         alignItems="center"
         borderRadius="4px"
-        backgroundColor="rgba(4,125,149,1)"
+        backgroundColor="rgba(102,0,0,1)"
         size="small"
         isDisabled={false}
         variation="primary"
         children="Edit Profile"
+        onClick={() => {
+          buttonOnClick();
+        }}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
     </View>
