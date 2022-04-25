@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+.journaltext
+{
+    width: 50vw;
+    height: 20vh;
+    resize: none;
+    padding: 20px 20px;
+    font-size: 16px;
+    font-family: 'Kalam', cursive;
+    color: #002366;
+    background:url('https://imgur.com/q1lTO5H.png');
+}
+
+.previous-entry-section
+{
+    padding: 20px 20px;
+    width: 50vw;
+    margin: auto;
+}
+.previous-entry-list
+{
+    align-self: center;
+}
+
+.previous-entry
+{
+    list-style-type: none;
+    position: relative;
+    font-size: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #067764;
+    color: #fff;
+    text-align: left;
+    
+}
