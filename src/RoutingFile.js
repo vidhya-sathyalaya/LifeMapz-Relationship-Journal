@@ -6,7 +6,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import FirstHome from './FirstHome';
 import Signup from './Signup';
 // import Aboutuspage from './Aboutuspage';
-import { Aboutus } from './ui-components_aboutus';
+import { Aboutus2 } from './ui-components_aboutus';
 import { Contactus2 } from './ui-components_contactus';
 // import { history } from 'react-router';
 import { Login } from "./auth-components/Login.js";
@@ -21,7 +21,7 @@ function RoutingFile() {
             <Route exact path='/' render={() => <FirstHome/>} />
             <Route  path='/home' ><FirstHome/></Route>
             <Route  path='/signup'><Signup/></Route>
-            <Route path='/aboutus'><Aboutus/></Route>
+            <Route path='/aboutus'><Aboutus2/></Route>
             <Route path='/contactus'><Contactus2/></Route>
             <Route path='/login'><Login/></Route>
             <Route path='/journalentry'><JournalEntry/></Route>

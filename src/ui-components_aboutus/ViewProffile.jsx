@@ -35,7 +35,6 @@ export default function ViewProffile(props) {
         position="absolute"
         top="69px"
         left="63px"
-        imageRendering=""
         {...getOverrideProps(overrides, "Ellipse 2")}
       ></Icon>
       <Icon
