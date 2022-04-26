@@ -19,7 +19,7 @@ function RoutingFile() {
     return (
     <Router >
         <Switch>
-            <Route exact path='/' render={() => <FirstHome/>} />
+            <Route exact path='/' render={() => <Signup/>} />
             <Route  path='/home' ><FirstHome/></Route>
             <Route  path='/signup'><Signup/></Route>
             <Route path='/aboutus'><AboutUsPage/></Route>

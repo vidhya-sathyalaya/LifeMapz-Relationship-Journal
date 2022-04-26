@@ -46,7 +46,7 @@ export { default as Footer1 } from "./Footer1";
 export { default as Frame418 } from "./Frame418";
 export { default as Features4x1 } from "./Features4x1";
 export { default as SocialB } from "./SocialB";
-export { default as ContactUs } from "./ContactUs";
+// export { default as ContactUs } from "./ContactUs";
 export { default as Socialpostatext } from "./Socialpostatext";
 export { default as FeaturesText2x2 } from "./FeaturesText2x2";
 export { default as YearPicker } from "./YearPicker";

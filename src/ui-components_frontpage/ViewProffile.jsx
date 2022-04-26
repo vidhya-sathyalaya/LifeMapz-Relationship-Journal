@@ -119,7 +119,7 @@ export default function ViewProffile(props) {
         left="429px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="id here"
+        children={profileconn?.email}
         {...getOverrideProps(overrides, "id here")}
       ></Text>
       <Text
@@ -157,7 +157,7 @@ export default function ViewProffile(props) {
         left="430px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="gender here"
+        children={profileconn?.id}
         {...getOverrideProps(overrides, "gender here")}
       ></Text>
       <Text
@@ -195,7 +195,7 @@ export default function ViewProffile(props) {
         left="434px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="dobhere"
+        children={profileconn?.dob}
         {...getOverrideProps(overrides, "dobhere")}
       ></Text>
       <Text

@@ -13,6 +13,7 @@ import { Footer1 } from './ui-components_frontpage';
 import { 
   Frame418 
 } from './ui-components_frontpage';
+
 Amplify.configure(awsconfig);
 
 
@@ -41,6 +42,7 @@ function FirstHome() {
         
          <div>
            <FrontPage1 overrides={fpg1}/>
+           {/* <Frame425 overrides={fpg1}/> */}
            {/* <Footer1 overrides={fott1}/> */}
            {/* <Frame418 /> */}
            <Newfooter></Newfooter>
