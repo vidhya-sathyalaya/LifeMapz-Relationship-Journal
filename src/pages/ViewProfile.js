@@ -31,12 +31,19 @@ export default function ViewProfile(props) {
 
   async function logSingleItem(){
 
-    var params = {
-      TableName: 'User-fmtgiqoe4fgvtp6svt46tmljhq-dev',
-      Key: {
-        email:"mocase5887@votooe.com",
-      },
-    };
+    // var params = {
+    //   TableName: 'User-fmtgiqoe4fgvtp6svt46tmljhq-dev',
+    //   Key: {
+    //     email:"mocase5887@votooe.com",
+    //   },
+    // };
+
+    // try {
+    //   var result = await docClient.get(params).promise()
+    //   console.log(JSON.stringify(result))
+    // } catch (error) {
+    //     console.error(error);
+    // }
 
     // docClient
     // .scan({
@@ -46,23 +53,33 @@ export default function ViewProfile(props) {
     // .then(data => console.log(data.Items))
     // .catch(console.error)
 
+    // get query with id working
+    // docClient
+    // .get({
+    //   TableName: "User-fmtgiqoe4fgvtp6svt46tmljhq-dev",
+    //   Key: {
+    //     // email:"mocase5887@votooe.com",
+    //     id: "0fc76543-c384-45d4-8502-9e76982a62ab", // id is the Partition Key, '123' is the value of it
+    //   },
+    // })
+    // .promise()
+    // .then(data => console.log(data.Item))
+    // .catch(console.error)
+
+    // successfully queried database using email index
     docClient
-    .get({
-      TableName: "User-fmtgiqoe4fgvtp6svt46tmljhq-dev",
-      Key: {
-        id: "0fc76543-c384-45d4-8502-9e76982a62ab", // id is the Partition Key, '123' is the value of it
-      },
+    .query({
+      TableName: 'User-fmtgiqoe4fgvtp6svt46tmljhq-dev',
+      IndexName: 'byEmail' ,
+      KeyConditionExpression: "email = :email",
+      ExpressionAttributeValues: {
+        ":email": "mocase5887@votooe.com",
+       }
     })
     .promise()
-    .then(data => console.log(data.Item))
-    .catch(console.error)
+    .then(data => console.log(data.Items))
+    .catch(console.error);
 
-    // try {
-    //   var result = await docClient.get(params).promise()
-    //   console.log(JSON.stringify(result))
-    // } catch (error) {
-    //     console.error(error);
-    // }
 }
 
   // declaring react hooks
@@ -90,6 +107,7 @@ export default function ViewProfile(props) {
     // storeUserID();
     getUserInfo();
     logSingleItem();
+    // find();
 }, []);
 
 
