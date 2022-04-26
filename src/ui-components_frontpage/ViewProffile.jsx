@@ -30,21 +30,6 @@ export default function ViewProffile(props) {
       {...getOverrideProps(overrides, "ViewProffile")}
     >
       <Icon
-        width="170px"
-        height="170px"
-        viewBox={{ minX: 0, minY: 0, width: 170, height: 170 }}
-        paths={[
-          {
-            d: "M170 85C170 131.944 131.944 170 85 170C38.0558 170 0 131.944 0 85C0 38.0558 38.0558 0 85 0C131.944 0 170 38.0558 170 85Z",
-            fillRule: "nonzero",
-          },
-        ]}
-        position="absolute"
-        top="69px"
-        left="63px"
-        {...getOverrideProps(overrides, "Ellipse 2")}
-      ></Icon>
-      <Icon
         width="24px"
         height="24px"
         position="absolute"
@@ -250,6 +235,16 @@ export default function ViewProffile(props) {
         }}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
+      <Image
+        width="169.01px"
+        height="170px"
+        position="absolute"
+        top="67px"
+        left="63px"
+        borderRadius="84.50292205810547px"
+        padding="0px 0px 0px 0px"
+        {...getOverrideProps(overrides, "28530 8")}
+      ></Image>
     </View>
   );
 }

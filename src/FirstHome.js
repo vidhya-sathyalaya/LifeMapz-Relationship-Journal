@@ -7,7 +7,7 @@ import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 
 import awsconfig from './aws-exports';
-import { NavBar, Newfooter } from './ui-components_frontpage';
+import { Frame425, NavBar, Newfooter } from './ui-components_frontpage';
 import { FrontPage1 } from './ui-components_frontpage';
 import { Footer1 } from './ui-components_frontpage';
 import { 
@@ -24,7 +24,7 @@ function FirstHome() {
     },
    }
    const fpg1 = {
-     "image 1":{
+     "image 2":{
        src: "https://i.ibb.co/xfyV5Dd/Screen-Shot-2022-03-18-at-1-15-07-PM.png",
      },
    }
@@ -41,7 +41,8 @@ function FirstHome() {
            <NavBar overrides={imageOverrides} />
         
          <div>
-           <FrontPage1 overrides={fpg1}/>
+           {/* <FrontPage1 overrides={fpg1}/> */}
+           <Frame425 overrides={fpg1}/>
            {/* <Frame425 overrides={fpg1}/> */}
            {/* <Footer1 overrides={fott1}/> */}
            {/* <Frame418 /> */}

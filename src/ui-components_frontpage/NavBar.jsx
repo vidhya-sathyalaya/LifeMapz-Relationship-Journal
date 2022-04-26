@@ -8,6 +8,7 @@
 import React from "react";
 import {
   getOverrideProps,
+  useAuthSignOutAction,
   useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
@@ -33,10 +34,7 @@ export default function NavBar(props) {
     type: "url",
     url: "http://localhost:3000/signup",
   });
-  const loginOnClick = useNavigateAction({
-    type: "url",
-    url: "http://localhost:3000/login",
-  });
+  const loginOnClick = useAuthSignOutAction({ global: false });
   const imageOnClick = useNavigateAction({
     type: "url",
     url: "http://localhost:3000/viewprofile",
@@ -247,7 +245,7 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Login"
+          children="Sign Out"
           onClick={() => {
             loginOnClick();
           }}

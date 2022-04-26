@@ -3,6 +3,8 @@ import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 import RoutingFile from './RoutingFile';
 import awsconfig from './aws-exports';
+
+import { withAuthenticator } from '@aws-amplify/ui-react'
 Amplify.configure(awsconfig);
 
 
@@ -14,6 +16,6 @@ function App() {
       </div>
   );
 }
- export default App;
-
+//  export default App;
+export default withAuthenticator(App);
 

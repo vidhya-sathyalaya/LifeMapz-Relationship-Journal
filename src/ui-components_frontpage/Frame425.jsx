@@ -6,10 +6,17 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function Frame425(props) {
   const { overrides, ...rest } = props;
+  const createJournalOnClick = useNavigateAction({
+    type: "url",
+    url: "http://localhost:3000/createjournal",
+  });
   return (
     <View
       width="1512px"
@@ -48,6 +55,9 @@ export default function Frame425(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Create Journal"
+          onClick={() => {
+            createJournalOnClick();
+          }}
           {...getOverrideProps(overrides, "Create Journal")}
         ></Text>
       </View>
@@ -76,7 +86,7 @@ export default function Frame425(props) {
         fontWeight="300"
         color="rgba(0,0,0,1)"
         fontStyle="italic"
-        lineHeight="20px"
+        lineHeight="45px"
         textAlign="center"
         display="flex"
         direction="column"

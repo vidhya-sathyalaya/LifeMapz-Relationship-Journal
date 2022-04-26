@@ -6,13 +6,14 @@ import { Home } from "./auth-components/Home.js";
 import "./styles.css";
 
 import awsExports from "./aws-exports";
+import FirstHome from "./FirstHome.js";
 Amplify.configure(awsExports);
 
 export default function Signup() {
   const { user } = useAuthenticator();
 
   if (user) {
-    return <Home />;
+    return <FirstHome />;
   }
 
   return <Login />;

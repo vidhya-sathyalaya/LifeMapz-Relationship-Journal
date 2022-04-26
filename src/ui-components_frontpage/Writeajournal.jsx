@@ -7,12 +7,18 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Button, CheckboxField, Icon, Text, View } from "@aws-amplify/ui-react";
+import {
+  Button,
+  CheckboxField,
+  Icon,
+  TextField,
+  View,
+} from "@aws-amplify/ui-react";
 export default function Writeajournal(props) {
   const { overrides, ...rest } = props;
   return (
     <View
-      width="1097px"
+      width="1512px"
       height="551px"
       overflow="hidden"
       position="relative"
@@ -26,18 +32,35 @@ export default function Writeajournal(props) {
         height="447px"
         position="absolute"
         top="calc(50% - 223.5px - 34px)"
-        left="calc(50% - 530px - -0.5px)"
+        left="calc(50% - 530px - 0px)"
         borderRadius="12px"
         padding="0px 0px 0px 0px"
         backgroundColor="rgba(255,255,255,0.79)"
         {...getOverrideProps(overrides, "Rectangle 1167")}
       ></View>
+      <TextField
+        display="flex"
+        gap="4px"
+        position="absolute"
+        top="calc(50% - 187px - 58.5px)"
+        left="calc(50% - 520.5px - 0.5px)"
+        direction="column"
+        width="1041px"
+        height="374px"
+        padding="0px 0px 0px 0px"
+        size="large"
+        isDisabled={false}
+        labelHidden={true}
+        variation="default"
+        isMultiline={true}
+        {...getOverrideProps(overrides, "TextField")}
+      ></TextField>
       <Icon
         position="absolute"
-        top="76.04%"
-        bottom="19.6%"
-        left="74.66%"
-        right="23.15%"
+        top="75.86%"
+        bottom="19.78%"
+        left="61.57%"
+        right="36.24%"
         overflow="hidden"
         padding="0px 0px 0px 0px"
         viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
@@ -55,10 +78,10 @@ export default function Writeajournal(props) {
       <Button
         display="flex"
         position="absolute"
-        top="88.38%"
-        bottom="5.44%"
-        left="47.4%"
-        right="47.4%"
+        top="88.02%"
+        bottom="5.81%"
+        left="48.08%"
+        right="48.15%"
         direction="row"
         justifyContent="center"
         alignItems="center"
@@ -71,35 +94,15 @@ export default function Writeajournal(props) {
         children="Post"
         {...getOverrideProps(overrides, "Button")}
       ></Button>
-      <Text
-        fontFamily="Indie Flower"
-        fontSize="24px"
-        fontWeight="400"
-        color="rgba(0,0,0,1)"
-        lineHeight="28.125px"
-        textAlign="left"
-        display="flex"
-        direction="column"
-        justifyContent="flex-start"
-        position="absolute"
-        top="3.27%"
-        bottom="26.86%"
-        left="1.73%"
-        right="1.64%"
-        padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children="Write here..."
-        {...getOverrideProps(overrides, "Write here...")}
-      ></Text>
       <CheckboxField
         display="flex"
         position="absolute"
-        top="76.23%"
-        bottom="19.42%"
-        left="78.49%"
-        right="3.56%"
+        top="75.86%"
+        bottom="19.78%"
+        left="66.01%"
+        right="16.04%"
         direction="row"
-        width="197px"
+        width="271.53px"
         justifyContent="center"
         alignItems="center"
         transformOrigin="top left"
