@@ -106,9 +106,9 @@ class CreateJournal extends React.Component {
     return (
         <div className="container">
         <main>
-          <button onClick={this.saveJournal} className="signOutButton">Click Me!</button>
-          <EmailForm/>
-          {/* <ViewProfile/> */}
+          {/* <button onClick={this.saveJournal} className="signOutButton">Click Me!</button>
+          <EmailForm/> */}
+          <ViewProfile/>
         </main>
       </div>
       );

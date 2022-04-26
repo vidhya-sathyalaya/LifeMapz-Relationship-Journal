@@ -11,9 +11,40 @@ import React, { useEffect, useState } from "react";
 import * as queries from '../graphql/queries';
 import { API, graphqlOperation } from 'aws-amplify';
 
+// experimenting with document client
+import { Auth } from 'aws-amplify';
+
 
 
 export default function ViewProfile(props) {
+
+  var AWS = require('aws-sdk');
+  // Set the region 
+  AWS.config.update({
+    region: 'us-east-1',
+    accessKeyId: "AKIAUAO4TAFGMC46A2OF",
+    secretAccessKey: "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"
+  });
+
+  // Create DynamoDB document client
+  var docClient = new AWS.DynamoDB.DocumentClient({ apiVersion: '2012-08-10' });
+
+  async function logSingleItem(){
+
+    var params = {
+      TableName: 'User-fmtgiqoe4fgvtp6svt46tmljhq-dev',
+      Key: {
+        "email":"mocase5887@votooe.com"
+      },
+    };
+
+    try {
+      var result = await docClient.get(params).promise()
+      console.log(JSON.stringify(result))
+    } catch (error) {
+        console.error(error);
+    }
+}
 
   // declaring react hooks
   const [fname, setFName] = useState("");
@@ -39,6 +70,7 @@ export default function ViewProfile(props) {
   useEffect(() => {
     // storeUserID();
     getUserInfo();
+    logSingleItem();
 }, []);
 
 
