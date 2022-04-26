@@ -12,7 +12,7 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Button, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function ViewProffile(props) {
-  const { overrides, ...rest } = props;
+  const { profileconn, overrides, ...rest } = props;
   const buttonOnClick = useNavigateAction({
     type: "url",
     url: "http://localhost:3000/editprofile",
@@ -81,7 +81,7 @@ export default function ViewProffile(props) {
         left="334px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Fname"
+        children={profileconn?.fname}
         {...getOverrideProps(overrides, "Fname")}
       ></Text>
       <Text
@@ -100,7 +100,7 @@ export default function ViewProffile(props) {
         left="430px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Lname"
+        children={profileconn?.lname}
         {...getOverrideProps(overrides, "Lname")}
       ></Text>
       <Text

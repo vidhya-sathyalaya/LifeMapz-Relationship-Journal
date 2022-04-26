@@ -17,7 +17,10 @@ function JournalPage() {
      // <AmplifyProvider>
          <div className='App'>
           <NavBar overrides={imageOverrides} />
+          <div >
           <Writeajournal></Writeajournal>
+          </div>
+          
          </div>
        // </AmplifyProvider>
   );

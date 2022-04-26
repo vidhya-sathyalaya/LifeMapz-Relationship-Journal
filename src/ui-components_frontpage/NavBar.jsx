@@ -170,7 +170,7 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="About us"
+          children="About Us"
           onClick={() => {
             applicantsOnClick();
           }}
@@ -191,7 +191,7 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Contact"
+          children="Contact Us"
           onClick={() => {
             companyOnClick();
           }}

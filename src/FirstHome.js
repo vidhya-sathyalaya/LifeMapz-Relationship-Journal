@@ -7,7 +7,7 @@ import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 
 import awsconfig from './aws-exports';
-import { NavBar } from './ui-components_frontpage';
+import { NavBar, Newfooter } from './ui-components_frontpage';
 import { FrontPage1 } from './ui-components_frontpage';
 import { Footer1 } from './ui-components_frontpage';
 import { 
@@ -43,6 +43,7 @@ function FirstHome() {
            <FrontPage1 overrides={fpg1}/>
            {/* <Footer1 overrides={fott1}/> */}
            {/* <Frame418 /> */}
+           <Newfooter></Newfooter>
          </div>
          </div>
        // </AmplifyProvider>

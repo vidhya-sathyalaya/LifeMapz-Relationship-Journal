@@ -6,11 +6,8 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { User } from "../models";
 import { ViewProps } from "@aws-amplify/ui-react";
-export declare type ViewProffileProps = React.PropsWithChildren<Partial<ViewProps> & {
-    profileconn?: User;
-} & {
+export declare type NewfooterProps = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function ViewProffile(props: ViewProffileProps): React.ReactElement;
+export default function Newfooter(props: NewfooterProps): React.ReactElement;
