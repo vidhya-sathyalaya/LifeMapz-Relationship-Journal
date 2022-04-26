@@ -27,23 +27,42 @@ export default function ViewProfile(props) {
   });
 
   // Create DynamoDB document client
-  var docClient = new AWS.DynamoDB.DocumentClient({ apiVersion: '2012-08-10' });
+  var docClient = new AWS.DynamoDB.DocumentClient();
 
   async function logSingleItem(){
 
     var params = {
       TableName: 'User-fmtgiqoe4fgvtp6svt46tmljhq-dev',
       Key: {
-        "email":"mocase5887@votooe.com"
+        email:"mocase5887@votooe.com",
       },
     };
 
-    try {
-      var result = await docClient.get(params).promise()
-      console.log(JSON.stringify(result))
-    } catch (error) {
-        console.error(error);
-    }
+    // docClient
+    // .scan({
+    //   TableName: "User-fmtgiqoe4fgvtp6svt46tmljhq-dev",
+    // })
+    // .promise()
+    // .then(data => console.log(data.Items))
+    // .catch(console.error)
+
+    docClient
+    .get({
+      TableName: "User-fmtgiqoe4fgvtp6svt46tmljhq-dev",
+      Key: {
+        id: "0fc76543-c384-45d4-8502-9e76982a62ab", // id is the Partition Key, '123' is the value of it
+      },
+    })
+    .promise()
+    .then(data => console.log(data.Item))
+    .catch(console.error)
+
+    // try {
+    //   var result = await docClient.get(params).promise()
+    //   console.log(JSON.stringify(result))
+    // } catch (error) {
+    //     console.error(error);
+    // }
 }
 
   // declaring react hooks
