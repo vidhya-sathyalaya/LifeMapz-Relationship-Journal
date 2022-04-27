@@ -5,11 +5,48 @@
  **************************************************************************/
 
 /* eslint-disable */
-import React from "react";
+import React, { useEffect, useState } from "react";
+import emailjs from '@emailjs/browser'
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Image, Text, TextField, View } from "@aws-amplify/ui-react";
 export default function Frame419(props) {
   const { overrides, ...rest } = props;
+
+  const [name, setName] = useState("");
+  const [journalName, setJournalName] = useState("");
+  const [partnerEmail, setPartnerEmail] = useState("");
+
+  function saveJournal() {
+
+    // to-do : Create a jouurnal and update user with newly created journal ID
+
+    // console.log(journalName);
+    // console.log(partnerEmail);
+    
+    // fetching first name and last name from session storage
+    const fromName = sessionStorage.getItem('userFname') + "" + sessionStorage.getItem('userLname');
+    // console.log(fromName);
+
+    // calling function to send email
+    sendEmail(fromName);
+  }
+
+  // function that sends email to designated user using emailjs service
+  function sendEmail(fullName){
+
+    var templateParams = {
+        email: partnerEmail,
+        from_name: fullName,
+    };
+
+    emailjs.send('service_h2hbmqw', 'template_ow5b9ms', templateParams,'F1-CVdkIHCr6O5tx5')
+    .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+        console.log('FAILED...', error);
+    });
+  }
+
   return (
     <View
       width="935px"
@@ -37,6 +74,7 @@ export default function Frame419(props) {
         isDisabled={false}
         variation="primary"
         children="Invite your partner"
+        onClick={saveJournal}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
       <Image
@@ -108,6 +146,8 @@ export default function Frame419(props) {
         variation="default"
         isMultiline={false}
         label="Enter journal name"
+        value={journalName}
+        onChange={e => setJournalName(e.target.value)}
         {...getOverrideProps(overrides, "TextField31343817")}
       ></TextField>
       <TextField
@@ -126,6 +166,8 @@ export default function Frame419(props) {
         variation="default"
         isMultiline={false}
         label="Enter email id of your partner"
+        value={partnerEmail}
+        onChange={e => setPartnerEmail(e.target.value)}
         {...getOverrideProps(overrides, "TextField31343824")}
       ></TextField>
     </View>
