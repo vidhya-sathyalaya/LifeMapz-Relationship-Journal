@@ -3,8 +3,7 @@ import Amplify from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 
 import awsconfig from './aws-exports';
-import { NavBar } from './ui-components_frontpage';
-import { ViewProffile } from './ui-components_aboutus';
+import { FooterAllPages, NavBar, ViewProffile } from './ui-components_frontpage';
 Amplify.configure(awsconfig);
 
 
@@ -19,6 +18,7 @@ function ViewProfilePage() {
          <div className='App'>
           <NavBar overrides={imageOverrides} />
           <ViewProffile></ViewProffile>
+          <FooterAllPages></FooterAllPages>
          </div>
        // </AmplifyProvider>
   );

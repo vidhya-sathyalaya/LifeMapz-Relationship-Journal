@@ -7,7 +7,7 @@
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
-export declare type Journalpost2Props = React.PropsWithChildren<Partial<ViewProps> & {
+export declare type MacBookPro141Props = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function Journalpost2(props: Journalpost2Props): React.ReactElement;
+export default function MacBookPro141(props: MacBookPro141Props): React.ReactElement;

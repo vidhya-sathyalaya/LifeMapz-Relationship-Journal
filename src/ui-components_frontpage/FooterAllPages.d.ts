@@ -6,14 +6,8 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { CollectionProps } from "@aws-amplify/ui-react";
-export declare type Journalpost2CollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
-    items?: any[];
-    overrideItems?: ({ item: any, index: number }: {
-        item: any;
-        index: any;
-    }) => Record<string, string>;
-} & {
+import { ViewProps } from "@aws-amplify/ui-react";
+export declare type FooterAllPagesProps = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function Journalpost2Collection(props: Journalpost2CollectionProps): React.ReactElement;
+export default function FooterAllPages(props: FooterAllPagesProps): React.ReactElement;

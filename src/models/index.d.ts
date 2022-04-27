@@ -72,6 +72,7 @@ export declare class JournalEntry {
 export declare class Journal {
   readonly id: string;
   readonly date_created: string;
+  readonly name: string;
   readonly is_active: boolean;
   readonly Users?: (User | null)[] | null;
   readonly JournalEntries?: (JournalEntry | null)[] | null;

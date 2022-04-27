@@ -286,6 +286,13 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
+                "name": {
+                    "name": "name",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "is_active": {
                     "name": "is_active",
                     "isArray": false,
@@ -465,16 +472,6 @@ export const schema = {
                 {
                     "type": "key",
                     "properties": {
-                        "name": "byEmail",
-                        "queryField": "userByEmail",
-                        "fields": [
-                            "email"
-                        ]
-                    }
-                },
-                {
-                    "type": "key",
-                    "properties": {
                         "name": "byJournal",
                         "fields": [
                             "journalID"
@@ -519,5 +516,5 @@ export const schema = {
         }
     },
     "nonModels": {},
-    "version": "0504205d268c007051ad6882bf1cd407"
+    "version": "4267ca9d56a3b9e69ad247f87e14c348"
 };
