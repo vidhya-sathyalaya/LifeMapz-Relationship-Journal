@@ -9,6 +9,13 @@ import React, { useEffect, useState } from "react";
 import emailjs from '@emailjs/browser'
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Image, Text, TextField, View } from "@aws-amplify/ui-react";
+
+import * as mutations from '../graphql/mutations'
+import { API, graphqlOperation } from 'aws-amplify';
+
+import AWSDateUtil from "../util";
+
+
 export default function Frame419(props) {
   const { overrides, ...rest } = props;
 
@@ -18,8 +25,6 @@ export default function Frame419(props) {
 
   function saveJournal() {
 
-    // to-do : Create a jouurnal and update user with newly created journal ID
-
     // console.log(journalName);
     // console.log(partnerEmail);
     
@@ -28,8 +33,142 @@ export default function Frame419(props) {
     // console.log(fromName);
 
     // calling function to send email
-    sendEmail(fromName);
+    // sendEmail(fromName);
+
+    // create a jouurnal and update user with newly created journal ID
+    var created = createJournal(journalName);
+
+    if(created){
+      attachUsersToJournal();
+    }
+    else{
+      // try again cannot create journal
+      console.log("Error!!!");
+    }
   }
+
+  async function attachUsersToJournal(){
+
+    // attaching partner to journal
+    
+    // npm install i aws-sdk --save 
+    // npm install i util
+    var AWS = require('aws-sdk');
+    // Set the region, access key and secret key of the IAM AWS user
+    AWS.config.update({
+      region: 'us-east-1',
+      accessKeyId: "AKIAUAO4TAFGMC46A2OF",
+      secretAccessKey: "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"
+    });
+
+    // Create DynamoDB document client
+    var docClient = new AWS.DynamoDB.DocumentClient();
+
+    try {
+      var params = {
+        TableName: 'User-fmtgiqoe4fgvtp6svt46tmljhq-dev',
+        Item: {
+          // id: sessionStorage.getItem('userEmail'),
+          id: partnerEmail,
+          journalID: sessionStorage.getItem('journalID'),
+        },
+      };
+      var result = await docClient.put(params).promise()
+      console.log("[createJournal]")
+      console.log(result.Attributes);
+      // saveDetailsToSession(result.Items[0]);
+      // var fname = result.Items[0].fname ;
+      // console.log(fname);
+      // console.log(JSON.stringify(result))
+  } catch (error) {
+      console.error(error);
+    }
+
+
+  }
+
+
+  // creating journal with graphql
+  async function createJournal(jName){
+
+    const queryParams = {
+        id: sessionStorage.getItem('userEmail'),
+        name: jName,
+        is_active: true,
+        date_created: AWSDateUtil.getCurrentAWSDate(),
+    };
+
+    try {
+      const newJournal = await API.graphql({ query: mutations.createJournal, variables: {input: queryParams}});
+      if (newJournal.errors){
+        console.log("Failed!!");
+        const errors = reply.errors;
+        throw errors[0];
+        return false;
+      }
+      else{
+        // console.log(newJournal.data.createJournal.id);
+        sessionStorage.setItem('journalID', newJournal.data.createJournal.id);
+        return true
+      }
+    }
+    catch (err){
+      console.log(err);
+      return false;
+    }
+
+    return false;
+
+    // console.log("[GraphqlOutput]");
+    // console.log(newJournal.data);
+
+    // if (newJournal.errors){
+    //   console.log("True");
+    // }
+    // else{
+    //   console.log("False");
+    // }
+
+  }
+
+  // creating data with document client
+  // async function createJournal(jName){
+
+  //   // npm install i aws-sdk --save 
+  //   // npm install i util
+  //   var AWS = require('aws-sdk');
+  //   // Set the region, access key and secret key of the IAM AWS user
+  //   AWS.config.update({
+  //     region: 'us-east-1',
+  //     accessKeyId: "AKIAUAO4TAFGMC46A2OF",
+  //     secretAccessKey: "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"
+  //   });
+
+  //   // Create DynamoDB document client
+  //   var docClient = new AWS.DynamoDB.DocumentClient();
+
+  //   try {
+  //     var params = {
+  //       TableName: 'Journal-fmtgiqoe4fgvtp6svt46tmljhq-dev',
+  //       Item: {
+  //         id: sessionStorage.getItem('userEmail'),
+  //         name: jName,
+  //         is_active: true,
+  //         date_created: AWSDateUtil.getCurrentAWSDate(),
+  //       },
+  //     };
+  //     var result = await docClient.put(params).promise()
+  //     console.log("[createJournal]")
+  //     console.log(result.Attributes);
+  //     // saveDetailsToSession(result.Items[0]);
+  //     // var fname = result.Items[0].fname ;
+  //     // console.log(fname);
+  //     // console.log(JSON.stringify(result))
+  // } catch (error) {
+  //     console.error(error);
+  //   }
+
+  // }
 
   // function that sends email to designated user using emailjs service
   function sendEmail(fullName){
