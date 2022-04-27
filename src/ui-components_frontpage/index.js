@@ -37,6 +37,7 @@ export { default as FOOTER3 } from "./FOOTER3";
 export { default as EditProfile } from "./EditProfile";
 export { default as ViewProffile } from "./ViewProffile";
 export { default as CardD } from "./CardD";
+export { default as JP } from "./JP";
 export { default as Component1 } from "./Component1";
 export { default as CardB } from "./CardB";
 export { default as Frame3836 } from "./Frame3836";

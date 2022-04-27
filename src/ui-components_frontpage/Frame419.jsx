@@ -12,12 +12,12 @@ export default function Frame419(props) {
   const { overrides, ...rest } = props;
   return (
     <View
-      width="935px"
-      height="761px"
+      width="1512px"
+      height="768px"
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
-      backgroundImage="linear-gradient(-90deg, rgba(244,186,199,0.44), rgba(0,26,255,0))"
+      backgroundImage="linear-gradient(-90deg, rgba(244,186,199,0.17), rgba(0,26,255,0.03))"
       {...rest}
       {...getOverrideProps(overrides, "Frame419")}
     >
@@ -25,8 +25,8 @@ export default function Frame419(props) {
         display="flex"
         gap="10px"
         position="absolute"
-        top="682px"
-        left="346px"
+        top="688px"
+        left="634px"
         direction="row"
         justifyContent="center"
         alignItems="center"
@@ -43,8 +43,8 @@ export default function Frame419(props) {
         width="935px"
         height="482px"
         position="absolute"
-        top="0px"
-        left="0px"
+        top="22px"
+        left="288px"
         padding="0px 0px 0px 0px"
         src="https://i.ibb.co/x3c37Mg/222.png"
         {...getOverrideProps(overrides, "28530 1")}
@@ -53,8 +53,8 @@ export default function Frame419(props) {
         width="935px"
         height="72px"
         position="absolute"
-        top="482px"
-        left="0px"
+        top="504px"
+        left="288px"
         overflow="hidden"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Frame 420")}
@@ -96,8 +96,8 @@ export default function Frame419(props) {
         display="flex"
         gap="4px"
         position="absolute"
-        top="573px"
-        left="566px"
+        top="595px"
+        left="854px"
         direction="column"
         width="300px"
         height="61px"
@@ -114,8 +114,8 @@ export default function Frame419(props) {
         display="flex"
         gap="4px"
         position="absolute"
-        top="573px"
-        left="102px"
+        top="595px"
+        left="390px"
         direction="column"
         width="300px"
         height="61px"
