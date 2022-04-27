@@ -5,6 +5,9 @@ import { DataStore } from '@aws-amplify/datastore';
 import { TextEntry } from '../models';
 import { JournalEntry, ReactionValue } from '../models';
 
+import "@aws-amplify/ui-react/styles.css";
+import { NavBar, Writeajournal, Frame427 as EntryCard } from '../ui-components'
+
 import AWSDateUtil from '../util'
 
 {/*import { Link } from 'react-router-dom';*/}
@@ -86,15 +89,26 @@ class JournalEntryPage extends React.Component {
     }
 
     render() {
-        const tentries = this.state.PreviousEntries?.map((te, i) => (
-            <li key={i} className="previous-entry">{te}</li>
+          const tentries = this.state.PreviousEntries?.map((te, i) => (
+            <EntryCard key={i} overrides={
+                {
+                    "write here": {
+                        children: te
+                    }
+                }
+            } />
           ));
         return (
             <div>
-                <h1> Today </h1>
-                <textarea className='journaltext' onChange={event => this.changeEntry(event.target.value)}/>
-                <br></br>
-                <button onClick={this.saveEntry}> Save </button>
+                <NavBar/>
+                <Writeajournal overrides={{
+                    "Button": {
+                        onClick: this.saveEntry
+                    },
+                    "TextField": {
+                        onChange: event => this.changeEntry(event.target.value)
+                    }
+                }} />
                 <div className='previous-entry-section'>
                     <ul className='previous-entry-list'>
                         {tentries}
