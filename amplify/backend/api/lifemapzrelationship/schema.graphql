@@ -1,0 +1,56 @@
+type Images @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  images: String
+}
+
+type TextEntry @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  content: String!
+  journalentryID: ID! @index(name: "byJournalEntry")
+}
+
+enum ReactionValue {
+  HAPPY
+  SAD
+  LOVE
+}
+
+type JournalEntry @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  date_created: AWSTimestamp!
+  date_modified: AWSTimestamp!
+  reaction_id: ReactionValue!
+  entry_type: String!
+  is_memorable: Boolean!
+  userID: ID! @index(name: "byUser")
+  journalID: ID! @index(name: "byJournal")
+  TextEntries: [TextEntry] @hasMany(indexName: "byJournalEntry", fields: ["id"])
+}
+
+type Journal @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  date_created: AWSDate!
+  name: String!
+  is_active: Boolean!
+  Users: [User] @hasMany(indexName: "byJournal", fields: ["id"])
+  JournalEntries: [JournalEntry] @hasMany(indexName: "byJournal", fields: ["id"])
+}
+
+enum GenderValue {
+  MALE
+  FEMALE
+  NONBINARY
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  cognito_username: String
+  fname: String!
+  lname: String!
+  email: String!
+  dob: AWSDate
+  gender: GenderValue
+  JournalEntries: [JournalEntry] @hasMany(indexName: "byUser", fields: ["id"])
+  journalID: ID @index(name: "byJournal")
+}
+ 

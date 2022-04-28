@@ -42,7 +42,7 @@ export { default as Component1 } from "./Component1";
 export { default as CardB } from "./CardB";
 export { default as Frame3836 } from "./Frame3836";
 export { default as Component6 } from "./Component6";
-export { default as ContactUS } from "./ContactUS";
+// export { default as ContactUS } from "./ContactUS";
 export { default as NavBar } from "./NavBar";
 export { default as CardC } from "./CardC";
 export { default as Frame426 } from "./Frame426";

@@ -6,17 +6,75 @@
 
 /* eslint-disable */
 import React from "react";
+import { Route, BrowserRouter as Router, Switch, useHistory} from "react-router-dom";
 import {
   getOverrideProps,
   useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
+
+import CreateJournalPage from '../CreateJournalPage';
+import JournalPage from '../JournalPage';
+
 import { Image, Text, View } from "@aws-amplify/ui-react";
 export default function FrontPage1(props) {
   const { overrides, ...rest } = props;
+  // need to write if-else logic according to the journalID
+
+  console.log(overrides[1].isUserProfile);
+  console.log(overrides);
+
+
   const createJournalOnClick = useNavigateAction({
     type: "url",
     url: "http://localhost:3000/createjournal",
   });
+
+  const checkJournalExists = () => {
+    var journalID = sessionStorage.getItem('journalID');
+    console.log(journalID);
+      // if user has journalID attached
+      if (journalID) {
+        console.log("Here");
+        // window.location.hash = "/journalentry";
+          // return (
+          //   <Router >
+          //     <Route path='/journalentry'><JournalPage/></Route>
+          //   </Router>
+          // )
+          return <JournalPage/>;
+      } else {
+          // If user doesn't have journalID attached
+          return (
+            <Router >
+              <Route path='/createjournal'><CreateJournalPage/></Route>
+            </Router>
+          )      
+        }
+  };
+
+
+  // function checkJournalExists()
+  // {
+  //   var journalID = sessionStorage.getItem('journalID');
+  //   console.log(journalID);
+  //   const history = useHistory();
+  //   if (journalID){
+  //     // forward to journal page
+  //     props.history.push("/journalentry");
+  //     // return (
+  //     //   <Router >
+  //     //     <Route path='/journalentry'><JournalPage/></Route>
+  //     //   </Router>
+  //     // )
+  //   }else{
+  //     return (
+  //       <Router >
+  //         <Route path='/createjournal'><CreateJournalPage/></Route>
+  //       </Router>
+  //     )
+  //   }
+  // }
+
   return (
     <View
       width="1520px"
@@ -109,9 +167,7 @@ export default function FrontPage1(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Create Journal"
-            onClick={() => {
-              createJournalOnClick();
-            }}
+            onClick={checkJournalExists}
             {...getOverrideProps(overrides, "Create Journal")}
           ></Text>
         </View>
@@ -125,7 +181,7 @@ export default function FrontPage1(props) {
         right="0%"
         width="64.88%"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "image 1")}
+        {...getOverrideProps(overrides[0], "image 1")}
       ></Image>
     </View>
   );
