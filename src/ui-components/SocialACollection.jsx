@@ -19,14 +19,12 @@ export default function SocialACollection(props) {
   const itemsPagination = {
     sort: (s) => s.date_created(SortDirection.DESCENDING),
   };
-  const items =
-    itemsProp !== undefined
-      ? itemsProp
-      : useDataStoreBinding({
-          type: "collection",
-          model: JournalEntry,
-          pagination: itemsPagination,
-        }).items;
+  const itemsDataStore = useDataStoreBinding({
+    type: "collection",
+    model: JournalEntry,
+    pagination: itemsPagination,
+  }).items;
+  const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
   return (
     <Collection
       type="list"

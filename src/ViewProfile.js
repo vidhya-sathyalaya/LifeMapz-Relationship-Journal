@@ -5,18 +5,120 @@
  **************************************************************************/
 
 /* eslint-disable */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   getOverrideProps,
   useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
+
+import * as queries from './graphql/queries';
+import { API, graphqlOperation } from 'aws-amplify';
+
+// experimenting with document client
+import { Auth } from 'aws-amplify';
+
 import { Button, Icon, Image, Text, View } from "@aws-amplify/ui-react";
-export default function ViewProffile(props) {
+export default function ViewProfile(props) {
   const { profileconn, overrides, ...rest } = props;
   const buttonOnClick = useNavigateAction({
     type: "url",
     url: "http://localhost:3000/editprofile",
   });
+
+
+  var AWS = require('aws-sdk');
+  // Set the region 
+  AWS.config.update({
+    region: 'us-east-1',
+    accessKeyId: "AKIAUAO4TAFGMC46A2OF",
+    secretAccessKey: "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"
+  });
+
+  // Create DynamoDB document client
+  var docClient = new AWS.DynamoDB.DocumentClient();
+
+  async function logSingleItem(){
+
+    // var params = {
+    //   TableName: 'User-fmtgiqoe4fgvtp6svt46tmljhq-dev',
+    //   Key: {
+    //     email:"mocase5887@votooe.com",
+    //   },
+    // };
+
+    // try {
+    //   var result = await docClient.get(params).promise()
+    //   console.log(JSON.stringify(result))
+    // } catch (error) {
+    //     console.error(error);
+    // }
+
+    // docClient
+    // .scan({
+    //   TableName: "User-fmtgiqoe4fgvtp6svt46tmljhq-dev",
+    // })
+    // .promise()
+    // .then(data => console.log(data.Items))
+    // .catch(console.error)
+
+    // get query with id working
+    // docClient
+    // .get({
+    //   TableName: "User-fmtgiqoe4fgvtp6svt46tmljhq-dev",
+    //   Key: {
+    //     // email:"mocase5887@votooe.com",
+    //     id: "0fc76543-c384-45d4-8502-9e76982a62ab", // id is the Partition Key, '123' is the value of it
+    //   },
+    // })
+    // .promise()
+    // .then(data => console.log(data.Item))
+    // .catch(console.error)
+
+    // successfully queried database using email index
+    docClient
+    .query({
+      TableName: 'User-fmtgiqoe4fgvtp6svt46tmljhq-dev',
+      IndexName: 'byEmail' ,
+      KeyConditionExpression: "email = :email",
+      ExpressionAttributeValues: {
+        ":email": sessionStorage.getItem('userEmail'),
+       }
+    })
+    .promise()
+    .then(data => console.log(data.Items))
+    .catch(console.error);
+
+}
+
+  // declaring react hooks
+  const [fname, setFName] = useState("");
+  const [lname, setLName] = useState("");
+  const [dob, setDOB] = useState("");
+  const [email, setEmail] = useState("");
+  const [gender, setGender] = useState("");
+  
+
+  // this function is just used to fetch the full name of the user using graphql
+  const getUserInfo = async () => {
+    const user = await API.graphql({ query: queries.getUser , variables: { id : sessionStorage.getItem('userID') }});
+    console.log("[getFromName]");
+    setFName(user.data.getUser.fname);
+    setLName(user.data.getUser.lname);
+    setDOB(user.data.getUser.dob);
+    setEmail(user.data.getUser.email);
+    setGender(user.data.getUser.gender);
+  };
+
+
+  // useEffect is just like compoenent did mount for function based component
+  useEffect(() => {
+    // storeUserID();
+    getUserInfo();
+    // logSingleItem();
+    // find();
+}, []);
+
+
   return (
     <View
       width="1512px"
@@ -68,7 +170,7 @@ export default function ViewProffile(props) {
         whiteSpace="pre-wrap"
         children={profileconn?.fname}
         {...getOverrideProps(overrides, "Fname")}
-      ></Text>
+      >{fname}</Text>
       <Text
         fontFamily="Inter"
         fontSize="14px"
@@ -87,7 +189,7 @@ export default function ViewProffile(props) {
         whiteSpace="pre-wrap"
         children={profileconn?.lname}
         {...getOverrideProps(overrides, "Lname")}
-      ></Text>
+      >{lname}</Text>
       <Text
         fontFamily="Inter"
         fontSize="14px"
@@ -106,7 +208,7 @@ export default function ViewProffile(props) {
         whiteSpace="pre-wrap"
         children={profileconn?.email}
         {...getOverrideProps(overrides, "id here")}
-      ></Text>
+      >{email}</Text>
       <Text
         fontFamily="Inter"
         fontSize="14px"
@@ -144,7 +246,7 @@ export default function ViewProffile(props) {
         whiteSpace="pre-wrap"
         children={profileconn?.id}
         {...getOverrideProps(overrides, "gender here")}
-      ></Text>
+      >{gender}</Text>
       <Text
         fontFamily="Inter"
         fontSize="14px"
@@ -182,7 +284,7 @@ export default function ViewProffile(props) {
         whiteSpace="pre-wrap"
         children={profileconn?.dob}
         {...getOverrideProps(overrides, "dobhere")}
-      ></Text>
+      >{dob}</Text>
       <Text
         fontFamily="Inter"
         fontSize="14px"
