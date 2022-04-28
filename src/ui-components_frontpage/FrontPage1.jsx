@@ -181,7 +181,7 @@ export default function FrontPage1(props) {
         right="0%"
         width="64.88%"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides[0], "image 1")}
+        {...getOverrideProps(overrides[0], "image 2")}
       ></Image>
     </View>
   );

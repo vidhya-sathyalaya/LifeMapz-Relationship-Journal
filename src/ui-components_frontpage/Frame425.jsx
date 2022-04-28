@@ -5,7 +5,7 @@
  **************************************************************************/
 
 /* eslint-disable */
-import React from "react";
+import React, {useState} from "react";
 import {
   getOverrideProps,
   useNavigateAction,
@@ -13,10 +13,31 @@ import {
 import { Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function Frame425(props) {
   const { overrides, ...rest } = props;
+  const [isJournal, setIsJournal] = useState("false");
+
+  console.log(overrides[1].isUserProfile);
+  console.log(overrides);
+
+  var journalID = overrides[2].journalID;
+
+  if (journalID == "undefined"){
+    setIsJournal(false);
+  }
+  else{
+    setIsJournal(true);
+  }
+
   const createJournalOnClick = useNavigateAction({
     type: "url",
     url: "http://localhost:3000/createjournal",
   });
+
+  const openJournalOnClick = useNavigateAction({
+    type: "url",
+    url: "http://localhost:3000/journalentry",
+  });
+
+
   return (
     <View
       width="1512px"
@@ -56,7 +77,12 @@ export default function Frame425(props) {
           whiteSpace="pre-wrap"
           children="Create Journal"
           onClick={() => {
+            if(!isJournal){
             createJournalOnClick();
+            }
+            else{
+             openJournalOnClick();
+            }
           }}
           {...getOverrideProps(overrides, "Create Journal")}
         ></Text>
@@ -113,7 +139,7 @@ export default function Frame425(props) {
         right="0%"
         width="51.85%"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "image 2")}
+        {...getOverrideProps(overrides[0], "image 2")}
       ></Image>
       <Icon
         width="161px"
@@ -494,4 +520,5 @@ export default function Frame425(props) {
       ></Icon>
     </View>
   );
+  
 }
