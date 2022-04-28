@@ -3,6 +3,7 @@ import { Authenticator, Button, useAuthenticator } from "@aws-amplify/ui-react";
 import Amplify, { Auth } from 'aws-amplify';
 
 import React, {useState} from "react";
+import awsconfig from './aws-exports';
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import {RadioGroupField , Radio, Text, TextField, View } from "@aws-amplify/ui-react";
 import AWSDateUtil from "./util";
@@ -15,7 +16,7 @@ import { DataStore } from '@aws-amplify/datastore';
 import { API, graphqlOperation } from 'aws-amplify';
 
 // importing mutations for creations
-// import createUser from '../graphql/mutations';
+import * as queries from './graphql/queries';
 import * as mutations from './graphql/mutations';
 
 // const { signOut, user } = useAuthenticator();
@@ -31,6 +32,10 @@ class CompleteSignup extends React.Component {
     this.onChangeLname = this.onChangeLname.bind(this);
     this.onChangeGender = this.onChangeGender.bind(this);
     this.saveProfile = this.saveProfile.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.createProfile = this.createProfile.bind(this);
+
+    this.isUserProfileCreated = false;
 
     this.state = {
       id: '',
@@ -40,15 +45,63 @@ class CompleteSignup extends React.Component {
       email:'',
       dob:'',
       gender:'',  
-      createdAt: '',
+      // createdAt: '',
     };
   }
+
+  async getUserData()
+  {
+  // npm install i aws-sdk --save 
+  // npm install i util
+  var AWS = require('aws-sdk');
+  // Set the region, access key and secret key of the IAM AWS user
+  AWS.config.update({
+    region: 'us-east-1',
+    accessKeyId: "AKIAUAO4TAFGMC46A2OF",
+    secretAccessKey: "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"
+  });
+
+  // Create DynamoDB document client
+  var docClient = new AWS.DynamoDB.DocumentClient();
+  // fetching current user data with Auth
+  const authenticatedUser = await Auth.currentAuthenticatedUser();
+
+  // only call the api if the authenitacted user is found and hence found its email
+  if (authenticatedUser) {
+    try {
+        var params = {
+          TableName: 'User-fmtgiqoe4fgvtp6svt46tmljhq-dev',
+          Key: {
+            id: authenticatedUser.attributes.email,
+          },
+        };
+        var result = await docClient.get(params).promise()
+
+        // console.log("here");
+        // console.log(result);
+
+        if (result.Item == null){
+          this.isUserProfileCreated = false;
+        }else{
+          this.isUserProfileCreated = true;
+        }
+
+    } catch (error) {
+        console.error(error);
+        this.isUserProfileCreated = false;
+      }
+  }
+  else{
+    console.log("User not authenticated");
+    this.isUserProfileCreated = false;
+  }
+}
   
 
   componentDidMount()
     {
-        // this.setState( {cognitoUsername : Auth.user.attributes.username });
-        this.getCurrentUserInfo();
+        this.getUserData();
+        console.log(this.isUserProfileCreated);
     }
 
   getCurrentUserInfo() {
@@ -60,7 +113,7 @@ class CompleteSignup extends React.Component {
       this.setState({email : user.attributes.email});
       this.setState({id: user.attributes.email});
       });
-      this.setState({createdAt: AWSDateUtil.getCurrentAWSDate()});
+      // this.setState({createdAt: AWSDateUtil.getCurrentAWSDate()});
     }
 
     onChangeFname(e) {
@@ -87,9 +140,62 @@ class CompleteSignup extends React.Component {
     });
     }
 
-    async saveProfile() {
-      const savedProfile = await API.graphql({ query: mutations.updateUser, variables: {input: this.state}});
+   handleSubmit(){
+     console.log("User Profile" + this.isUserProfileCreated)
+     if(this.isUserProfileCreated){
+       console.log("HEre");
+       this.saveProfile();
+     }
+     else{
+       this.createProfile();
+     }
+   }
+
+   async createProfile(){
+
+    const authenticatedUser = await Auth.currentAuthenticatedUser();
+
+    var params = {
+      id: authenticatedUser.attributes.email,
+      email: authenticatedUser.attributes.email,
+      cognito_username: authenticatedUser.username ,
+      fname: this.state.fname,
+      lname: this.state.lname,
+      dob: this.state.dob,
+      gender: this.state.gender,
+      journalID: 'undefined',
+    }
+
+    try{
+      const savedProfile = await API.graphql({ query: mutations.createUser, variables: {input: params}});
       console.log(savedProfile);
+      }
+      catch(err){
+        console.log(err);
+      }
+   }
+
+    async saveProfile() {
+
+      const authenticatedUser = await Auth.currentAuthenticatedUser();
+
+      var params = {
+        id: authenticatedUser.attributes.email,
+        email: authenticatedUser.attributes.email,
+        cognito_username: authenticatedUser.username ,
+        fname: this.state.fname,
+        lname: this.state.lname,
+        dob: this.state.dob,
+        gender: this.state.gender,
+      }
+
+      try{
+      const savedProfile = await API.graphql({ query: mutations.updateUser, variables: {input: params}});
+      console.log(savedProfile);
+      }
+      catch(err){
+        console.log(err);
+      }
     }
 
   render() {
@@ -321,8 +427,8 @@ class CompleteSignup extends React.Component {
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
               children="Save Profile"
-              onSubmit={this.saveProfile}
-              onClick = {this.saveProfile}
+              onSubmit={this.handleSubmit}
+              onClick = {this.handleSubmit}
             ></Button>
           </View>
           <Text

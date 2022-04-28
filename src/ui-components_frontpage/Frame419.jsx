@@ -14,6 +14,7 @@ import * as mutations from '../graphql/mutations'
 import { API, graphqlOperation } from 'aws-amplify';
 
 import AWSDateUtil from "../util";
+import { getValue } from "@testing-library/user-event/dist/utils";
 
 
 export default function Frame419(props) {
@@ -21,9 +22,10 @@ export default function Frame419(props) {
 
   const [name, setName] = useState("");
   const [journalName, setJournalName] = useState("");
+  const [createdJournal, setCreatedJournal] = useState("undefined");
   const [partnerEmail, setPartnerEmail] = useState("");
 
-  function saveJournal() {
+   async function saveJournal() {
 
     // console.log(journalName);
     // console.log(partnerEmail);
@@ -36,10 +38,12 @@ export default function Frame419(props) {
     sendEmail(fromName);
 
     // create a jouurnal and update user with newly created journal ID
-    var created = createJournal(journalName);
+    var created = await createJournal(journalName);
+    // console.log("JOURNAL ID");
+    // console.log(created);
 
-    if(created){
-      attachUsersToJournal();
+    if(created != ""){
+      attachUsersToJournal(created);
     }
     else{
       // try again cannot create journal
@@ -47,12 +51,9 @@ export default function Frame419(props) {
     }
   }
 
-  async function attachUsersToJournal(){
+  async function attachUsersToJournal(jid){
 
-
-    // to do: attach journalID to current user
-    
-
+    console.log("JID" + jid);
     // attaching partner to journal
 
     // npm install i aws-sdk --save 
@@ -69,22 +70,58 @@ export default function Frame419(props) {
     var docClient = new AWS.DynamoDB.DocumentClient();
 
     try {
-      var params = {
+      var params1 = {
         TableName: 'User-fmtgiqoe4fgvtp6svt46tmljhq-dev',
         Item: {
           // id: sessionStorage.getItem('userEmail'),
           id: partnerEmail,
-          journalID: sessionStorage.getItem('journalID'),
+          // email: partnerEmail,
+          journalID: jid,
         },
       };
-      var result = await docClient.put(params).promise()
+      var partnerUser = await docClient.put(params1).promise()
       console.log("[createJournal]")
-      console.log(result.Attributes);
+      console.log(partnerUser);
       // saveDetailsToSession(result.Items[0]);
       // var fname = result.Items[0].fname ;
       // console.log(fname);
       // console.log(JSON.stringify(result))
+
+
+
   } catch (error) {
+      console.error(error);
+    }
+
+    // attach journalID to current user
+    try {
+
+      var params2 = {
+        TableName: 'User-fmtgiqoe4fgvtp6svt46tmljhq-dev',
+        Key: {
+          id: sessionStorage.getItem('userEmail'),
+        },
+        UpdateExpression: `set journalID = :journalID`,
+        ExpressionAttributeValues: {
+          ":journalID": jid,
+        }
+      };
+
+      // var params2 = {
+      //   TableName: 'User-fmtgiqoe4fgvtp6svt46tmljhq-dev',
+      //   Item: {
+      //     id: sessionStorage.getItem('userEmail'),
+      //     // id: partnerEmail,
+      //     // email: partnerEmail,
+      //     journalID: sessionStorage.getItem('journalID'),
+      //   },
+      // };
+      var currentUser = await docClient.update(params2).promise()
+      console.log("[createJournal]")
+      console.log(currentUser);
+      console.log(currentUser.Attributes);
+
+    }catch (error) {
       console.error(error);
     }
 
@@ -113,13 +150,14 @@ export default function Frame419(props) {
       }
       else{
         // console.log(newJournal.data.createJournal.id);
+        setCreatedJournal(newJournal.data.createJournal.id);
         sessionStorage.setItem('journalID', newJournal.data.createJournal.id);
-        return true
+        return newJournal.data.createJournal.id;
       }
     }
     catch (err){
       console.log(err);
-      return false;
+      return "";
     }
 
 
