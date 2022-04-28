@@ -20,6 +20,9 @@ export default function FrontPage1(props) {
   const { overrides, ...rest } = props;
   // need to write if-else logic according to the journalID
 
+  console.log(overrides[1].isUserProfile);
+  console.log(overrides);
+
 
   const createJournalOnClick = useNavigateAction({
     type: "url",
@@ -178,7 +181,7 @@ export default function FrontPage1(props) {
         right="0%"
         width="64.88%"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "image 1")}
+        {...getOverrideProps(overrides[0], "image 1")}
       ></Image>
     </View>
   );

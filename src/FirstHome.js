@@ -7,12 +7,13 @@ import Amplify from 'aws-amplify';
 import { Auth } from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import awsconfig from './aws-exports';
 import { NavBar } from './ui-components_frontpage';
 import { FrontPage1 } from './ui-components_frontpage';
 import { Footer1 } from './ui-components_frontpage';
+import  CompleteSignup from './CompleteSignup';
 import { 
   Frame418 
 } from './ui-components_frontpage';
@@ -20,6 +21,8 @@ Amplify.configure(awsconfig);
 
 
 function FirstHome() {
+
+  const [isUser, setIsUser] = useState(false);
 
   // npm install i aws-sdk --save 
   // npm install i util
@@ -68,7 +71,15 @@ function FirstHome() {
           }
         };
         var result = await docClient.query(params).promise()
-        saveDetailsToSession(result.Items[0]);
+
+        console.log(result);
+
+        if (result.Items[0]){
+          saveDetailsToSession(result.Items[0]);
+          setIsUser(true);
+        }else{
+          setIsUser(false);
+        }
         // var fname = result.Items[0].fname ;
         // console.log(fname);
         // console.log(JSON.stringify(result))
@@ -112,22 +123,28 @@ function FirstHome() {
      },
    }
 
-   getUserData();
+   if (isUser){
+    return (
+      // <AmplifyProvider>
+          <div className='App'>
+            {/* <p align="center"> Relationship Journal</p> */}
+            <NavBar overrides={imageOverrides} />
+         
+          <div>
+            <FrontPage1 overrides={[fpg1, {"isUserProfile" : isUser}]}/>
+            {/* <FrontPage1 overrides={fpg1}/> */}
+            {/* <Footer1 overrides={fott1}/> */}
+            {/* <Frame418 /> */}
+          </div>
+          </div>
+        // </AmplifyProvider>
+    );
+   }
+   else{
+    return <CompleteSignup/>
+   }
 
-   return (
-     // <AmplifyProvider>
-         <div className='App'>
-           {/* <p align="center"> Relationship Journal</p> */}
-           <NavBar overrides={imageOverrides} />
-        
-         <div>
-           <FrontPage1 overrides={fpg1}/>
-           {/* <Footer1 overrides={fott1}/> */}
-           {/* <Frame418 /> */}
-         </div>
-         </div>
-       // </AmplifyProvider>
-  );
+   
 }
 
 export default FirstHome;
