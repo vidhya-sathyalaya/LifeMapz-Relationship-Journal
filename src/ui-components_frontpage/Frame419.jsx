@@ -29,11 +29,11 @@ export default function Frame419(props) {
     // console.log(partnerEmail);
     
     // fetching first name and last name from session storage
-    const fromName = sessionStorage.getItem('userFname') + "" + sessionStorage.getItem('userLname');
+    const fromName = sessionStorage.getItem('userFname') + " " + sessionStorage.getItem('userLname');
     // console.log(fromName);
 
     // calling function to send email
-    // sendEmail(fromName);
+    sendEmail(fromName);
 
     // create a jouurnal and update user with newly created journal ID
     var created = createJournal(journalName);
@@ -49,8 +49,12 @@ export default function Frame419(props) {
 
   async function attachUsersToJournal(){
 
-    // attaching partner to journal
+
+    // to do: attach journalID to current user
     
+
+    // attaching partner to journal
+
     // npm install i aws-sdk --save 
     // npm install i util
     var AWS = require('aws-sdk');
@@ -98,13 +102,14 @@ export default function Frame419(props) {
         date_created: AWSDateUtil.getCurrentAWSDate(),
     };
 
+    // console.log(queryParams);
+
     try {
       const newJournal = await API.graphql({ query: mutations.createJournal, variables: {input: queryParams}});
       if (newJournal.errors){
         console.log("Failed!!");
         const errors = reply.errors;
         throw errors[0];
-        return false;
       }
       else{
         // console.log(newJournal.data.createJournal.id);
@@ -117,7 +122,6 @@ export default function Frame419(props) {
       return false;
     }
 
-    return false;
 
     // console.log("[GraphqlOutput]");
     // console.log(newJournal.data);

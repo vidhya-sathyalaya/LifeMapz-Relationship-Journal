@@ -5,6 +5,7 @@ import Amplify, { Auth } from 'aws-amplify';
 import React, {useState} from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import {RadioGroupField , Radio, Text, TextField, View } from "@aws-amplify/ui-react";
+import AWSDateUtil from "./util";
 
 // import  Frame418  from './Frame418';
 
@@ -32,12 +33,14 @@ class CompleteSignup extends React.Component {
     this.saveProfile = this.saveProfile.bind(this);
 
     this.state = {
+      id: '',
       cognito_username: '' ,
       fname: '',
       lname: '',
       email:'',
       dob:'',
       gender:'',  
+      createdAt: '',
     };
   }
   
@@ -55,6 +58,8 @@ class CompleteSignup extends React.Component {
       console.log(user.username);
       this.setState({cognito_username : user.username});
       this.setState({email : user.attributes.email});
+      this.setState({id: user.attributes.email});
+      this.setState({createdAt: AWSDateUtil.getCurrentAWSDate()});
       });
     }
 
@@ -83,7 +88,7 @@ class CompleteSignup extends React.Component {
     }
 
     async saveProfile() {
-      const savedProfile = await API.graphql({ query: mutations.createUser, variables: {input: this.state}});
+      const savedProfile = await API.graphql({ query: mutations.updateUser, variables: {input: this.state}});
       console.log(savedProfile);
     }
 

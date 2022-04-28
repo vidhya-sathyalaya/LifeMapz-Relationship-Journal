@@ -5,27 +5,38 @@
  **************************************************************************/
 
 /* eslint-disable */
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {
   getOverrideProps,
   useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
 import { Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function Frame425(props) {
+  
   const { overrides, ...rest } = props;
   const [isJournal, setIsJournal] = useState("false");
 
   console.log(overrides[1].isUserProfile);
   console.log(overrides);
 
-  var journalID = overrides[2].journalID;
+  // var journalID = overrides[2].journalID;
 
-  if (journalID == "undefined"){
-    setIsJournal(false);
-  }
-  else{
-    setIsJournal(true);
-  }
+  // if (journalID == "undefined"){
+  //   setIsJournal(false);
+  // }
+  // else{
+  //   setIsJournal(true);
+  // }
+
+  useEffect(() => {
+    var journalID = overrides[2].journalID;
+    if (journalID == "undefined"){
+      setIsJournal(false);
+    }
+    else{
+      setIsJournal(true);
+    }
+}, []);
 
   const createJournalOnClick = useNavigateAction({
     type: "url",

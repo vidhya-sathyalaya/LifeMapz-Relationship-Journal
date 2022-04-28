@@ -95,7 +95,7 @@ function FirstHome() {
 
 // function to save user details to the session storage
   function saveDetailsToSession(userObject){
-  //  console.log(userObject);
+   console.log(userObject);
    sessionStorage.setItem('userID', userObject.id);
    sessionStorage.setItem('userEmail', userObject.email);
    sessionStorage.setItem('userFname', userObject.fname);
