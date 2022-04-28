@@ -13,6 +13,7 @@ import ContactUsPage from './ContactUsPage';
 import CreateJournalPage from './CreateJournalPage';
 import ViewProfilePage from './ViewProfilePage';
 import JournalPage from './JournalPage';
+import JournalEntry from './pages/JournalEntry';
 import Edit from './ui-components/Edit';
 
 Amplify.configure(awsconfig);
@@ -31,7 +32,7 @@ function RoutingFile() {
                     <Route path='/aboutus'><AboutUsPage/></Route>
                     <Route path='/contactus'><ContactUsPage/></Route>
                     <Route path='/login'><Login/></Route>
-                    <Route path='/journalentry'><JournalPage/></Route>
+                    <Route path='/journalentry'><JournalEntry/></Route>
                     <Route path='/createjournal'><CreateJournalPage/></Route>
                     <Route path='/viewprofile'><ViewProfilePage/></Route>
                     <Route path='/editprofile'><Edit/></Route>

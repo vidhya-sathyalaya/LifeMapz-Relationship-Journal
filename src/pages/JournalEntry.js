@@ -21,6 +21,7 @@ class JournalEntryPage extends React.Component {
     constructor()
     {
         super();
+        console.log("In the constructor");
         this.state = { Entry : ""};
         this.changeEntry = this.changeEntry.bind(this);
         this.saveEntry = this.saveEntry.bind(this);
@@ -41,10 +42,16 @@ class JournalEntryPage extends React.Component {
         const tentries = [];
         var txtentry = {};
 
+        console.log(sessionStorage.getItem("journalID"));
+
         const journalentries = await DataStore.query(JournalEntry,
-            c => c.date_created('gt', AWSDateUtil.getStartOfDayAsTimeStamp())
+            c => c
+            .date_created('gt', AWSDateUtil.getStartOfDayAsTimeStamp())
             .date_created('le', AWSDateUtil.getEndOfDayAsTimeStamp())
             .entry_type('eq', "Text"));
+            // .journalID('eq', sessionStorage.getItem('journalID')));
+
+        console.log(journalentries);
         
         for(var i = 0; i< journalentries.length; i++)
         {
@@ -70,8 +77,8 @@ class JournalEntryPage extends React.Component {
                 "reaction_id": ReactionValue.HAPPY,
                 "entry_type": "Text",
                 "is_memorable": false, //default, needs to change later
-                "userID": "a3f4095e-39de-43d2-baf4-f8c16f0f6f4d",
-                "journalID": "a3f4095e-39de-43d2-baf4-f8c16f0f6f4d"
+                "userID": sessionStorage.getItem('userID'),
+                "journalID": sessionStorage.getItem('journalID'),
             })
         );
 
