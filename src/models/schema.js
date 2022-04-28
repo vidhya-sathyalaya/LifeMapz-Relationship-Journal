@@ -164,7 +164,7 @@ export const schema = {
                     "type": {
                         "enum": "ReactionValue"
                     },
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "entry_type": {
@@ -178,7 +178,7 @@ export const schema = {
                     "name": "is_memorable",
                     "isArray": false,
                     "type": "Boolean",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "userID": {
@@ -208,6 +208,20 @@ export const schema = {
                         "connectionType": "HAS_MANY",
                         "associatedWith": "journalentryID"
                     }
+                },
+                "user_fname": {
+                    "name": "user_fname",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "is_secret": {
+                    "name": "is_secret",
+                    "isArray": false,
+                    "type": "Boolean",
+                    "isRequired": false,
+                    "attributes": []
                 },
                 "createdAt": {
                     "name": "createdAt",
@@ -516,5 +530,5 @@ export const schema = {
         }
     },
     "nonModels": {},
-    "version": "4267ca9d56a3b9e69ad247f87e14c348"
+    "version": "bd147dac235985c417f68febccac7c3c"
 };

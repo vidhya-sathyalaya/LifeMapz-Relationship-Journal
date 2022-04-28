@@ -10,9 +10,12 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function JP(props) {
   const { overrides, ...rest } = props;
+
+  console.log(props);
+
   return (
     <View
-      width="960px"
+      width="1512px"
       height="326px"
       overflow="hidden"
       position="relative"
@@ -23,12 +26,12 @@ export default function JP(props) {
     >
       <Image
         position="absolute"
-        top="25.46%"
-        bottom="25.46%"
-        height="49.08%"
-        left="80.63%"
-        right="2.71%"
-        width="16.67%"
+        top="26.07%"
+        bottom="27.91%"
+        height="46.01%"
+        left="80.62%"
+        right="3.74%"
+        width="15.63%"
         borderRadius="16px"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "image")}
@@ -41,7 +44,7 @@ export default function JP(props) {
         left="2.6%"
         right="76.56%"
         direction="row"
-        width="200px"
+        width="315px"
         height="24px"
         alignItems="flex-start"
         padding="0px 0px 0px 0px"
@@ -79,9 +82,9 @@ export default function JP(props) {
           justifyContent="flex-start"
           textDecoration="underline"
           letterSpacing="0.01px"
-          width="160px"
+          width="275px"
           grow="1"
-          basis="160px"
+          basis="275px"
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
@@ -97,7 +100,7 @@ export default function JP(props) {
         left="3.02%"
         right="6.35%"
         direction="row"
-        width="870px"
+        width="1370.25px"
         height="24px"
         alignItems="flex-start"
         padding="0px 0px 0px 0px"
@@ -155,8 +158,8 @@ export default function JP(props) {
         position="absolute"
         top="26.07%"
         bottom="25.46%"
-        left="4.06%"
-        right="26.04%"
+        left="8.6%"
+        right="21.83%"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="write here"
@@ -171,7 +174,7 @@ export default function JP(props) {
         left="52.92%"
         right="41.35%"
         direction="row"
-        width="55px"
+        width="86.63px"
         height="45px"
         justifyContent="center"
         alignItems="center"
@@ -191,7 +194,7 @@ export default function JP(props) {
         left="47.08%"
         right="47.08%"
         direction="row"
-        width="56px"
+        width="88.2px"
         justifyContent="center"
         alignItems="center"
         overflow="hidden"
@@ -211,7 +214,7 @@ export default function JP(props) {
         left="41.35%"
         right="52.92%"
         direction="row"
-        width="55px"
+        width="86.63px"
         height="45px"
         justifyContent="center"
         alignItems="center"
