@@ -140,8 +140,6 @@ function FirstHome() {
             {/* <FrontPage1 overrides={[fpg1, {"isUserProfile" : isUser}]}/> */}
             <Frame425 overrides={[fpg1, {"isUserProfile" : isUser}, {journalID : sessionStorage.getItem('journalID')}]}/>
             {/* took from aish branch <Frame425 overrides={fpg1}/> */}
-            {/* <Footer1 overrides={fott1}/> */}
-            {/* <Frame418 /> */}
             <Newfooter></Newfooter>
           </div>
           </div>
@@ -149,10 +147,16 @@ function FirstHome() {
     );
    }
    else{
-    return <CompleteSignup/>
+    return (
+      <div className='App'>
+      <NavBar overrides={[imageOverrides, username]} />
+        <div>
+        <CompleteSignup/>
+        <Newfooter></Newfooter>
+      </div>
+    </div>
+      )
    }
-
-   
 }
 
 export default FirstHome;
