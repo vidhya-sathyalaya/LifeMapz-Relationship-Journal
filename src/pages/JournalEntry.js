@@ -6,7 +6,7 @@ import { TextEntry } from '../models';
 import { JournalEntry, ReactionValue } from '../models';
 
 import "@aws-amplify/ui-react/styles.css";
-import { NavBar, Writeajournal, Frame427 as EntryCard } from '../ui-components'
+import { NavBar, Writeajournal, JP as EntryCard } from '../ui-components'
 
 import AWSDateUtil from '../util'
 
@@ -102,6 +102,7 @@ class JournalEntryPage extends React.Component {
             <div>
                 <NavBar/>
                 <Writeajournal overrides={{
+                    
                     "Button": {
                         onClick: this.saveEntry
                     },
@@ -109,10 +110,11 @@ class JournalEntryPage extends React.Component {
                         onChange: event => this.changeEntry(event.target.value)
                     }
                 }} />
-                <div className='previous-entry-section'>
-                    <ul className='previous-entry-list'>
+                <div className='previous-entry-section1'>
+                    {//<ul className='previous-entry-list'>
+    }   
                         {tentries}
-                    </ul>
+                    
                 </div>
             </div>
         );
