@@ -59,8 +59,8 @@ class CompleteSignup extends React.Component {
       this.setState({cognito_username : user.username});
       this.setState({email : user.attributes.email});
       this.setState({id: user.attributes.email});
-      this.setState({createdAt: AWSDateUtil.getCurrentAWSDate()});
       });
+      this.setState({createdAt: AWSDateUtil.getCurrentAWSDate()});
     }
 
     onChangeFname(e) {

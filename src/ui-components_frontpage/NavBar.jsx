@@ -14,6 +14,7 @@ import {
 import { Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
 export default function NavBar(props) {
   const { images, overrides, ...rest } = props;
+  console.log(props);
   const dashboardOnClick = useNavigateAction({
     type: "url",
     url: "http://localhost:3000/home",
@@ -32,7 +33,7 @@ export default function NavBar(props) {
   });
   const signUpOnClick = useNavigateAction({
     type: "url",
-    url: "http://localhost:3000/signup",
+    url: "http://localhost:3000/viewprofile",
   });
   const loginOnClick = useAuthSignOutAction({ global: false });
   const imageOnClick = useNavigateAction({
@@ -224,7 +225,7 @@ export default function NavBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="SignUp"
+          children={overrides[1].name}
           onClick={() => {
             signUpOnClick();
           }}
@@ -261,7 +262,7 @@ export default function NavBar(props) {
           onClick={() => {
             imageOnClick();
           }}
-          {...getOverrideProps(overrides, "image")}
+          {...getOverrideProps(overrides[0], "image")}
         ></Image>
       </Flex>
     </Flex>

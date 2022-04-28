@@ -14,10 +14,14 @@ function JournalPage() {
     },
    }
 
+   const username = {
+    name : sessionStorage.getItem('userFname') + " " + sessionStorage.getItem('userLname'),
+ }
+
    return (
      // <AmplifyProvider>
          <div className='App'>
-          <NavBar overrides={imageOverrides} />
+          <NavBar overrides={[imageOverrides, username]} />
           <div >
           <Writeajournal></Writeajournal>
           <FooterAllPages></FooterAllPages>

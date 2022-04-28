@@ -125,12 +125,16 @@ function FirstHome() {
      },
    }
 
+   const username = {
+    name : sessionStorage.getItem('userFname') + " " + sessionStorage.getItem('userLname'),
+ }
+
    if (isUser){
     return (
       // <AmplifyProvider>
           <div className='App'>
             {/* <p align="center"> Relationship Journal</p> */}
-            <NavBar overrides={imageOverrides} />
+            <NavBar overrides={[imageOverrides, username]} />
          
           <div>
             {/* <FrontPage1 overrides={[fpg1, {"isUserProfile" : isUser}]}/> */}

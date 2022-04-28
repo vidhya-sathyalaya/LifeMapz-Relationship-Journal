@@ -13,10 +13,15 @@ function AboutUsPage() {
        src: "https://www.bootdey.com/app/webroot/img/Content/avatar/avatar1.png",
     },
    }
+
+   const username = {
+    name : sessionStorage.getItem('userFname') + " " + sessionStorage.getItem('userLname'),
+ }
+
    return (
      // <AmplifyProvider>
          <div className='App'>
-          <NavBar overrides={imageOverrides} />
+          <NavBar overrides={[imageOverrides, username]} />
           <Aboutus2></Aboutus2>
           <FooterAllPages></FooterAllPages>
          </div>
