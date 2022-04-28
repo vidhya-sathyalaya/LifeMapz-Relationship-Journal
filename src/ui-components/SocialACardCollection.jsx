@@ -15,13 +15,11 @@ import SocialA from "./SocialA";
 import { Collection } from "@aws-amplify/ui-react";
 export default function SocialACardCollection(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
-  const items =
-    itemsProp !== undefined
-      ? itemsProp
-      : useDataStoreBinding({
-          type: "collection",
-          model: JournalEntry,
-        }).items;
+  const itemsDataStore = useDataStoreBinding({
+    type: "collection",
+    model: JournalEntry,
+  }).items;
+  const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
   return (
     <Collection
       type="list"

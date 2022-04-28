@@ -472,16 +472,6 @@ export const schema = {
                 {
                     "type": "key",
                     "properties": {
-                        "name": "byEmail",
-                        "queryField": "userByEmail",
-                        "fields": [
-                            "email"
-                        ]
-                    }
-                },
-                {
-                    "type": "key",
-                    "properties": {
                         "name": "byJournal",
                         "fields": [
                             "journalID"

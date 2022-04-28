@@ -7,19 +7,13 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import {
-  Button,
-  CheckboxField,
-  Icon,
-  TextField,
-  View,
-} from "@aws-amplify/ui-react";
+import { Button, CheckboxField, Icon, Text, View } from "@aws-amplify/ui-react";
 export default function Writeajournal(props) {
   const { overrides, ...rest } = props;
   return (
     <View
       width="1512px"
-      height="551px"
+      height="500px"
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
@@ -28,39 +22,22 @@ export default function Writeajournal(props) {
       {...getOverrideProps(overrides, "Writeajournal")}
     >
       <View
-        width="1060px"
-        height="447px"
+        width="1250px"
+        height="300px"
         position="absolute"
-        top="calc(50% - 223.5px - 34px)"
-        left="calc(50% - 530px - 0px)"
+        top="calc(50% - 150px - 22px)"
+        left="calc(50% - 625px - 1px)"
         borderRadius="12px"
         padding="0px 0px 0px 0px"
         backgroundColor="rgba(255,255,255,0.79)"
         {...getOverrideProps(overrides, "Rectangle 1167")}
       ></View>
-      <TextField
-        display="flex"
-        gap="4px"
-        position="absolute"
-        top="calc(50% - 187px - 58.5px)"
-        left="calc(50% - 520.5px - 0.5px)"
-        direction="column"
-        width="1041px"
-        height="374px"
-        padding="0px 0px 0px 0px"
-        size="large"
-        isDisabled={false}
-        labelHidden={true}
-        variation="default"
-        isMultiline={true}
-        {...getOverrideProps(overrides, "TextField")}
-      ></TextField>
       <Icon
         position="absolute"
-        top="75.86%"
-        bottom="19.78%"
-        left="61.57%"
-        right="36.24%"
+        top="60.8%"
+        bottom="36.04%"
+        left="62.52%"
+        right="35.89%"
         overflow="hidden"
         padding="0px 0px 0px 0px"
         viewBox={{ minX: 0, minY: 0, width: 24, height: 24 }}
@@ -78,8 +55,8 @@ export default function Writeajournal(props) {
       <Button
         display="flex"
         position="absolute"
-        top="88.02%"
-        bottom="5.81%"
+        top="60%"
+        bottom="33.2%"
         left="48.08%"
         right="48.15%"
         direction="row"
@@ -97,10 +74,10 @@ export default function Writeajournal(props) {
       <CheckboxField
         display="flex"
         position="absolute"
-        top="75.86%"
-        bottom="19.78%"
-        left="66.01%"
-        right="16.04%"
+        top="60%"
+        bottom="35.2%"
+        left="65.96%"
+        right="16.08%"
         direction="row"
         width="271.53px"
         justifyContent="center"
@@ -116,6 +93,27 @@ export default function Writeajournal(props) {
         label="Do not share with my partner"
         {...getOverrideProps(overrides, "CheckboxField")}
       ></CheckboxField>
+      <Text
+        fontFamily="Inter"
+        fontSize="16px"
+        fontWeight="400"
+        color="rgba(0,0,0,1)"
+        lineHeight="24px"
+        textAlign="left"
+        display="flex"
+        direction="column"
+        justifyContent="flex-start"
+        letterSpacing="0.01px"
+        width="1153px"
+        height="140px"
+        position="absolute"
+        top="110px"
+        left="175px"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children="write here&#xA;"
+        {...getOverrideProps(overrides, "write here")}
+      ></Text>
     </View>
   );
 }

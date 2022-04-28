@@ -10,11 +10,6 @@
       "StackName": "amplify-lifemapzrelationship-dev-212110",
       "StackId": "arn:aws:cloudformation:us-east-1:275877396812:stack/amplify-lifemapzrelationship-dev-212110/8eb2fed0-8896-11ec-a7e6-0e753b2bd793",
       "AmplifyAppId": "dhfc0e2nxfl9j"
-    },
-    "categories": {
-      "auth": {
-        "lifemapzrelationship": {}
-      }
     }
   }
 }
