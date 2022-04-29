@@ -4,11 +4,11 @@ import "@aws-amplify/ui-react/styles.css";
 
 import awsconfig from './aws-exports';
 import { FooterAllPages, NavBar } from './ui-components_frontpage';
-import { Aboutus3 } from './ui-components';
+import { Edit } from './ui-components';
 Amplify.configure(awsconfig);
 
 
-function AboutUsPage() {
+function EditProfilePage() {
   const imageOverrides = {
     "image":{
        src: "https://www.bootdey.com/app/webroot/img/Content/avatar/avatar1.png",
@@ -23,11 +23,11 @@ function AboutUsPage() {
      // <AmplifyProvider>
          <div className='App'>
           <NavBar overrides={[imageOverrides, username]} />
-          <Aboutus3></Aboutus3>
+          <Edit></Edit>
           <FooterAllPages></FooterAllPages>
          </div>
        // </AmplifyProvider>
   );
 }
 
-export default AboutUsPage;
+export default EditProfilePage;

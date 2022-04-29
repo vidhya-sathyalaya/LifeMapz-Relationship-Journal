@@ -57,12 +57,14 @@ export declare class JournalEntry {
   readonly id: string;
   readonly date_created: number;
   readonly date_modified: number;
-  readonly reaction_id: ReactionValue | keyof typeof ReactionValue;
+  readonly reaction_id?: ReactionValue | keyof typeof ReactionValue | null;
   readonly entry_type: string;
-  readonly is_memorable: boolean;
+  readonly is_memorable?: boolean | null;
   readonly userID: string;
   readonly journalID: string;
   readonly TextEntries?: (TextEntry | null)[] | null;
+  readonly user_fname?: string | null;
+  readonly is_secret?: boolean | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<JournalEntry, JournalEntryMetaData>);

@@ -7,7 +7,13 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Button, CheckboxField, Icon, Text, View } from "@aws-amplify/ui-react";
+import {
+  Button,
+  CheckboxField,
+  Icon,
+  TextField,
+  View,
+} from "@aws-amplify/ui-react";
 export default function Writeajournal(props) {
   const { overrides, ...rest } = props;
   return (
@@ -93,27 +99,23 @@ export default function Writeajournal(props) {
         label="Do not share with my partner"
         {...getOverrideProps(overrides, "CheckboxField")}
       ></CheckboxField>
-      <Text
-        fontFamily="Inter"
-        fontSize="16px"
-        fontWeight="400"
-        color="rgba(0,0,0,1)"
-        lineHeight="24px"
-        textAlign="left"
+      <TextField
         display="flex"
-        direction="column"
-        justifyContent="flex-start"
-        letterSpacing="0.01px"
-        width="1153px"
-        height="140px"
+        gap="4px"
         position="absolute"
-        top="110px"
-        left="175px"
+        top="104px"
+        left="208px"
+        direction="column"
+        width="1085px"
         padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children="write here&#xA;"
-        {...getOverrideProps(overrides, "write here")}
-      ></Text>
+        size="default"
+        isDisabled={true}
+        labelHidden={false}
+        variation="default"
+        isMultiline={true}
+        placeholder="Write here"
+        {...getOverrideProps(overrides, "TextField")}
+      ></TextField>
     </View>
   );
 }
