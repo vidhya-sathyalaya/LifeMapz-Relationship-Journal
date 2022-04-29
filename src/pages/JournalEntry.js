@@ -6,7 +6,11 @@ import { TextEntry } from '../models';
 import { JournalEntry, ReactionValue } from '../models';
 
 import "@aws-amplify/ui-react/styles.css";
-import { NavBar, Writeajournal, JP as EntryCard } from '../ui-components'
+import { API, graphqlOperation } from 'aws-amplify';
+import { Writeajournal } from '../ui-components'
+// import { Writeajournal, JP as EntryCard } from '../ui-components'
+import {JP as EntryCard} from '../ui-components_frontpage';
+import NavBar from '../ui-components_frontpage/NavBar';
 
 import AWSDateUtil from '../util'
 
@@ -14,6 +18,29 @@ import AWSDateUtil from '../util'
 
 const initialState = { Entry: '' }
 
+const listJournalEntries = /* GraphQL */ `
+query listJournalEntries($eq: ID) {
+    listJournalEntries(filter: {journalID: {eq: $eq}}) {
+      items {
+        entry_type
+        id
+        is_secret
+        is_memorable
+        journalID
+        userID
+        user_fname
+        date_created
+        TextEntries {
+          items {
+            content
+            id
+            journalentryID
+          }
+        }
+      }
+    }
+  }  
+  `;
 
 class JournalEntryPage extends React.Component {
 
@@ -21,9 +48,20 @@ class JournalEntryPage extends React.Component {
     constructor()
     {
         super();
+        // console.log("In the constructor");
         this.state = { Entry : ""};
         this.changeEntry = this.changeEntry.bind(this);
         this.saveEntry = this.saveEntry.bind(this);
+
+        this.username = {
+            name : sessionStorage.getItem('userFname') + " " + sessionStorage.getItem('userLname'),
+         }
+
+        this.imageOverrides = {
+            "image":{
+               src: "https://www.bootdey.com/app/webroot/img/Content/avatar/avatar1.png",
+            },
+        }
     };
 
     changeEntry(value)
@@ -41,24 +79,45 @@ class JournalEntryPage extends React.Component {
         const tentries = [];
         var txtentry = {};
 
-        const journalentries = await DataStore.query(JournalEntry,
-            c => c.date_created('gt', AWSDateUtil.getStartOfDayAsTimeStamp())
-            .date_created('le', AWSDateUtil.getEndOfDayAsTimeStamp())
-            .entry_type('eq', "Text"));
+        // console.log(sessionStorage.getItem("journalID"));
+
+        const queryData = await API.graphql({ query: listJournalEntries , variables: { eq : sessionStorage.getItem('journalID') }});
+
+        const journalentries = queryData.data.listJournalEntries.items;
+
+        // console.log(queryData);
+
+        // const journalentries = await DataStore.query(JournalEntry,
+        //     c => c
+        //     // .date_created('gt', AWSDateUtil.getStartOfDayAsTimeStamp())
+        //     // .date_created('le', AWSDateUtil.getEndOfDayAsTimeStamp())
+        //     // .entry_type('eq', "Text"));
+        //     .journalID('eq', sessionStorage.getItem('journalID')));
+
+        // console.log(journalentries);
+
+        var desiredData = [];
         
         for(var i = 0; i< journalentries.length; i++)
         {
-            txtentry = await DataStore.query(TextEntry,
-                c => c.journalentryID('eq', journalentries[i].id));
-            for(var j =0; j<txtentry.length; j++)
-            {
-                //console.log(txtentry[j].content);
-                tentries.push(txtentry[j].content);
-            }
+            // console.log(journalentries[i].TextEntries.items[0].content);
+            const obj = { 'text' : journalentries[i].TextEntries.items[0].content, 'date' : journalentries[i].date_created 
+                        , 'username' : journalentries[i].user_fname, 'userid' : journalentries[i].userID  }
+
+            desiredData.push(journalentries[i].TextEntries.items[0].content);
+            // desiredData.push(obj);
+
+            // txtentry = await DataStore.query(TextEntry,
+            //     c => c.journalentryID('eq', journalentries[i].id));
+            // for(var j =0; j<txtentry.length; j++)
+            // {
+            //     //console.log(txtentry[j].content);
+            //     tentries.push(txtentry[j].content);
+            // }
         }
 
-        console.log(tentries);
-        this.setState( { PreviousEntries: tentries});
+        console.log(desiredData);
+        this.setState( { PreviousEntries: desiredData});
 
     }
 
@@ -70,8 +129,8 @@ class JournalEntryPage extends React.Component {
                 "reaction_id": ReactionValue.HAPPY,
                 "entry_type": "Text",
                 "is_memorable": false, //default, needs to change later
-                "userID": "a3f4095e-39de-43d2-baf4-f8c16f0f6f4d",
-                "journalID": "a3f4095e-39de-43d2-baf4-f8c16f0f6f4d"
+                "userID": sessionStorage.getItem('userID'),
+                "journalID": sessionStorage.getItem('journalID'),
             })
         );
 
@@ -90,18 +149,16 @@ class JournalEntryPage extends React.Component {
 
     render() {
           const tentries = this.state.PreviousEntries?.map((te, i) => (
-            <EntryCard key={i} overrides={
-                {
-                    "write here": {
-                        children: te
-                    }
+            <EntryCard key={i} overrides={ 
+                { 
+                    "write here": { children: te }
                 }
-            } />
+            }
+            />
           ));
         return (
             <div>
-                <NavBar/>
-                <div className='container'>
+                <NavBar overrides={[this.imageOverrides, this.username]} />
                 <Writeajournal overrides={{
                     "Button": {
                         onClick: this.saveEntry
@@ -110,13 +167,10 @@ class JournalEntryPage extends React.Component {
                         onChange: event => this.changeEntry(event.target.value)
                     }
                 }} />
-                </div>
-                <div className='container'>
                 <div className='previous-entry-section'>
                     <ul className='previous-entry-list'>
                         {tentries}
                     </ul>
-                </div>
                 </div>
             </div>
         );

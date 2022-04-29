@@ -25,6 +25,25 @@ export default function ViewProfile(props) {
     url: "http://localhost:3000/editprofile",
   });
 
+  const getUser = /* GraphQL */ `
+  query GetUser($id: ID!) {
+    getUser(id: $id) {
+      id
+      cognito_username
+      fname
+      lname
+      email
+      dob
+      gender
+      JournalEntries {
+        nextToken
+        startedAt
+      }
+      journalID
+    }
+  }
+`;
+
 
   var AWS = require('aws-sdk');
   // Set the region 
@@ -100,7 +119,7 @@ export default function ViewProfile(props) {
 
   // this function is just used to fetch the full name of the user using graphql
   const getUserInfo = async () => {
-    const user = await API.graphql({ query: queries.getUser , variables: { id : sessionStorage.getItem('userID') }});
+    const user = await API.graphql({ query: getUser , variables: { id : sessionStorage.getItem('userID') }});
     console.log("[getFromName]");
     setFName(user.data.getUser.fname);
     setLName(user.data.getUser.lname);
