@@ -73,7 +73,7 @@ function FirstHome() {
         };
         var result = await docClient.query(params).promise()
 
-        console.log(result);
+        console.log("User by email result is " + result.Items[0]);
 
         if (result.Items[0]){
           saveDetailsToSession(result.Items[0]);

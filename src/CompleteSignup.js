@@ -262,7 +262,7 @@ class CompleteSignup extends React.Component {
             variation="default"
             isMultiline={false}
             label="Date of Birth"
-            placeholder="MM/DD/YYYY"
+            placeholder="YYYY-MM-DD"
             value= {this.state.dob}
             onChange={this.onChangeDate}
           ></TextField>

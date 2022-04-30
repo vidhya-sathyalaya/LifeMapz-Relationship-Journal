@@ -14,7 +14,6 @@ import {
 import { Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
 export default function NavBar(props) {
   const { images, overrides, ...rest } = props;
-  console.log(props);
   const dashboardOnClick = useNavigateAction({
     type: "url",
     url: "http://localhost:3000/home",
