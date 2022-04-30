@@ -29,6 +29,8 @@ amplify/logs
 amplify/mock-data
 amplify/backend/amplify-meta.json
 amplify/backend/.temp
+src/ui-components
+src/models
 build/
 dist/
 node_modules/
